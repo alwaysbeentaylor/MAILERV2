@@ -547,14 +547,29 @@ export default function Campaigns() {
 
                   {/* ⚡ Speed Profile Selector */}
                   <div className="speed-selector">
-                    <label>⚡ Verzendsnelheid:</label>
+                    <label>⚡ Verzendsnelheid (Live aanpasbaar):</label>
                     <div className="speed-buttons">
                       {Object.entries(SES_TURBO_CONFIG.profiles).map(([key, profile]) => (
                         <button
                           key={key}
                           className={`speed-btn ${speedProfile === key ? 'active' : ''} ${key === 'turbo' || key === 'max' ? 'ses-mode' : ''} ${key === 'godmode' ? 'godmode' : ''}`}
-                          onClick={() => setSpeedProfile(key)}
-                          disabled={isRunning}
+                          onClick={async () => {
+                            setSpeedProfile(key);
+                            if (selectedCampaign) {
+                              try {
+                                await fetch('/api/campaigns/update-speed', {
+                                  method: 'POST',
+                                  headers: { 'Content-Type': 'application/json' },
+                                  body: JSON.stringify({
+                                    campaignId: selectedCampaign.id,
+                                    speedProfile: key
+                                  })
+                                });
+                              } catch (e) {
+                                console.error('Failed to update speed live', e);
+                              }
+                            }
+                          }}
                           title={profile.description}
                         >
                           {profile.name}

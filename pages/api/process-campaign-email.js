@@ -204,7 +204,16 @@ export default async function handler(req, res) {
         if (hasMorePending && updatedCampaign.status === 'running') {
             // Schedule next email via QStash
             const qstashClient = getQStashClient();
-            const delay = campaign.delayBetweenEmails || 30; // seconds
+
+            // Calculate delay based on speed profile
+            // normal: 30s, turbo: 6s, max: 2s, godmode: 1s
+            let delay = updatedCampaign.delayBetweenEmails || 30;
+            const profile = updatedCampaign.speedProfile || 'normal';
+
+            if (profile === 'turbo') delay = 6;
+            else if (profile === 'max') delay = 2;
+            else if (profile === 'godmode') delay = 1;
+            else if (profile === 'normal') delay = 30;
 
             if (qstashClient) {
                 try {
@@ -213,10 +222,10 @@ export default async function handler(req, res) {
                         body: { campaignId },
                         delay: delay
                     });
-                    console.log(`📅 Next email scheduled in ${delay}s, QStash: ${response.messageId}`);
+                    console.log(`📅 Next email scheduled in ${delay}s (Profile: ${profile}), QStash: ${response.messageId}`);
+                    await addCampaignLog(campaignId, `📅 Volgende e-mail ingepland over ${delay} seconden (${profile} mode)`, 'info');
                 } catch (qstashError) {
                     console.error('QStash scheduling error:', qstashError);
-                    // Don't fail the whole operation, campaign can be resumed manually
                 }
             } else {
                 console.warn('⚠️ QStash niet beschikbaar - volgende email niet automatisch gepland');
