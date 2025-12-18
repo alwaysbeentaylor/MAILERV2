@@ -20,27 +20,30 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
+    const { campaignId } = req.body;
+
+    // Log entry ASAP
+    if (campaignId) {
+        await addCampaignLog(campaignId, '📡 QStash aanroep ontvangen, begin verificatie...', 'info');
+    }
+
     // Verify QStash signature in production
     if (process.env.NODE_ENV === 'production') {
         const isValid = await verifySignature(req);
         if (!isValid) {
             console.error('❌ Invalid QStash signature');
             if (campaignId) {
-                await addCampaignLog(campaignId, '❌ QStash signature verificatie mislukt. Controleer signing keys.', 'error');
+                await addCampaignLog(campaignId, '❌ Beveiligingscheck mislukt: QStash signature ongeldig. Controleer je signing keys.', 'error');
             }
             return res.status(401).json({ error: 'Invalid signature' });
         }
     }
 
-    const { campaignId } = req.body;
-
-    if (campaignId) {
-        await addCampaignLog(campaignId, '🔄 Worker aangeroepen door QStash - verwerking start...', 'info');
-    }
-
     if (!campaignId) {
         return res.status(400).json({ error: 'Campaign ID is vereist' });
     }
+
+    await addCampaignLog(campaignId, '🔄 Beveiliging OK, start email verwerking...', 'info');
 
     console.log(`\n🔄 Processing campaign email: ${campaignId}`);
 
