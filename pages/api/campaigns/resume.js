@@ -21,9 +21,9 @@ export default async function handler(req, res) {
             return res.status(404).json({ error: 'Campagne niet gevonden' });
         }
 
-        if (campaign.status !== 'paused') {
+        if (campaign.status !== 'paused' && campaign.status !== 'pending') {
             return res.status(400).json({
-                error: `Campagne kan niet worden hervat (status: ${campaign.status})`
+                error: `Campagne kan niet worden gestart/hervat (status: ${campaign.status})`
             });
         }
 
