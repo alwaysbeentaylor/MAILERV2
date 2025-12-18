@@ -1,0 +1,1555 @@
+{
+  "meta": {
+    "versie": "2.0",
+    "regels": [
+      "Kies exact één observatie per mail",
+      "Gebruik de zin als opening, gedrag als gevolg, patroon als context",
+      "Nooit niche of diensten expliciet noemen",
+      "Maximaal 60-95 woorden per mail",
+      "CTA wekt nieuwsgierigheid, geen call"
+    ]
+  },
+
+  "niches": {
+
+    "aannemer_bouw": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat projecten of voor-na beelden niet meteen zichtbaar zijn.",
+          "gedrag": "Op dat moment gaan bezoekers vaak vergelijken of zoeken ze verder.",
+          "patroon": "Dit zie ik vaker bij bedrijven die inhoudelijk sterk zijn, maar dit online minder laten zien."
+        },
+        {
+          "zin": "Ik merkte dat het moeilijk te zien is wat voor type werk jullie precies doen.",
+          "gedrag": "Bezoekers haken dan vaak af vóór ze contact opnemen.",
+          "patroon": "Dit gebeurt vooral bij vakspecialisten die ervan uitgaan dat hun werk voor zich spreekt."
+        },
+        {
+          "zin": "Reviews of ervaringen van eerdere klanten zijn niet direct zichtbaar op de homepage.",
+          "gedrag": "Bezoekers gaan dan zelf zoeken naar beoordelingen elders.",
+          "patroon": "Terwijl die reviews er vaak wel zijn, alleen niet prominent geplaatst."
+        },
+        {
+          "zin": "De eerste stap om contact op te nemen of een offerte aan te vragen is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaak bij sites die veel informatie geven maar de volgende stap vergeten."
+        },
+        {
+          "zin": "Meerdere diensten worden tegelijk gepresenteerd zonder duidelijke focus.",
+          "gedrag": "Bezoekers weten dan niet waar jullie het sterkst in zijn.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik je kort aanwijzen waar ik dit zag?"
+      ]
+    },
+
+    "dakwerker": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat voor-na foto's van projecten niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat ze kunnen verwachten.",
+          "patroon": "Dit zie ik vaker bij vakmensen die het werk belangrijker vinden dan de presentatie."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen in de buurt werken.",
+          "patroon": "Terwijl dat vaak gewoon het geval is, alleen niet expliciet vermeld."
+        },
+        {
+          "zin": "Reviews of ervaringen van eerdere klanten staan niet op de homepage.",
+          "gedrag": "Bezoekers zoeken dan zelf naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vaak niet nodig zijn."
+        },
+        {
+          "zin": "De mogelijkheid om direct contact op te nemen staat niet prominent bovenaan.",
+          "gedrag": "Bezoekers met een urgent probleem scrollen dan eerst naar beneden.",
+          "patroon": "Bij dit type werk is snelheid vaak belangrijk voor de bezoeker."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "schilder": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat voorbeelden van uitgevoerd werk niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten welke kwaliteit ze mogen verwachten.",
+          "patroon": "Dit zie ik vaker bij vakmensen die liever laten zien dan vertellen."
+        },
+        {
+          "zin": "Het verschil tussen binnen- en buitenwerk is niet meteen duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of jullie doen wat zij nodig hebben.",
+          "patroon": "Terwijl dat onderscheid voor hen vaak belangrijk is."
+        },
+        {
+          "zin": "Reviews of ervaringen van klanten zijn niet direct zichtbaar op de homepage.",
+          "gedrag": "Bezoekers gaan dan zelf zoeken naar beoordelingen.",
+          "patroon": "Dit kost hen extra stappen die vermijdbaar zijn."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen zichtbaar wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "loodgieter": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat het telefoonnummer niet meteen prominent zichtbaar is.",
+          "gedrag": "Bezoekers met een urgent probleem moeten dan eerst zoeken.",
+          "patroon": "Bij dit type werk is snelheid vaak cruciaal voor de bezoeker."
+        },
+        {
+          "zin": "Er is geen indicatie van spoedservice of beschikbaarheid.",
+          "gedrag": "Bezoekers weten dan niet of ze snel geholpen kunnen worden.",
+          "patroon": "Dit zie ik vaker bij bedrijven die 24/7 bereikbaar zijn maar dit niet tonen."
+        },
+        {
+          "zin": "Het werkgebied is niet direct duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen kunnen komen.",
+          "patroon": "Terwijl dat vaak gewoon het geval is."
+        },
+        {
+          "zin": "Diensten lopen door elkaar zonder duidelijke structuur.",
+          "gedrag": "Bezoekers weten dan niet waar ze moeten kijken voor hun specifieke probleem.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "elektricien": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat certificeringen of keurmerken niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of alles veilig en erkend is.",
+          "patroon": "Terwijl die certificeringen er vaak wel zijn, alleen niet prominent geplaatst."
+        },
+        {
+          "zin": "De contactmogelijkheid staat niet prominent bovenaan de pagina.",
+          "gedrag": "Bezoekers met een vraag moeten dan eerst scrollen.",
+          "patroon": "Dit zie ik vaker bij sites met veel informatie maar geen duidelijke eerste stap."
+        },
+        {
+          "zin": "Diensten staan verspreid zonder duidelijke volgorde.",
+          "gedrag": "Bezoekers weten dan niet waar ze moeten beginnen.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen werken.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet zichtbaar genoeg."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "installatie_techniek": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de eerste stap voor een aanvraag niet meteen duidelijk is.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij technische bedrijven met veel informatie op de site."
+        },
+        {
+          "zin": "Contactinformatie staat niet prominent bovenaan de pagina.",
+          "gedrag": "Bezoekers met een vraag moeten dan eerst zoeken.",
+          "patroon": "Terwijl ze vaak al besloten hebben contact op te nemen."
+        },
+        {
+          "zin": "Diensten staan verspreid zonder duidelijke volgorde.",
+          "gedrag": "Bezoekers weten dan niet waar jullie het sterkst in zijn.",
+          "patroon": "Breed aanbod is een kracht, maar kan online overweldigend zijn."
+        },
+        {
+          "zin": "Merken of specialisaties zijn niet direct zichtbaar.",
+          "gedrag": "Bezoekers kunnen dan niet inschatten of jullie werken met wat zij nodig hebben.",
+          "patroon": "Die expertise is er vaak wel, alleen niet prominent getoond."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "tuinarchitect_hovenier": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat projectfoto's of portfolio niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten welke stijl jullie hanteren.",
+          "patroon": "Dit zie ik vaker bij vakspecialisten die het werk belangrijker vinden dan de presentatie."
+        },
+        {
+          "zin": "De stijl of aanpak is niet voelbaar wanneer iemand op de homepage komt.",
+          "gedrag": "Bezoekers weten dan niet of jullie passen bij wat zij in gedachten hebben.",
+          "patroon": "Terwijl die stijl er wel is, alleen niet direct getoond."
+        },
+        {
+          "zin": "De eerste stap voor kennismaking of offerte is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij sites met veel inspiratie maar geen duidelijke volgende stap."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen in de buurt werken.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "schoonmaakbedrijf": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de eerste stap om een offerte aan te vragen niet meteen duidelijk is.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij bedrijven die veel diensten aanbieden."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen zichtbaar wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen kunnen komen.",
+          "patroon": "Terwijl dat vaak gewoon het geval is."
+        },
+        {
+          "zin": "Het type schoonmaak is niet direct onderscheiden.",
+          "gedrag": "Bezoekers weten dan niet of jullie doen wat zij specifiek nodig hebben.",
+          "patroon": "Breed aanbod is een kracht, maar kan online onduidelijkheid geven."
+        },
+        {
+          "zin": "Reviews of referenties staan niet op de homepage.",
+          "gedrag": "Bezoekers zoeken dan zelf naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vaak niet nodig zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "autogarage": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat openingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze langs kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "De locatie is niet direct duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie in de buurt zijn.",
+          "patroon": "Terwijl dat voor hen vaak een belangrijke factor is."
+        },
+        {
+          "zin": "Type diensten lopen door elkaar zonder duidelijke structuur.",
+          "gedrag": "Bezoekers weten dan niet waar ze moeten kijken voor hun specifieke vraag.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        },
+        {
+          "zin": "De mogelijkheid om een afspraak te maken is niet meteen duidelijk.",
+          "gedrag": "Bezoekers bellen dan liever, ook al hadden ze online willen plannen.",
+          "patroon": "Dit zie ik vaker bij bedrijven die telefonisch sterk zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "autodetailing": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat voor-na foto's niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten welk resultaat ze mogen verwachten.",
+          "patroon": "Dit zie ik vaker bij vakmensen die het werk belangrijker vinden dan de presentatie."
+        },
+        {
+          "zin": "Pakketten of diensten zijn niet duidelijk onderscheiden.",
+          "gedrag": "Bezoekers weten dan niet welke optie bij hen past.",
+          "patroon": "Terwijl dat onderscheid voor hen vaak belangrijk is."
+        },
+        {
+          "zin": "Prijsindicatie is niet direct vindbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij premium diensten waar prijs niet het hoofdpunt is."
+        },
+        {
+          "zin": "De mogelijkheid om te boeken is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al besloten hebben te willen boeken."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "horeca_restaurant": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat er geen directe manier is om te reserveren bovenaan.",
+          "gedrag": "Bezoekers zoeken dan verder naar alternatieven.",
+          "patroon": "Dit zie ik vaker bij zaken die telefonisch goed bereikbaar zijn maar online die stap missen."
+        },
+        {
+          "zin": "Het menu of de kaart is niet snel vindbaar.",
+          "gedrag": "Bezoekers twijfelen dan of dit de juiste plek is voor wat ze zoeken.",
+          "patroon": "Terwijl het menu er vaak wel is, alleen niet prominent geplaatst."
+        },
+        {
+          "zin": "Openingstijden zijn niet meteen zichtbaar wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers weten dan niet of ze kunnen langskomen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet direct zichtbaar."
+        },
+        {
+          "zin": "De sfeer of ambiance is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of dit bij hen past.",
+          "patroon": "Dit zie ik vaker bij zaken die het in de praktijk wél uitstralen."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "horeca_cafe_bar": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat openingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze langs kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "De locatie is niet direct duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers moeten dan extra stappen nemen om jullie te vinden.",
+          "patroon": "Terwijl dat voor hen vaak de eerste vraag is."
+        },
+        {
+          "zin": "De sfeer is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of dit de juiste plek is.",
+          "patroon": "Dit zie ik vaker bij zaken die het in de praktijk wél uitstralen."
+        },
+        {
+          "zin": "Het aanbod is niet direct zichtbaar.",
+          "gedrag": "Bezoekers weten dan niet wat ze kunnen verwachten.",
+          "patroon": "Terwijl dat vaak precies is wat hen zou overtuigen."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "horeca_hotel_bnb": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat beschikbaarheid niet direct te checken is.",
+          "gedrag": "Bezoekers gaan dan naar externe boekingssites om te kijken.",
+          "patroon": "Dit zie ik vaker bij accommodaties die wel direct te boeken zijn maar dit niet tonen."
+        },
+        {
+          "zin": "Kamers of faciliteiten zijn niet snel vindbaar.",
+          "gedrag": "Bezoekers kunnen dan moeilijk kiezen wat bij hen past.",
+          "patroon": "Terwijl die informatie er vaak wel is, alleen niet prominent."
+        },
+        {
+          "zin": "De locatie is niet meteen duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers weten dan niet hoe handig jullie liggen.",
+          "patroon": "Voor reizigers is dat vaak een van de eerste vragen."
+        },
+        {
+          "zin": "Reviews of ervaringen zijn niet zichtbaar op de homepage.",
+          "gedrag": "Bezoekers zoeken dan naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vermijdbaar zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "bakker_slager_traiteur": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat openingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze langs kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "De locatie is niet direct duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie in de buurt zijn.",
+          "patroon": "Terwijl dat voor hen vaak het belangrijkste is."
+        },
+        {
+          "zin": "Het assortiment is niet snel vindbaar.",
+          "gedrag": "Bezoekers weten dan niet wat ze kunnen verwachten.",
+          "patroon": "Terwijl dat vaak precies is wat hen zou overtuigen te komen."
+        },
+        {
+          "zin": "De mogelijkheid om te bestellen is niet prominent aanwezig.",
+          "gedrag": "Bezoekers bellen dan liever, ook al hadden ze online willen bestellen.",
+          "patroon": "Dit zie ik vaker bij zaken die telefonisch sterk zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "kapper_barbershop": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat foto's van eerder werk niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten welke kwaliteit ze mogen verwachten.",
+          "patroon": "Dit zie ik vaker bij vakmensen die het werk belangrijker vinden dan de presentatie."
+        },
+        {
+          "zin": "Prijsindicatie is niet direct zichtbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Terwijl ze vaak al besloten hebben te willen boeken."
+        },
+        {
+          "zin": "Er is geen directe manier om te boeken bovenaan de pagina.",
+          "gedrag": "Bezoekers bellen dan liever, ook al hadden ze online willen plannen.",
+          "patroon": "Dit zie ik vaker bij zaken die telefonisch sterk zijn."
+        },
+        {
+          "zin": "De sfeer of stijl is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers weten dan niet of dit bij hen past.",
+          "patroon": "Terwijl die sfeer er in de praktijk vaak wel is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "schoonheidssalon_wellness": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat behandelingen niet snel vindbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wat jullie precies aanbieden.",
+          "patroon": "Terwijl dat vaak precies is wat hen zou helpen kiezen."
+        },
+        {
+          "zin": "Prijsindicatie is niet direct zichtbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij premium diensten waar prijs niet het hoofdpunt is."
+        },
+        {
+          "zin": "Er is geen directe manier om te boeken.",
+          "gedrag": "Bezoekers bellen dan liever, ook al hadden ze online willen plannen.",
+          "patroon": "Dit zie ik vaker bij zaken die telefonisch sterk zijn."
+        },
+        {
+          "zin": "De sfeer is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of dit bij hen past.",
+          "patroon": "Terwijl die sfeer er in de praktijk vaak wel is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "fitness_sportschool": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat het aanbod of de lessen niet snel vindbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wat jullie precies bieden.",
+          "patroon": "Terwijl dat vaak precies is wat hen zou helpen kiezen."
+        },
+        {
+          "zin": "Prijzen of abonnementen zijn niet direct zichtbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij clubs die persoonlijk contact prefereren."
+        },
+        {
+          "zin": "Er is geen duidelijke stap voor een proefles of rondleiding.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al nieuwsgierig genoeg zijn om te komen kijken."
+        },
+        {
+          "zin": "De sfeer is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of dit bij hen past.",
+          "patroon": "Terwijl die sfeer er in de praktijk vaak wel is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "fysiotherapie": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat specialisaties niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet of jullie helpen bij hun specifieke klacht.",
+          "patroon": "Terwijl die expertise er vaak wel is, alleen niet prominent getoond."
+        },
+        {
+          "zin": "De eerste stap om een afspraak te maken is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij praktijken met veel informatie op de site."
+        },
+        {
+          "zin": "Informatie over vergoeding of verzekering is niet direct zichtbaar.",
+          "gedrag": "Bezoekers moeten dan zelf uitzoeken of het vergoed wordt.",
+          "patroon": "Terwijl dat voor hen vaak een belangrijke overweging is."
+        },
+        {
+          "zin": "Reviews of ervaringen van patiënten staan niet op de homepage.",
+          "gedrag": "Bezoekers zoeken dan zelf naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vermijdbaar zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "tandarts": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de mogelijkheid om een afspraak te maken niet meteen duidelijk is.",
+          "gedrag": "Bezoekers bellen dan liever, ook al hadden ze online willen plannen.",
+          "patroon": "Dit zie ik vaker bij praktijken die telefonisch sterk zijn."
+        },
+        {
+          "zin": "Behandelingen zijn niet snel vindbaar.",
+          "gedrag": "Bezoekers weten dan niet wat jullie precies aanbieden.",
+          "patroon": "Terwijl dat voor hen vaak belangrijk is bij de keuze."
+        },
+        {
+          "zin": "Openingstijden zijn niet meteen zichtbaar.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze terecht kunnen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "Spoedmogelijkheid is niet duidelijk.",
+          "gedrag": "Bezoekers met pijn zoeken dan verder naar alternatieven.",
+          "patroon": "Terwijl jullie vaak wel spoedgevallen aannemen."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "huisarts_medisch": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de inschrijfprocedure niet direct duidelijk is.",
+          "gedrag": "Nieuwe patiënten weten dan niet hoe ze zich kunnen aanmelden.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "Openingstijden of bereikbaarheid zijn niet meteen zichtbaar.",
+          "gedrag": "Patiënten weten dan niet wanneer ze kunnen bellen.",
+          "patroon": "Terwijl dat voor hen vaak de eerste vraag is."
+        },
+        {
+          "zin": "De spoedlijn staat niet prominent op de pagina.",
+          "gedrag": "Patiënten met urgente klachten moeten dan eerst zoeken.",
+          "patroon": "Bij dit type zorg is snelheid vaak cruciaal."
+        },
+        {
+          "zin": "Het team of de praktijk is niet direct zichtbaar.",
+          "gedrag": "Patiënten kunnen dan geen beeld vormen bij wie hen helpt.",
+          "patroon": "Dit zie ik vaker bij praktijken waar persoonlijk contact belangrijk is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "psycholoog_therapeut": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat specialisaties of werkgebieden niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet of jullie helpen bij wat zij ervaren.",
+          "patroon": "Terwijl die expertise er vaak wel is, alleen niet prominent getoond."
+        },
+        {
+          "zin": "De eerste stap in het proces is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "De drempel om hulp te zoeken is al hoog; onduidelijkheid maakt het hoger."
+        },
+        {
+          "zin": "Informatie over wachtlijst of beschikbaarheid is niet direct zichtbaar.",
+          "gedrag": "Bezoekers weten dan niet of ze snel terecht kunnen.",
+          "patroon": "Terwijl dat voor hen vaak een belangrijke overweging is."
+        },
+        {
+          "zin": "De aanpak of werkwijze is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of dit bij hen past.",
+          "patroon": "Bij dit type hulp is de klik vaak belangrijker dan de methode."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "dierenarts": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat openingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Baasjes weten dan niet wanneer ze terecht kunnen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "Spoedmogelijkheid staat niet prominent op de pagina.",
+          "gedrag": "Baasjes met een ziek dier moeten dan eerst zoeken.",
+          "patroon": "Bij dit type zorg is snelheid vaak cruciaal."
+        },
+        {
+          "zin": "Diensten zijn niet snel vindbaar.",
+          "gedrag": "Bezoekers weten dan niet of jullie helpen met wat zij nodig hebben.",
+          "patroon": "Terwijl dat aanbod er vaak wel is."
+        },
+        {
+          "zin": "De mogelijkheid om een afspraak te maken is niet meteen duidelijk.",
+          "gedrag": "Bezoekers bellen dan liever, ook al hadden ze online willen plannen.",
+          "patroon": "Dit zie ik vaker bij praktijken die telefonisch sterk zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "apotheek": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat openingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze langs kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "De locatie is niet direct duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie in de buurt zijn.",
+          "patroon": "Terwijl dat voor hen vaak het belangrijkste is."
+        },
+        {
+          "zin": "Diensten zoals herhaalrecepten of advies zijn niet snel vindbaar.",
+          "gedrag": "Bezoekers weten dan niet wat ze online kunnen regelen.",
+          "patroon": "Terwijl die mogelijkheden er vaak wel zijn."
+        },
+        {
+          "zin": "De contactmogelijkheid staat niet prominent bovenaan.",
+          "gedrag": "Bezoekers met een vraag moeten dan eerst scrollen.",
+          "patroon": "Dit zie ik vaker bij sites met veel informatie."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "advocaat_notaris": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat specialisaties niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet of jullie helpen bij hun specifieke zaak.",
+          "patroon": "Terwijl die expertise er vaak wel is, alleen niet prominent getoond."
+        },
+        {
+          "zin": "De eerste stap voor contact is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "De drempel om juridische hulp te zoeken is al hoog; onduidelijkheid maakt het hoger."
+        },
+        {
+          "zin": "Het team of de expertise is niet direct vindbaar.",
+          "gedrag": "Bezoekers kunnen dan geen beeld vormen bij wie hen helpt.",
+          "patroon": "Bij dit type dienst is vertrouwen vaak de belangrijkste factor."
+        },
+        {
+          "zin": "Cases of resultaten zijn niet zichtbaar op de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat jullie bereiken.",
+          "patroon": "Terwijl die track record er vaak wel is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "accountant_boekhouder": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat diensten niet direct onderscheiden zijn.",
+          "gedrag": "Bezoekers weten dan niet welke optie bij hen past.",
+          "patroon": "Breed aanbod is een kracht, maar kan online onduidelijkheid geven."
+        },
+        {
+          "zin": "De eerste stap voor kennismaking is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij kantoren met veel informatie op de site."
+        },
+        {
+          "zin": "De doelgroep is niet meteen duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of jullie passen bij hun situatie.",
+          "patroon": "Terwijl die focus er vaak wel is, alleen niet getoond."
+        },
+        {
+          "zin": "Reviews of referenties staan niet op de homepage.",
+          "gedrag": "Bezoekers zoeken dan zelf naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vermijdbaar zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "verzekeringsadviseur": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat diensten of producten niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet waarmee jullie kunnen helpen.",
+          "patroon": "Terwijl dat aanbod er vaak wel is, alleen niet prominent."
+        },
+        {
+          "zin": "De eerste stap voor een adviesgesprek is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij adviseurs die persoonlijk contact prefereren."
+        },
+        {
+          "zin": "Onafhankelijkheid is niet meteen duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of jullie objectief adviseren.",
+          "patroon": "Terwijl dat voor hen vaak een belangrijke overweging is."
+        },
+        {
+          "zin": "Reviews of ervaringen staan niet op de homepage.",
+          "gedrag": "Bezoekers zoeken dan zelf naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vermijdbaar zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "makelaar_vastgoed": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat actueel aanbod niet direct zichtbaar is.",
+          "gedrag": "Bezoekers gaan dan naar externe sites om te kijken wat er beschikbaar is.",
+          "patroon": "Dit zie ik vaker bij kantoren die op portals vertrouwen."
+        },
+        {
+          "zin": "Het verschil tussen verkoop en aankoop is niet direct onderscheiden.",
+          "gedrag": "Bezoekers weten dan niet waar ze moeten beginnen.",
+          "patroon": "Terwijl die scheiding voor hen vaak belangrijk is."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen duidelijk.",
+          "gedrag": "Bezoekers twijfelen dan of jullie in hun regio werken.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent."
+        },
+        {
+          "zin": "De mogelijkheid om een waardebepaling aan te vragen is niet meteen zichtbaar.",
+          "gedrag": "Bezoekers scrollen dan door zonder die stap te zetten.",
+          "patroon": "Terwijl dat vaak de eerste stap is die ze willen nemen."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "hypotheekadviseur": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat diensten niet direct onderscheiden zijn.",
+          "gedrag": "Bezoekers weten dan niet welke situatie bij hen past.",
+          "patroon": "Terwijl die opties er vaak wel zijn, alleen niet duidelijk gepresenteerd."
+        },
+        {
+          "zin": "De eerste stap voor een adviesgesprek is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij adviseurs die persoonlijk contact prefereren."
+        },
+        {
+          "zin": "Onafhankelijkheid is niet meteen duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of jullie objectief vergelijken.",
+          "patroon": "Terwijl dat voor hen vaak een belangrijke overweging is."
+        },
+        {
+          "zin": "Rekentools of indicaties staan niet prominent op de homepage.",
+          "gedrag": "Bezoekers gaan dan naar externe sites om te rekenen.",
+          "patroon": "Terwijl ze al op jullie site zijn en klaar om te starten."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "coaching_opleiding": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat niet meteen duidelijk is wat iemand hier concreet leert.",
+          "gedrag": "Bezoekers scrollen dan door en klikken weg.",
+          "patroon": "Dit zie ik vaker bij aanbieders die uitgaan van voorkennis bij de bezoeker."
+        },
+        {
+          "zin": "De focus ligt op meerdere thema's tegelijk.",
+          "gedrag": "Bezoekers weten dan niet of dit specifiek genoeg is voor hun situatie.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        },
+        {
+          "zin": "Resultaten of testimonials zijn niet direct zichtbaar op de homepage.",
+          "gedrag": "Bezoekers twijfelen dan of dit serieus en bewezen is.",
+          "patroon": "Terwijl die succesverhalen er vaak wel zijn."
+        },
+        {
+          "zin": "De eerste stap voor kennismaking is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "De drempel om te beginnen is al hoog; onduidelijkheid maakt het hoger."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "consultant_adviseur": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat expertise niet direct zichtbaar is.",
+          "gedrag": "Bezoekers weten dan niet of jullie verstand hebben van hun specifieke vraag.",
+          "patroon": "Terwijl die kennis er vaak wel is, alleen niet prominent getoond."
+        },
+        {
+          "zin": "Cases of resultaten staan niet op de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat jullie bereiken.",
+          "patroon": "Terwijl die track record er vaak wel is."
+        },
+        {
+          "zin": "De eerste stap voor kennismaking is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij experts die uitgaan van persoonlijk contact."
+        },
+        {
+          "zin": "De doelgroep is niet meteen duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of jullie passen bij hun type organisatie.",
+          "patroon": "Terwijl die focus er vaak wel is, alleen niet getoond."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "fotograaf_videograaf": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat portfolio niet direct zichtbaar is bovenaan.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten welke stijl jullie hanteren.",
+          "patroon": "Dit zie ik vaker bij creatieven die tekst boven beeld plaatsen."
+        },
+        {
+          "zin": "Het type werk is niet direct onderscheiden.",
+          "gedrag": "Bezoekers weten dan niet of jullie doen wat zij zoeken.",
+          "patroon": "Breed aanbod is een kracht, maar kan online onduidelijkheid geven."
+        },
+        {
+          "zin": "Prijsindicatie is niet vindbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij creatieven die maatwerk leveren."
+        },
+        {
+          "zin": "De mogelijkheid om te boeken is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al besloten hebben interesse te hebben."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "webdesigner_bureau": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat portfolio of cases niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat ze kunnen verwachten.",
+          "patroon": "Dit zie ik vaker bij bureaus die veel verschillende projecten doen."
+        },
+        {
+          "zin": "De werkwijze is niet direct duidelijk.",
+          "gedrag": "Bezoekers weten dan niet hoe een samenwerking verloopt.",
+          "patroon": "Terwijl dat proces er vaak wel is, alleen niet getoond."
+        },
+        {
+          "zin": "Prijsindicatie is niet vindbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij bureaus die maatwerk leveren."
+        },
+        {
+          "zin": "De eerste stap voor kennismaking is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al nieuwsgierig genoeg zijn om te praten."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "marketingbureau": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat cases of resultaten niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat jullie bereiken.",
+          "patroon": "Terwijl die track record er vaak wel is."
+        },
+        {
+          "zin": "Diensten lopen door elkaar zonder duidelijke structuur.",
+          "gedrag": "Bezoekers weten dan niet waar jullie het sterkst in zijn.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        },
+        {
+          "zin": "De eerste stap voor kennismaking is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij bureaus die persoonlijk contact prefereren."
+        },
+        {
+          "zin": "De doelgroep is niet meteen duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of jullie passen bij hun type bedrijf.",
+          "patroon": "Terwijl die focus er vaak wel is, alleen niet getoond."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "architect_interieur": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat projecten of portfolio niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten welke stijl jullie hanteren.",
+          "patroon": "Dit zie ik vaker bij bureaus die tekst boven beeld plaatsen."
+        },
+        {
+          "zin": "De stijl is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers weten dan niet of jullie passen bij wat zij in gedachten hebben.",
+          "patroon": "Terwijl die stijl er wel is, alleen niet direct getoond."
+        },
+        {
+          "zin": "De werkwijze is niet direct duidelijk.",
+          "gedrag": "Bezoekers weten dan niet hoe een samenwerking verloopt.",
+          "patroon": "Bij dit type project is het proces vaak net zo belangrijk als het resultaat."
+        },
+        {
+          "zin": "De eerste stap voor kennismaking is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "De drempel om een groot project te starten is al hoog."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "drukkerij_printshop": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat producten of mogelijkheden niet snel vindbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wat jullie allemaal kunnen.",
+          "patroon": "Terwijl dat aanbod er vaak wel is, alleen niet overzichtelijk."
+        },
+        {
+          "zin": "Prijsindicatie is niet direct zichtbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij bedrijven die maatwerk leveren."
+        },
+        {
+          "zin": "De mogelijkheid om een offerte aan te vragen is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al weten wat ze nodig hebben."
+        },
+        {
+          "zin": "Doorlooptijd is niet direct duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of het op tijd kan.",
+          "patroon": "Bij print is timing vaak een belangrijke factor."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "kinderopvang_bso": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de locatie of faciliteiten niet direct zichtbaar zijn.",
+          "gedrag": "Ouders kunnen dan moeilijk een beeld vormen van waar hun kind zou zijn.",
+          "patroon": "Dit zie ik vaker bij opvang die in de praktijk juist heel open is."
+        },
+        {
+          "zin": "De aanpak of pedagogiek is niet direct voelbaar uit de homepage.",
+          "gedrag": "Ouders weten dan niet of dit past bij hun opvoedstijl.",
+          "patroon": "Terwijl die visie er vaak wel is, alleen niet prominent getoond."
+        },
+        {
+          "zin": "Openingstijden zijn niet meteen duidelijk.",
+          "gedrag": "Ouders weten dan niet of dit past bij hun werkschema.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet zichtbaar genoeg."
+        },
+        {
+          "zin": "De mogelijkheid voor een rondleiding of inschrijving is niet meteen duidelijk.",
+          "gedrag": "Ouders scrollen dan door zonder die stap te zetten.",
+          "patroon": "Terwijl ze vaak al nieuwsgierig genoeg zijn om te komen kijken."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "rijschool": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat pakketten of prijzen niet snel vindbaar zijn.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij rijscholen die persoonlijk advies prefereren."
+        },
+        {
+          "zin": "Slagingspercentage is niet direct zichtbaar.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten hoe succesvol jullie zijn.",
+          "patroon": "Terwijl dat cijfer er vaak wel is, alleen niet prominent."
+        },
+        {
+          "zin": "De mogelijkheid voor een proefles is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder die stap te zetten.",
+          "patroon": "Terwijl een proefles vaak de beste manier is om te beginnen."
+        },
+        {
+          "zin": "Het lesgebied is niet direct duidelijk.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen in de buurt lesgeven.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "muziekschool_kunst": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat het aanbod niet direct overzichtelijk is.",
+          "gedrag": "Bezoekers weten dan niet welke lessen jullie geven.",
+          "patroon": "Terwijl dat aanbod er vaak wel is, alleen niet duidelijk gepresenteerd."
+        },
+        {
+          "zin": "Niveaus of doelgroepen zijn niet direct onderscheiden.",
+          "gedrag": "Bezoekers weten dan niet of dit past bij hun ervaring.",
+          "patroon": "Beginners en gevorderden hebben verschillende behoeften."
+        },
+        {
+          "zin": "Prijzen zijn niet vindbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Dit zie ik vaker bij scholen die persoonlijk advies prefereren."
+        },
+        {
+          "zin": "De mogelijkheid voor een proefles is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder die stap te zetten.",
+          "patroon": "Terwijl een proefles vaak de beste manier is om te beginnen."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "webshop_ecommerce": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat reviews of vertrouwenstekens niet direct zichtbaar zijn.",
+          "gedrag": "Bezoekers checken dan andere shops voor vergelijking.",
+          "patroon": "Terwijl die reviews er vaak wel zijn, alleen niet prominent geplaatst."
+        },
+        {
+          "zin": "Verzendinformatie is niet snel vindbaar.",
+          "gedrag": "Bezoekers twijfelen dan of het op tijd komt.",
+          "patroon": "Bij online kopen is levering vaak een beslissende factor."
+        },
+        {
+          "zin": "Retourbeleid is niet meteen duidelijk.",
+          "gedrag": "Bezoekers voelen zich dan minder veilig om te bestellen.",
+          "patroon": "Die garantie staat er vaak wel, alleen niet zichtbaar genoeg."
+        },
+        {
+          "zin": "Productcategorieën zijn niet direct overzichtelijk.",
+          "gedrag": "Bezoekers scrollen dan door en klikken weg.",
+          "patroon": "Dit zie ik vaker bij shops met een breed assortiment."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "retail_winkel": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat openingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze langs kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "De locatie is niet direct duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie in de buurt zijn.",
+          "patroon": "Voor een fysieke winkel is dat vaak de eerste vraag."
+        },
+        {
+          "zin": "Het assortiment is niet snel vindbaar.",
+          "gedrag": "Bezoekers weten dan niet wat ze kunnen verwachten.",
+          "patroon": "Terwijl dat vaak precies is wat hen zou overtuigen te komen."
+        },
+        {
+          "zin": "De sfeer of specialiteit is niet voelbaar uit de homepage.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of dit bij hen past.",
+          "patroon": "Terwijl die sfeer er in de praktijk vaak wel is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "bloemenwinkel_tuincentrum": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat openingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze langs kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "De locatie is niet direct duidelijk wanneer iemand op de site komt.",
+          "gedrag": "Bezoekers twijfelen dan of jullie in de buurt zijn.",
+          "patroon": "Voor een fysieke winkel is dat vaak de eerste vraag."
+        },
+        {
+          "zin": "De mogelijkheid om te bestellen is niet prominent aanwezig.",
+          "gedrag": "Bezoekers bellen dan liever, ook al hadden ze online willen bestellen.",
+          "patroon": "Dit zie ik vaker bij winkels die telefonisch sterk zijn."
+        },
+        {
+          "zin": "Bezorgmogelijkheid is niet direct duidelijk.",
+          "gedrag": "Bezoekers weten dan niet of jullie kunnen leveren.",
+          "patroon": "Terwijl die service er vaak wel is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "juwelier_optiek": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de collectie niet direct zichtbaar is.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat jullie aanbieden.",
+          "patroon": "Terwijl die collectie er wel is, alleen niet prominent getoond."
+        },
+        {
+          "zin": "Openingstijden zijn niet meteen duidelijk.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze langs kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent."
+        },
+        {
+          "zin": "De locatie is niet prominent aanwezig.",
+          "gedrag": "Bezoekers moeten dan extra stappen nemen om jullie te vinden.",
+          "patroon": "Voor een fysieke winkel is dat vaak de eerste vraag."
+        },
+        {
+          "zin": "Diensten zoals reparatie of aanpassing zijn niet direct vindbaar.",
+          "gedrag": "Bezoekers weten dan niet dat jullie dit ook doen.",
+          "patroon": "Terwijl die services er vaak wel zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "klusbedrijf_handyman": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat diensten niet direct overzichtelijk zijn.",
+          "gedrag": "Bezoekers weten dan niet of jullie doen wat zij nodig hebben.",
+          "patroon": "Breed aanbod is een kracht, maar kan online onduidelijkheid geven."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen duidelijk.",
+          "gedrag": "Bezoekers twijfelen dan of jullie bij hen kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent."
+        },
+        {
+          "zin": "De contactmogelijkheid staat niet prominent bovenaan.",
+          "gedrag": "Bezoekers met een klus moeten dan eerst scrollen.",
+          "patroon": "Terwijl ze vaak snel iemand willen bereiken."
+        },
+        {
+          "zin": "Reviews staan niet zichtbaar op de homepage.",
+          "gedrag": "Bezoekers zoeken dan zelf naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vermijdbaar zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "verhuur_equipment": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat het aanbod niet direct overzichtelijk is.",
+          "gedrag": "Bezoekers weten dan niet wat jullie allemaal verhuren.",
+          "patroon": "Terwijl dat aanbod er vaak wel is, alleen niet duidelijk gepresenteerd."
+        },
+        {
+          "zin": "Beschikbaarheid is niet direct te checken.",
+          "gedrag": "Bezoekers moeten dan bellen om te vragen of iets vrij is.",
+          "patroon": "Dit zie ik vaker bij verhuurbedrijven die telefonisch sterk zijn."
+        },
+        {
+          "zin": "Prijzen zijn niet vindbaar.",
+          "gedrag": "Bezoekers zoeken dan verder voor vergelijking.",
+          "patroon": "Terwijl ze vaak al weten wat ze willen huren."
+        },
+        {
+          "zin": "De mogelijkheid om te reserveren is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al besloten hebben iets te willen huren."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "evenementen_catering": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat het type evenementen niet direct onderscheiden is.",
+          "gedrag": "Bezoekers weten dan niet of jullie doen wat zij nodig hebben.",
+          "patroon": "Breed aanbod is een kracht, maar kan online onduidelijkheid geven."
+        },
+        {
+          "zin": "Portfolio of voorbeelden zijn niet direct zichtbaar.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat ze kunnen verwachten.",
+          "patroon": "Terwijl die voorbeelden er vaak wel zijn."
+        },
+        {
+          "zin": "Prijsindicatie is niet vindbaar.",
+          "gedrag": "Bezoekers weten dan niet of jullie binnen hun budget vallen.",
+          "patroon": "Dit zie ik vaker bij bedrijven die maatwerk leveren."
+        },
+        {
+          "zin": "De mogelijkheid om een offerte aan te vragen is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al een datum in gedachten hebben."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "it_software": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat niet meteen duidelijk is welk probleem jullie oplossen.",
+          "gedrag": "Bezoekers snappen dan niet of dit voor hen is.",
+          "patroon": "Dit zie ik vaker bij technische bedrijven die uitgaan van voorkennis."
+        },
+        {
+          "zin": "Diensten lopen door elkaar zonder duidelijke structuur.",
+          "gedrag": "Bezoekers weten dan niet waar jullie het sterkst in zijn.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        },
+        {
+          "zin": "Cases of resultaten zijn niet direct zichtbaar.",
+          "gedrag": "Bezoekers nemen dan geen contact op omdat ze niet weten wat te verwachten.",
+          "patroon": "Terwijl die track record er vaak wel is."
+        },
+        {
+          "zin": "De eerste stap voor contact is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Dit zie ik vaker bij bedrijven met veel informatie op de site."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "transport_logistiek": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat diensten niet direct onderscheiden zijn.",
+          "gedrag": "Bezoekers weten dan niet welke oplossing bij hen past.",
+          "patroon": "Breed aanbod is een kracht, maar kan online onduidelijkheid geven."
+        },
+        {
+          "zin": "Het werkgebied is niet meteen duidelijk.",
+          "gedrag": "Bezoekers twijfelen dan of jullie hun route dekken.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent."
+        },
+        {
+          "zin": "De mogelijkheid om een offerte aan te vragen is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al weten wat ze moeten versturen."
+        },
+        {
+          "zin": "Referenties of klanten zijn niet zichtbaar.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten of jullie betrouwbaar zijn.",
+          "patroon": "Terwijl die track record er vaak wel is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    },
+
+    "uitzendbureau_recruitment": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat vacatures niet direct zichtbaar zijn.",
+          "gedrag": "Werkzoekenden weten dan niet of er iets voor hen is.",
+          "patroon": "Terwijl die vacatures er vaak wel zijn, alleen niet prominent."
+        },
+        {
+          "zin": "Branches of specialisaties zijn niet direct onderscheiden.",
+          "gedrag": "Bezoekers weten dan niet of jullie hun vakgebied kennen.",
+          "patroon": "Focus is een kracht die online niet altijd zichtbaar is."
+        },
+        {
+          "zin": "De eerste stap om contact op te nemen is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "De drempel om van baan te wisselen is al hoog."
+        },
+        {
+          "zin": "Werkgevers en werkzoekenden zijn niet direct onderscheiden.",
+          "gedrag": "Beide groepen weten dan niet waar ze moeten beginnen.",
+          "patroon": "Terwijl die scheiding voor hen belangrijk is."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "non_profit_vereniging": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de missie niet direct duidelijk is bovenaan.",
+          "gedrag": "Bezoekers snappen dan niet meteen waar jullie voor staan.",
+          "patroon": "Terwijl die missie er wel is, alleen niet prominent geplaatst."
+        },
+        {
+          "zin": "Activiteiten zijn niet snel vindbaar.",
+          "gedrag": "Bezoekers weten dan niet wat jullie concreet doen.",
+          "patroon": "Dit zie ik vaker bij organisaties met een breed programma."
+        },
+        {
+          "zin": "De mogelijkheid om lid te worden of te doneren is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al gemotiveerd zijn om te helpen."
+        },
+        {
+          "zin": "Impact of resultaten zijn niet zichtbaar.",
+          "gedrag": "Bezoekers kunnen dan moeilijk inschatten wat hun bijdrage betekent.",
+          "patroon": "Terwijl die verhalen er vaak wel zijn."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "sportclub_vereniging": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat trainingstijden niet meteen zichtbaar zijn.",
+          "gedrag": "Bezoekers weten dan niet wanneer ze kunnen komen.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "De locatie is niet direct duidelijk.",
+          "gedrag": "Bezoekers twijfelen dan of jullie in de buurt zijn.",
+          "patroon": "Voor een sportclub is dat vaak een belangrijke factor."
+        },
+        {
+          "zin": "Teams of niveaus zijn niet direct onderscheiden.",
+          "gedrag": "Bezoekers weten dan niet of er een groep is die bij hen past.",
+          "patroon": "Beginners en gevorderden hebben verschillende behoeften."
+        },
+        {
+          "zin": "De mogelijkheid voor een proeftraining is niet meteen duidelijk.",
+          "gedrag": "Bezoekers scrollen dan door zonder die stap te zetten.",
+          "patroon": "Terwijl een proeftraining vaak de beste manier is om te beginnen."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik kort aanwijzen waar dit gebeurt?",
+        "Kan ik je laten zien waar ik dit zag?"
+      ]
+    },
+
+    "generiek": {
+      "observaties": [
+        {
+          "zin": "Bij het bekijken van jullie site viel me op dat de bovenste tekst algemeen blijft zonder concrete belofte.",
+          "gedrag": "Bezoekers scrollen dan door zonder te weten wat jullie uniek maakt.",
+          "patroon": "Dit zie ik vaker bij bedrijven die veel doen maar het moeilijk samenvatten."
+        },
+        {
+          "zin": "Er is geen duidelijke volgende stap bovenaan de pagina.",
+          "gedrag": "Bezoekers scrollen dan door zonder actie te ondernemen.",
+          "patroon": "Terwijl ze vaak al nieuwsgierig genoeg zijn om door te gaan."
+        },
+        {
+          "zin": "Contactgegevens zijn niet meteen zichtbaar boven de vouw.",
+          "gedrag": "Bezoekers met een vraag moeten dan eerst zoeken.",
+          "patroon": "Die informatie staat er vaak wel, alleen niet prominent genoeg."
+        },
+        {
+          "zin": "Reviews of bewijs zijn niet direct zichtbaar op de homepage.",
+          "gedrag": "Bezoekers zoeken dan zelf naar beoordelingen elders.",
+          "patroon": "Dit kost hen extra stappen die vermijdbaar zijn."
+        },
+        {
+          "zin": "Meerdere onderwerpen worden tegelijk gepresenteerd zonder focus.",
+          "gedrag": "Bezoekers weten dan niet waar jullie het sterkst in zijn.",
+          "patroon": "Breed aanbod is een kracht, maar kan online verwarring geven."
+        }
+      ],
+      "ctas": [
+        "Wil je dat ik je laat zien wat ik bedoel?",
+        "Zal ik je laten zien waar dit gebeurt?",
+        "Kan ik kort aanwijzen wat ik zag?"
+      ]
+    }
+  }
+}

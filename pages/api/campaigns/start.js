@@ -1,8 +1,10 @@
 // Campaign Start API
 // Creates a new campaign and schedules the first email via QStash
 
-import { createCampaign, startCampaign, updateCampaign } from '../../../utils/campaign-server-store';
+import { createCampaign, startCampaign, updateCampaign, addCampaignLog } from '../../../utils/campaign-server-store';
 import { getQStashClient } from '../../../utils/qstash';
+import { getBaseUrl } from '../../../utils/base-url';
+
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -45,10 +47,12 @@ export default async function handler(req, res) {
 
         // Start the campaign
         await startCampaign(campaign.id);
+        await addCampaignLog(campaign.id, '🚀 Campagne gestart op de achtergrond', 'info');
 
         // Schedule first email processing via QStash
         const qstashClient = getQStashClient();
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        const baseUrl = getBaseUrl();
+
 
         if (qstashClient) {
             try {

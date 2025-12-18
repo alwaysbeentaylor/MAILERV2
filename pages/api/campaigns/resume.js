@@ -1,8 +1,10 @@
 // Campaign Resume API
 // Resumes a paused campaign and schedules next email
 
-import { getCampaign, resumeCampaign } from '../../../utils/campaign-server-store';
+import { getCampaign, resumeCampaign, addCampaignLog } from '../../../utils/campaign-server-store';
 import { getQStashClient } from '../../../utils/qstash';
+import { getBaseUrl } from '../../../utils/base-url';
+
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -37,10 +39,12 @@ export default async function handler(req, res) {
 
         // Resume the campaign
         const updated = await resumeCampaign(campaignId);
+        await addCampaignLog(campaignId, '🚀 Campagne hervat op de achtergrond', 'info');
 
         // Schedule next email via QStash
         const qstashClient = getQStashClient();
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        const baseUrl = getBaseUrl();
+
 
         if (qstashClient) {
             try {

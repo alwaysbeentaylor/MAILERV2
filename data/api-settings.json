@@ -1,0 +1,7 @@
+{
+  "resendEnabled": true,
+  "mailgunEnabled": true,
+  "openaiEnabled": true,
+  "websiteAnalysisEnabled": true,
+  "dryRunMode": false
+}

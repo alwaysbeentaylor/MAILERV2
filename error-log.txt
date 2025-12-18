@@ -1,0 +1,22 @@
+
+=== ERROR AT 2025-12-17T14:49:46.621Z ===
+Message: getUnsubscribeUrl is not defined
+Stack: ReferenceError: getUnsubscribeUrl is not defined
+    at handler (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\.next\dev\server\chunks\[root-of-the-server]__672a78eb._.js:3929:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiResolver (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\compiled\next-server\pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\compiled\next-server\pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\.next\dev\server\chunks\node_modules_next_dist_3cb687d5._.js:2935:13)
+    at async DevServer.runApi (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\next-server.js:391:37)
+    at async DevServer.handleRequestImpl (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\base-server.js:912:17)
+    at async C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\dev\next-dev-server.js:382:20
+    at async Span.traceAsyncFn (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\trace\trace.js:157:20)
+    at async DevServer.handleRequest (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\dev\next-dev-server.js:378:24)
+    at async invokeRender (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\lib\router-server.js:240:21)
+    at async handleRequest (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\lib\router-server.js:436:24)
+    at async requestHandlerImpl (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\lib\router-server.js:484:13)
+    at async Server.requestListener (C:\Users\Developer\Projects\MAILER\MailerOldWorkingClean\mailer-36e6d7e603e3b7adf55814aa2308f690f6ecadcd\node_modules\next\dist\server\lib\start-server.js:226:13)
+ToEmail: develop.json@gmail.com
+BusinessName: gmail
+=====================================

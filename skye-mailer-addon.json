@@ -1,0 +1,301 @@
+{
+    "skyeMailerAddon": {
+        "version": "2.0",
+        "brand": {
+            "naam": "SKYE Unlimited",
+            "positionering": "Premium websites + conversie + automatisering (geen template vibe)",
+            "belofte": "Maak je website een lead-machine die tijd bespaart en betere aanvragen oplevert",
+            "ctaDefault": "10 minuten: ik toon 3 concrete verbeterpunten op je homepage",
+            "tone": {
+                "stijl": [
+                    "direct",
+                    "menselijk",
+                    "to-the-point",
+                    "geen marketingpraat"
+                ],
+                "vermijd": [
+                    "overdreven hype",
+                    "emoji-blokken",
+                    "lange verhalen",
+                    "vage beloftes",
+                    "technische features"
+                ]
+            }
+        },
+        "observationPlaybook": {
+            "regels": [
+                "Kies exact 1 observatie per email",
+                "Als onzeker: schrijf als check-vraag (Klopt het dat...?)",
+                "Koppel observatie altijd aan impact (leads/tijd/no-shows/prijsjagers)",
+                "Observatie moet 'screenable' zijn: iets wat je in 5 seconden ziet op homepage"
+            ],
+            "observaties": [
+                {
+                    "id": "no_clear_cta",
+                    "trigger": [
+                        "geen duidelijke knop bovenaan",
+                        "contact verstopt",
+                        "CTA mist",
+                        "geen actieknop"
+                    ],
+                    "zin": "Ik mis op jullie homepage een duidelijke 'Vraag offerte aan' of 'Boek afspraak' knop bovenaan—daardoor haken mensen sneller af of gaan ze vergelijken.",
+                    "checkVraag": "Klopt het dat er geen duidelijke actieknop bovenaan staat?",
+                    "impact": "Bezoekers weten niet wat de volgende stap is → ze vertrekken naar een concurrent die het wel duidelijk maakt."
+                },
+                {
+                    "id": "no_reviews_proof",
+                    "trigger": [
+                        "weinig reviews zichtbaar",
+                        "geen vertrouwenselementen",
+                        "geen testimonials",
+                        "geen social proof"
+                    ],
+                    "zin": "Jullie werk oogt degelijk, maar ik zie weinig reviews of voor-na bewijs direct op de homepage—online kiest men dan sneller de 'veiligste' concurrent.",
+                    "checkVraag": "Klopt het dat reviews of projectresultaten niet meteen zichtbaar zijn op jullie homepage?",
+                    "impact": "Nieuwe bezoekers hebben geen bewijs dat jullie leveren wat je belooft → ze kiezen de concurrent met 50 Google reviews."
+                },
+                {
+                    "id": "outdated_look",
+                    "trigger": [
+                        "gedateerde layout",
+                        "oude fonts",
+                        "oude footer",
+                        "verouderd design",
+                        "2015 vibe"
+                    ],
+                    "zin": "De site voelt wat gedateerd, en dat is precies waar goede klanten onbewust afhaken (zeker op mobiel).",
+                    "checkVraag": "Hebben jullie de site al een tijdje niet vernieuwd? Op mobiel voelt hij wat gedateerd.",
+                    "impact": "Eerste indruk = professionele indruk. Een oude site = 'zijn ze nog wel actief?' → bounce."
+                },
+                {
+                    "id": "no_portfolio",
+                    "trigger": [
+                        "geen projecten",
+                        "geen portfolio",
+                        "alleen tekst",
+                        "geen voorbeelden",
+                        "geen cases"
+                    ],
+                    "zin": "Ik zie weinig concrete projecten of voor-na foto's. Voor nieuwe klanten is dat hét bewijs dat jullie kwaliteit de hogere prijs waard is.",
+                    "checkVraag": "Klopt het dat jullie projecten of resultaten niet centraal staan op de site?",
+                    "impact": "Zonder bewijs kopen mensen op prijs → je krijgt prijsjagers i.p.v. klanten die kwaliteit waarderen."
+                },
+                {
+                    "id": "weak_service_pages",
+                    "trigger": [
+                        "diensten onduidelijk",
+                        "alles op 1 pagina",
+                        "vaag aanbod",
+                        "geen specialisatie"
+                    ],
+                    "zin": "De diensten staan vrij breed beschreven. Daardoor krijg je sneller prijsjagers i.p.v. mensen die exact voor jullie specialisatie komen.",
+                    "checkVraag": "Klopt het dat de diensten vrij algemeen zijn beschreven zonder aparte pagina's per specialisatie?",
+                    "impact": "Algemene diensten = algemene prijs-vergelijking. Specifiek = premium perceptie."
+                },
+                {
+                    "id": "hidden_contact",
+                    "trigger": [
+                        "contact verstopt",
+                        "geen telefoonnummer zichtbaar",
+                        "alleen contactformulier"
+                    ],
+                    "zin": "Je contactgegevens staan vrij verstopt. Mensen die nu willen bellen of mailen, moeten zoeken—en de meesten doen dat niet.",
+                    "checkVraag": "Klopt het dat je telefoonnummer of email niet direct zichtbaar is op de homepage?",
+                    "impact": "Elke extra klik = 20% minder leads. Verstopte contact = gemiste opportuniteiten."
+                },
+                {
+                    "id": "slow_mobile",
+                    "trigger": [
+                        "traag op mobiel",
+                        "laadt langzaam",
+                        "zware afbeeldingen"
+                    ],
+                    "zin": "De site laadt traag op mobiel. 53% van bezoekers vertrekt als het langer dan 3 seconden duurt.",
+                    "checkVraag": "Heb je de site recent getest op een telefoon? Hij laadt vrij traag.",
+                    "impact": "Google bestraft trage sites + bezoekers vertrekken voordat ze je aanbod zien."
+                },
+                {
+                    "id": "no_pricing_indication",
+                    "trigger": [
+                        "geen prijzen",
+                        "geen tarieven",
+                        "prijzen onduidelijk"
+                    ],
+                    "zin": "Ik zie geen prijsindicatie. Dat betekent dat je veel tijd kwijt bent aan mensen die uiteindelijk 'te duur' zeggen.",
+                    "checkVraag": "Klopt het dat er geen prijsindicatie of 'vanaf' tarieven op de site staan?",
+                    "impact": "Zonder prijsfilter krijg je aanvragen van mensen die nooit gaan betalen → verspilde offertetijd."
+                },
+                {
+                    "id": "no_booking_system",
+                    "trigger": [
+                        "geen online boeken",
+                        "alleen telefoon",
+                        "geen afspraakmodule"
+                    ],
+                    "zin": "Ik zie dat mensen moeten bellen om een afspraak te maken. 40% van de boekingen gebeurt buiten openingstijden—die mis je nu.",
+                    "checkVraag": "Klopt het dat klanten niet online kunnen boeken en moeten bellen?",
+                    "impact": "Mensen boeken liever om 22:00 op de bank dan om 10:00 tussen hun werk door. Geen online = gemiste boekingen."
+                },
+                {
+                    "id": "generic_hero",
+                    "trigger": [
+                        "generieke kop",
+                        "We zijn experts",
+                        "Welkom bij",
+                        "saaie hero"
+                    ],
+                    "zin": "De bovenste tekst is vrij generiek ('Welkom bij...'). Dat is de #1 plek waar bezoekers beslissen te blijven of weg te klikken.",
+                    "checkVraag": "Wist je dat de bovenste tekst ('hero') 80% van de beslissing bepaalt om te blijven of weg te gaan?",
+                    "impact": "Generieke koppen = gemiddelde conversie. Specifieke pijnpunt-koppen = 2-3x meer leads."
+                }
+            ]
+        },
+        "ctaLibrary": [
+            {
+                "id": "audit_10min",
+                "zin": "Zal ik je in 10 minuten tonen waar je homepage nu aanvragen lekt? (3 concrete punten, geen sales pitch)",
+                "type": "reply",
+                "frictie": "laag"
+            },
+            {
+                "id": "mockup_hero",
+                "zin": "Wil je dat ik gratis 1 voorstel maak voor je bovenste stuk (hero + CTA)? Dan zie je meteen hoe het scherper kan.",
+                "type": "reply",
+                "frictie": "laag"
+            },
+            {
+                "id": "quick_video",
+                "zin": "Wil je dat ik je een korte video (2 min) stuur met wat ik zou aanpassen? Geen verplichtingen.",
+                "type": "reply",
+                "frictie": "laag"
+            },
+            {
+                "id": "screenshot_feedback",
+                "zin": "Ik kan je 1 screenshot sturen met wat ik zou veranderen aan je homepage. Interesse?",
+                "type": "reply",
+                "frictie": "zeer laag"
+            },
+            {
+                "id": "quick_call",
+                "zin": "Heb je 10 minuten deze week? Dan loop ik met je door wat ik zou aanpassen.",
+                "type": "call",
+                "frictie": "medium"
+            }
+        ],
+        "subjectLibrary": {
+            "neutral": [
+                "Kleine vraag over jullie website",
+                "Snelle observatie op jullie homepage",
+                "Mag ik iets eerlijk zeggen?",
+                "1 concreet punt dat aanvragen kost",
+                "Kort: dit valt op bij jullie site",
+                "Vraagje — {bedrijfsnaam}",
+                "{bedrijfsnaam} - dit viel me op",
+                "Zag je site... vraagje",
+                "Eerlijke vraag over {bedrijfsnaam}"
+            ],
+            "nicheVariations": {
+                "aannemers": [
+                    "Offertes voor niks? (kort punt)",
+                    "Projecten zichtbaar maken = betere leads",
+                    "{bedrijfsnaam} - dit kost je offertetijd"
+                ],
+                "horeca": [
+                    "No-shows: 1 simpele fix",
+                    "Reserveringen zonder telefoon-chaos",
+                    "Lege tafels op zaterdag?"
+                ],
+                "tandartsen": [
+                    "Lege stoelen voorkomen? (1 idee)",
+                    "Minder telefoontjes, meer patiënten",
+                    "Die 50 telefoontjes per dag..."
+                ],
+                "kappers": [
+                    "Boekingen om 22:00 - mis je die?",
+                    "No-shows op zaterdag? Dit helpt.",
+                    "Die telefoon tijdens het knippen..."
+                ],
+                "accountants": [
+                    "Maart-juni chaos? 1 idee.",
+                    "Die 47 telefoontjes over BTW-deadlines...",
+                    "No-shows kosten je €3000+/jaar"
+                ],
+                "advocaten": [
+                    "40% intake leidt nergens toe? Dit helpt.",
+                    "Gratis advies weggeven? Stop ermee.",
+                    "Betaalde intake = 90% conversie"
+                ],
+                "fysiotherapeuten": [
+                    "Patiënten stoppen voortijdig? Hier is waarom.",
+                    "Oefeningen niet gedaan? Hier is de fix.",
+                    "Die 4 no-shows per week..."
+                ],
+                "restaurants": [
+                    "Die no-show tafel van 8... €400 weg.",
+                    "Telefoon 50x per dag? Niet nodig.",
+                    "Allergieën weten vooraf? Makkelijk."
+                ]
+            }
+        },
+        "followupFramework": {
+            "followup1": {
+                "delayDays": 2,
+                "doel": "vriendelijke reminder + één statistiek",
+                "subjectPrefix": "Re: ",
+                "template": "Hey {naam}, ik wilde dit even bovenaan leggen. In {niche} zie je vaak dat {statistiek}. Als je wil: ik toon je die 3 punten in 10 minuten. Interesse?"
+            },
+            "followup2": {
+                "delayDays": 5,
+                "doel": "last ping + concreet gratis voorbeeld aanbieden",
+                "subjectPrefix": "Laatste: ",
+                "template": "Laatste ping {naam}. Zal ik anders gewoon 1 concreet voorbeeld sturen (hero + CTA mockup) zodat je meteen ziet wat ik bedoel? Geen verplichtingen, gewoon ter inspiratie."
+            }
+        },
+        "qualityGates": {
+            "hardFails": [
+                "Geen concrete observatie of te generiek ('opvallen', 'online zichtbaar')",
+                "Meer dan 2 solution bullets",
+                "Meer dan 170 woorden in body",
+                "Geen duidelijke CTA die reply uitlokt",
+                "Feature dump (design, snel, modern) zonder effect/consequentie",
+                "Generieke marketing woorden ('Meer klanten!' zonder context)"
+            ],
+            "mustHave": [
+                "1 specifieke observatie over HUN site",
+                "Impact van die observatie (wat kost het hen?)",
+                "Oplossing vertaald naar resultaat (niet feature)",
+                "Low-friction CTA (reply-based, niet 'plan een call')"
+            ]
+        },
+        "emailStructure": {
+            "maxWords": 170,
+            "sections": [
+                {
+                    "naam": "opening",
+                    "beschrijving": "Bedrijf + observatie (1 zin)",
+                    "voorbeeld": "Ik keek net naar {bedrijfsnaam}.nl en er viel me iets op."
+                },
+                {
+                    "naam": "observatie",
+                    "beschrijving": "Wat je zag + wat het kost (1-2 zinnen)",
+                    "voorbeeld": "Er staat geen duidelijke 'boek nu' knop bovenaan. Dat betekent dat bezoekers niet weten wat de volgende stap is—en dan gaan ze vergelijken."
+                },
+                {
+                    "naam": "microCredibility",
+                    "beschrijving": "Kort: waarom jij dit weet (1 zin)",
+                    "voorbeeld": "Ik fix dit soort conversie-lekken voor {niche} in heel Nederland."
+                },
+                {
+                    "naam": "oplossing",
+                    "beschrijving": "Max 2 bullets, resultaat-gericht (niet feature)",
+                    "voorbeeld": "→ Duidelijke CTA = bezoekers weten wat te doen\n→ Minder prijsjagers, meer serieuze aanvragen"
+                },
+                {
+                    "naam": "cta",
+                    "beschrijving": "Low-friction, reply-based (1 zin)",
+                    "voorbeeld": "Zal ik je in 10 minuten 3 concrete verbeterpunten laten zien? Geen pitch, gewoon feedback."
+                }
+            ]
+        }
+    }
+}

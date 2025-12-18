@@ -2,6 +2,8 @@
 // Dit endpoint wordt aangeroepen door QStash wanneer een email moet worden verstuurd
 
 import { verifySignature } from '../../utils/qstash';
+import { getBaseUrl } from '../../utils/base-url';
+
 
 export const config = {
     api: {
@@ -31,7 +33,8 @@ export default async function handler(req, res) {
 
     try {
         // Call the actual send-email endpoint
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        const baseUrl = getBaseUrl();
+
 
         const response = await fetch(`${baseUrl}/api/send-email`, {
             method: 'POST',

@@ -1,0 +1,18 @@
+{
+  "professional": {
+    "subject": "Pizzeria Milano - website analyse",
+    "intro": "Ik analyseerde https://pizzeria-milano.be en identificeerde drie optimalisatiemogelijkheden die uw conversie kunnen verhogen."
+  },
+  "casual": {
+    "subject": "Hey Pizzeria Milano! Even gekeken.. 👀",
+    "intro": "Yooo! Keek net naar https://pizzeria-milano.be en dacht: dit kan zoveel beter! 🔥 Geen hate, gewoon een tip."
+  },
+  "urgent": {
+    "subject": "Pizzeria Milano - je mist klanten (elke dag)",
+    "intro": "Elke dag dat https://pizzeria-milano.be zo blijft, loop je klanten mis. Letterlijk. Ik zag drie dingen die je NU moet weten."
+  },
+  "friendly": {
+    "subject": "Pizzeria Milano - even langskomen 👋",
+    "intro": "Hoi! Ik kwam jullie site tegen en dacht: laat ik even helpen. Zag een paar dingen die jullie vast niet doorhebben."
+  }
+}

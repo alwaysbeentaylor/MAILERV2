@@ -8,9 +8,12 @@ import {
     updateCampaignEmail,
     completeCampaign,
     errorCampaign,
-    getNextPendingEmail
+    getNextPendingEmail,
+    addCampaignLog
 } from '../../utils/campaign-server-store';
 import { verifySignature, getQStashClient } from '../../utils/qstash';
+import { getBaseUrl } from '../../utils/base-url';
+
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -77,6 +80,7 @@ export default async function handler(req, res) {
         if (!nextEmail) {
             // No more pending emails - mark campaign as completed
             console.log(`✅ Campaign ${campaignId} completed - no more pending emails`);
+            await addCampaignLog(campaignId, '✅ Campagne voltooid: alle emails verwerkt', 'success');
             await completeCampaign(campaignId);
             return res.status(200).json({
                 success: true,
@@ -95,7 +99,8 @@ export default async function handler(req, res) {
         });
 
         // Send the email via send-email API
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+        const baseUrl = getBaseUrl();
+
 
         try {
             const sendResult = await fetch(`${baseUrl}/api/send-email`, {
@@ -132,6 +137,7 @@ export default async function handler(req, res) {
                     trackingId: sendData.emailId || null,
                     smtpUsed: sendData.smtpUsed || null
                 });
+                await addCampaignLog(campaignId, `✅ E-mail verzonden naar ${emailData.email}`, 'success');
 
                 // Rotate SMTP if in rotate mode
                 if (campaign.smtpMode === 'rotate' && campaign.smtpAccountIds?.length > 1) {
@@ -148,6 +154,7 @@ export default async function handler(req, res) {
                     processedAt: new Date().toISOString(),
                     error: sendData.error?.message || sendData.error || 'Unknown error'
                 });
+                await addCampaignLog(campaignId, `❌ Fout bij ${emailData.email}: ${sendData.error?.message || sendData.error}`, 'error');
             }
         } catch (sendError) {
             console.error(`❌ Send error for ${emailData.email}:`, sendError);

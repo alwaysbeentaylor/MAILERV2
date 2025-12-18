@@ -1,0 +1,945 @@
+{
+  "meta": {
+    "versie": "2.0",
+    "beschrijving": "Controledocument voor AI-gestuurde cold outreach. JSON stuurt, AI formuleert.",
+    "regels": [
+      "Kies exact één observatie per mail uit geldige_observaties",
+      "Gebruik nooit termen uit verboden_observaties",
+      "Formuleer feitelijk, geen oordeel of advies",
+      "Geen uitleg of oplossing geven in de mail",
+      "Geen niche of diensten expliciet benoemen",
+      "CTA wekt nieuwsgierigheid, vraagt niet om call",
+      "Als observatie ook past bij andere niche, kies een andere",
+      "Maximaal 4-5 zinnen totaal per mail"
+    ]
+  },
+
+  "openings_varianten": [
+    "Ik keek even naar jullie site en merkte iets op.",
+    "Bij het bekijken van jullie homepage viel me iets op.",
+    "Tijdens het scrollen door jullie pagina zag ik iets.",
+    "Ik kwam jullie site tegen en zag iets interessants.",
+    "Even door jullie website gegaan en iets opgemerkt."
+  ],
+
+  "cta_varianten": [
+    "Zal ik je laten zien waar dit gebeurt?",
+    "Wil je dat ik kort aanwijs wat ik bedoel?",
+    "Zal ik dat even laten zien?",
+    "Wil je zien waar ik dit zag?",
+    "Kan ik je kort laten zien wat ik bedoel?"
+  ],
+
+  "niches": {
+
+    "generiek": {
+      "bezoekers_doel": "Snel begrijpen of dit relevant is",
+      "typische_bezoeker": "Iemand die snel wil weten of dit de moeite waard is",
+      "geldige_observaties": [
+        "bovenste tekst blijft algemeen zonder concrete belofte",
+        "geen duidelijke volgende stap bovenaan de pagina",
+        "contactgegevens niet meteen zichtbaar boven de vouw",
+        "reviews of bewijs niet direct zichtbaar op homepage",
+        "meerdere onderwerpen tegelijk op de homepage zonder focus",
+        "belangrijkste actieknop staat pas onderaan",
+        "bezoeker moet scrollen om te begrijpen wat jullie doen"
+      ],
+      "verboden_observaties": [
+        "design verouderd",
+        "website slecht",
+        "conversie laag",
+        "branding zwak",
+        "UX niet optimaal",
+        "marketingstrategie ontbreekt"
+      ]
+    },
+
+    "aannemer_bouw": {
+      "bezoekers_doel": "Kunnen ze dit project vertrouwen?",
+      "typische_bezoeker": "Huiseigenaar die verbouwing of nieuwbouw overweegt",
+      "geldige_observaties": [
+        "projecten of voor-na beelden niet direct zichtbaar",
+        "reviews niet zichtbaar op de homepage",
+        "geen duidelijke stap om contact op te nemen of offerte aan te vragen",
+        "meerdere diensten tegelijk gepresenteerd zonder duidelijke focus",
+        "werkgebied niet meteen duidelijk",
+        "geen indicatie van doorlooptijd of werkwijze",
+        "recente projecten niet direct vindbaar"
+      ],
+      "verboden_observaties": [
+        "design verouderd",
+        "positionering zwak",
+        "meer klanten nodig",
+        "concurrentie is beter",
+        "website oogt amateuristisch"
+      ]
+    },
+
+    "dakwerker": {
+      "bezoekers_doel": "Is dit betrouwbaar voor mijn dak?",
+      "typische_bezoeker": "Huiseigenaar met lekkage of renovatieplannen",
+      "geldige_observaties": [
+        "voor-na foto's van dakprojecten niet direct zichtbaar",
+        "werkgebied niet meteen duidelijk",
+        "geen indicatie van type daken of specialisaties",
+        "contactmogelijkheid niet prominent aanwezig",
+        "reviews of ervaringen niet op homepage"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "te weinig leads",
+        "SEO ontbreekt"
+      ]
+    },
+
+    "schilder": {
+      "bezoekers_doel": "Kan ik het resultaat vertrouwen?",
+      "typische_bezoeker": "Huiseigenaar die wil laten schilderen",
+      "geldige_observaties": [
+        "geen voorbeelden van uitgevoerd werk direct zichtbaar",
+        "binnen- en buitenwerk niet onderscheiden",
+        "werkgebied niet meteen duidelijk",
+        "contactmogelijkheid niet bovenaan",
+        "reviews niet zichtbaar op homepage"
+      ],
+      "verboden_observaties": [
+        "portfolio zwak",
+        "website oogt goedkoop",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "loodgieter": {
+      "bezoekers_doel": "Kunnen ze snel komen?",
+      "typische_bezoeker": "Iemand met urgent probleem of renovatieplannen",
+      "geldige_observaties": [
+        "telefoonnummer niet meteen prominent zichtbaar",
+        "geen indicatie van spoedservice of beschikbaarheid",
+        "werkgebied niet direct duidelijk",
+        "diensten lopen door elkaar zonder structuur",
+        "geen duidelijke stap voor aanvraag"
+      ],
+      "verboden_observaties": [
+        "website slecht",
+        "conversie laag",
+        "meer klanten nodig"
+      ]
+    },
+
+    "elektricien": {
+      "bezoekers_doel": "Is dit veilig en betrouwbaar?",
+      "typische_bezoeker": "Huiseigenaar of bedrijf met elektrisch vraagstuk",
+      "geldige_observaties": [
+        "certificeringen of keurmerken niet direct zichtbaar",
+        "contactmogelijkheid niet prominent aanwezig",
+        "diensten staan verspreid zonder duidelijke volgorde",
+        "werkgebied niet meteen duidelijk",
+        "geen indicatie van responstijd"
+      ],
+      "verboden_observaties": [
+        "website amateuristisch",
+        "vertrouwen ontbreekt",
+        "SEO slecht"
+      ]
+    },
+
+    "installatie_techniek": {
+      "bezoekers_doel": "Is dit betrouwbaar en snel geregeld?",
+      "typische_bezoeker": "Iemand die CV, airco of installatie nodig heeft",
+      "geldige_observaties": [
+        "geen duidelijke eerste stap voor aanvraag",
+        "contactinformatie niet prominent aanwezig",
+        "diensten staan verspreid zonder duidelijke volgorde",
+        "werkgebied niet direct duidelijk",
+        "merken of specialisaties niet zichtbaar"
+      ],
+      "verboden_observaties": [
+        "website oogt amateuristisch",
+        "concurrentie beter",
+        "positionering zwak"
+      ]
+    },
+
+    "tuinarchitect_hovenier": {
+      "bezoekers_doel": "Kunnen ze mijn tuin transformeren?",
+      "typische_bezoeker": "Huiseigenaar die tuin wil aanleggen of renoveren",
+      "geldige_observaties": [
+        "projectfoto's of portfolio niet direct zichtbaar",
+        "stijl of aanpak niet duidelijk uit de homepage",
+        "geen duidelijke stap voor kennismaking of offerte",
+        "werkgebied niet meteen duidelijk",
+        "ontwerp en aanleg niet onderscheiden"
+      ],
+      "verboden_observaties": [
+        "design verouderd",
+        "branding zwak",
+        "te weinig leads"
+      ]
+    },
+
+    "schoonmaakbedrijf": {
+      "bezoekers_doel": "Kan ik dit snel en betrouwbaar regelen?",
+      "typische_bezoeker": "Bedrijf of particulier die schoonmaak zoekt",
+      "geldige_observaties": [
+        "geen duidelijke stap om offerte aan te vragen",
+        "werkgebied niet meteen zichtbaar",
+        "type schoonmaak (kantoor, particulier, specialistisch) niet onderscheiden",
+        "contactmogelijkheid niet prominent",
+        "reviews of referenties niet op homepage"
+      ],
+      "verboden_observaties": [
+        "website slecht",
+        "positionering onduidelijk",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "autogarage": {
+      "bezoekers_doel": "Kan ik hier vertrouwen en snel terecht?",
+      "typische_bezoeker": "Autobezitter met onderhouds- of reparatievraag",
+      "geldige_observaties": [
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "type diensten (APK, onderhoud, reparatie) lopen door elkaar",
+        "geen duidelijke stap om afspraak te maken",
+        "reviews niet zichtbaar op homepage"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "conversie laag",
+        "meer klanten nodig"
+      ]
+    },
+
+    "autodetailing": {
+      "bezoekers_doel": "Kan ik het resultaat vertrouwen?",
+      "typische_bezoeker": "Autobezitter die waarde hecht aan verzorging",
+      "geldige_observaties": [
+        "voor-na foto's niet direct zichtbaar",
+        "pakketten of diensten niet duidelijk onderscheiden",
+        "prijsindicatie niet vindbaar",
+        "geen duidelijke stap om te boeken",
+        "reviews of resultaten niet op homepage"
+      ],
+      "verboden_observaties": [
+        "branding zwak",
+        "concurrentie beter",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "horeca_restaurant": {
+      "bezoekers_doel": "Kan ik hier nu beslissen?",
+      "typische_bezoeker": "Gast die wil reserveren of menu bekijken",
+      "geldige_observaties": [
+        "geen directe reserveringsmogelijkheid bovenaan",
+        "menu of kaart niet snel vindbaar",
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "sfeer of ambiance niet voelbaar uit homepage"
+      ],
+      "verboden_observaties": [
+        "branding onduidelijk",
+        "marketing mist kracht",
+        "positionering zwak"
+      ]
+    },
+
+    "horeca_cafe_bar": {
+      "bezoekers_doel": "Is dit de plek voor vanavond?",
+      "typische_bezoeker": "Gast die uitgaansgelegenheid zoekt",
+      "geldige_observaties": [
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "sfeer niet voelbaar uit de homepage",
+        "aanbod (tapas, bieren, cocktails) niet direct zichtbaar",
+        "geen duidelijke stap voor reservering of info"
+      ],
+      "verboden_observaties": [
+        "branding onduidelijk",
+        "website verouderd",
+        "social media beter"
+      ]
+    },
+
+    "horeca_hotel_bnb": {
+      "bezoekers_doel": "Kan ik vertrouwen en boeken?",
+      "typische_bezoeker": "Reiziger die accommodatie zoekt",
+      "geldige_observaties": [
+        "beschikbaarheid niet direct checkbaar",
+        "kamers of faciliteiten niet snel vindbaar",
+        "locatie niet meteen duidelijk",
+        "reviews of ervaringen niet zichtbaar op homepage",
+        "prijsindicatie niet vindbaar"
+      ],
+      "verboden_observaties": [
+        "conversie laag",
+        "booking.com beter",
+        "marketing zwak"
+      ]
+    },
+
+    "bakker_slager_traiteur": {
+      "bezoekers_doel": "Kan ik hier bestellen of langskomen?",
+      "typische_bezoeker": "Klant die wil bestellen of bezoeken",
+      "geldige_observaties": [
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "assortiment niet snel vindbaar",
+        "bestelmogelijkheid niet prominent aanwezig",
+        "specialiteiten niet uitgelicht"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "webshop nodig",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "kapper_barbershop": {
+      "bezoekers_doel": "Kan ik hier snel boeken?",
+      "typische_bezoeker": "Klant die afspraak wil maken",
+      "geldige_observaties": [
+        "geen directe boekingsmogelijkheid bovenaan",
+        "prijzen niet snel vindbaar",
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "sfeer of stijl niet voelbaar uit homepage"
+      ],
+      "verboden_observaties": [
+        "branding zwak",
+        "Instagram beter",
+        "website niet nodig"
+      ]
+    },
+
+    "schoonheidssalon_wellness": {
+      "bezoekers_doel": "Kan ik hier vertrouwen en boeken?",
+      "typische_bezoeker": "Klant die behandeling zoekt",
+      "geldige_observaties": [
+        "behandelingen niet snel vindbaar",
+        "prijsindicatie niet zichtbaar",
+        "geen directe boekingsmogelijkheid",
+        "sfeer niet voelbaar uit de homepage",
+        "reviews of ervaringen niet op homepage"
+      ],
+      "verboden_observaties": [
+        "design verouderd",
+        "concurrentie beter",
+        "positionering zwak"
+      ]
+    },
+
+    "fitness_sportschool": {
+      "bezoekers_doel": "Past dit bij mij?",
+      "typische_bezoeker": "Potentieel lid dat sportschool zoekt",
+      "geldige_observaties": [
+        "aanbod of lessen niet snel vindbaar",
+        "prijzen of abonnementen niet zichtbaar",
+        "geen duidelijke stap voor proefles of rondleiding",
+        "sfeer niet voelbaar uit homepage",
+        "locatie of openingstijden niet meteen duidelijk"
+      ],
+      "verboden_observaties": [
+        "marketing ontbreekt",
+        "concurrentie beter",
+        "conversie laag"
+      ]
+    },
+
+    "fysiotherapie": {
+      "bezoekers_doel": "Is dit betrouwbaar voor mijn klacht?",
+      "typische_bezoeker": "Patiënt met fysieke klacht",
+      "geldige_observaties": [
+        "specialisaties niet direct zichtbaar",
+        "eerste stap in het proces niet duidelijk",
+        "contactinformatie niet prominent aanwezig",
+        "vergoeding of verzekering niet duidelijk",
+        "reviews of ervaringen niet op homepage"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "onprofessioneel",
+        "marketing zwak"
+      ]
+    },
+
+    "tandarts": {
+      "bezoekers_doel": "Kan ik hier terecht en vertrouwen?",
+      "typische_bezoeker": "Patiënt die tandarts zoekt",
+      "geldige_observaties": [
+        "geen duidelijke stap om afspraak te maken",
+        "behandelingen niet snel vindbaar",
+        "openingstijden niet meteen zichtbaar",
+        "spoedmogelijkheid niet duidelijk",
+        "team of praktijk niet direct zichtbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "design amateuristisch",
+        "conversie laag"
+      ]
+    },
+
+    "huisarts_medisch": {
+      "bezoekers_doel": "Kan ik hier terecht?",
+      "typische_bezoeker": "Patiënt die zorg zoekt",
+      "geldige_observaties": [
+        "inschrijfprocedure niet direct duidelijk",
+        "openingstijden of bereikbaarheid niet meteen zichtbaar",
+        "spoedlijn niet prominent aanwezig",
+        "team of praktijk niet direct zichtbaar",
+        "diensten niet snel vindbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "onprofessioneel",
+        "marketing nodig"
+      ]
+    },
+
+    "psycholoog_therapeut": {
+      "bezoekers_doel": "Is dit veilig en passend voor mij?",
+      "typische_bezoeker": "Iemand die hulp zoekt bij mentale gezondheid",
+      "geldige_observaties": [
+        "specialisaties of werkgebieden niet direct zichtbaar",
+        "eerste stap in het proces niet duidelijk",
+        "wachtlijst of beschikbaarheid niet meteen duidelijk",
+        "vergoeding niet zichtbaar",
+        "aanpak of werkwijze niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "website onprofessioneel",
+        "vertrouwen ontbreekt",
+        "te weinig cliënten"
+      ]
+    },
+
+    "dierenarts": {
+      "bezoekers_doel": "Kan mijn dier hier goed geholpen worden?",
+      "typische_bezoeker": "Diereneigenaar met zorgvraag",
+      "geldige_observaties": [
+        "openingstijden niet meteen zichtbaar",
+        "spoedmogelijkheid niet prominent",
+        "diensten niet snel vindbaar",
+        "locatie niet direct duidelijk",
+        "geen duidelijke stap om afspraak te maken"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "marketing ontbreekt",
+        "concurrentie beter"
+      ]
+    },
+
+    "apotheek": {
+      "bezoekers_doel": "Kan ik hier terecht?",
+      "typische_bezoeker": "Patiënt die medicatie of advies zoekt",
+      "geldige_observaties": [
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "diensten (herhaalrecepten, advies) niet snel vindbaar",
+        "contactmogelijkheid niet prominent",
+        "extra services niet zichtbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "webshop nodig",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "advocaat_notaris": {
+      "bezoekers_doel": "Is dit de juiste partij voor mijn zaak?",
+      "typische_bezoeker": "Iemand met juridische vraag",
+      "geldige_observaties": [
+        "specialisaties niet direct zichtbaar",
+        "eerste stap voor contact niet duidelijk",
+        "team of expertise niet meteen vindbaar",
+        "cases of resultaten niet zichtbaar",
+        "werkwijze niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "positionering zwak",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "accountant_boekhouder": {
+      "bezoekers_doel": "Kunnen ze mijn administratie regelen?",
+      "typische_bezoeker": "Ondernemer of particulier met financiële vraag",
+      "geldige_observaties": [
+        "diensten niet direct onderscheiden",
+        "geen duidelijke stap voor kennismaking",
+        "doelgroep niet meteen duidelijk (ZZP, MKB, particulier)",
+        "werkwijze niet voelbaar",
+        "reviews of referenties niet op homepage"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "positionering onduidelijk",
+        "te weinig klanten"
+      ]
+    },
+
+    "verzekeringsadviseur": {
+      "bezoekers_doel": "Kan ik hier vertrouwen?",
+      "typische_bezoeker": "Iemand die verzekering zoekt of wil vergelijken",
+      "geldige_observaties": [
+        "diensten of producten niet direct zichtbaar",
+        "geen duidelijke stap voor adviesgesprek",
+        "onafhankelijkheid niet meteen duidelijk",
+        "reviews of ervaringen niet op homepage",
+        "werkwijze niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "vertrouwen ontbreekt",
+        "marketing zwak"
+      ]
+    },
+
+    "makelaar_vastgoed": {
+      "bezoekers_doel": "Kunnen ze mijn huis verkopen/vinden?",
+      "typische_bezoeker": "Koper of verkoper van vastgoed",
+      "geldige_observaties": [
+        "actueel aanbod niet direct zichtbaar",
+        "verkoop vs. aankoop niet onderscheiden",
+        "werkgebied niet meteen duidelijk",
+        "geen duidelijke stap voor waardebepaling of contact",
+        "resultaten of verkochte woningen niet zichtbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "funda beter",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "hypotheekadviseur": {
+      "bezoekers_doel": "Kunnen ze mij helpen met financiering?",
+      "typische_bezoeker": "Iemand die huis wil kopen of oversluiten",
+      "geldige_observaties": [
+        "diensten niet direct onderscheiden",
+        "geen duidelijke stap voor adviesgesprek",
+        "onafhankelijkheid niet meteen duidelijk",
+        "rekentools niet prominent aanwezig",
+        "reviews of ervaringen niet op homepage"
+      ],
+      "verboden_observaties": [
+        "conversie laag",
+        "concurrentie beter",
+        "marketing zwak"
+      ]
+    },
+
+    "coach_trainer": {
+      "bezoekers_doel": "Is dit relevant voor mijn situatie?",
+      "typische_bezoeker": "Iemand die persoonlijke of zakelijke groei zoekt",
+      "geldige_observaties": [
+        "focus ligt op meerdere thema's tegelijk",
+        "resultaten of aanpak niet direct zichtbaar",
+        "geen duidelijke eerste stap voor kennismaking",
+        "doelgroep niet meteen duidelijk",
+        "reviews of testimonials niet op homepage"
+      ],
+      "verboden_observaties": [
+        "persoonlijk merk zwak",
+        "te weinig leads",
+        "positionering onduidelijk"
+      ]
+    },
+
+    "consultant_adviseur": {
+      "bezoekers_doel": "Is dit de juiste expertise?",
+      "typische_bezoeker": "Bedrijf of ondernemer met specifieke vraag",
+      "geldige_observaties": [
+        "expertise niet direct zichtbaar",
+        "cases of resultaten niet op homepage",
+        "geen duidelijke stap voor kennismaking",
+        "doelgroep niet meteen duidelijk",
+        "aanpak of methodiek niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "positionering zwak",
+        "te weinig klanten",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "fotograaf_videograaf": {
+      "bezoekers_doel": "Past deze stijl bij wat ik zoek?",
+      "typische_bezoeker": "Iemand die foto's of video nodig heeft",
+      "geldige_observaties": [
+        "portfolio niet direct zichtbaar bovenaan",
+        "type werk (bruiloft, zakelijk, product) niet onderscheiden",
+        "prijsindicatie niet vindbaar",
+        "geen duidelijke stap om te boeken",
+        "stijl niet direct voelbaar"
+      ],
+      "verboden_observaties": [
+        "Instagram beter",
+        "website niet nodig",
+        "branding zwak"
+      ]
+    },
+
+    "webdesigner_bureau": {
+      "bezoekers_doel": "Kunnen ze leveren wat ik nodig heb?",
+      "typische_bezoeker": "Ondernemer die website zoekt",
+      "geldige_observaties": [
+        "portfolio of cases niet direct zichtbaar",
+        "werkwijze niet duidelijk",
+        "prijsindicatie niet vindbaar",
+        "geen duidelijke stap voor kennismaking",
+        "specialisaties niet meteen duidelijk"
+      ],
+      "verboden_observaties": [
+        "concurrentie beter",
+        "positionering zwak",
+        "te duur"
+      ]
+    },
+
+    "marketingbureau": {
+      "bezoekers_doel": "Kunnen ze resultaat leveren?",
+      "typische_bezoeker": "Bedrijf dat marketing hulp zoekt",
+      "geldige_observaties": [
+        "cases of resultaten niet direct zichtbaar",
+        "diensten lopen door elkaar",
+        "geen duidelijke stap voor kennismaking",
+        "doelgroep niet meteen duidelijk",
+        "aanpak niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "conversie laag",
+        "positionering zwak",
+        "te weinig leads"
+      ]
+    },
+
+    "architect_interieur": {
+      "bezoekers_doel": "Kunnen ze mijn visie realiseren?",
+      "typische_bezoeker": "Iemand met bouw- of verbouwplannen",
+      "geldige_observaties": [
+        "projecten of portfolio niet direct zichtbaar",
+        "stijl niet voelbaar uit homepage",
+        "werkwijze niet duidelijk",
+        "geen duidelijke stap voor kennismaking",
+        "specialisatie niet meteen duidelijk"
+      ],
+      "verboden_observaties": [
+        "design verouderd",
+        "branding zwak",
+        "te weinig projecten"
+      ]
+    },
+
+    "drukkerij_printshop": {
+      "bezoekers_doel": "Kunnen ze leveren wat ik nodig heb?",
+      "typische_bezoeker": "Bedrijf of particulier met printbehoefte",
+      "geldige_observaties": [
+        "producten of mogelijkheden niet snel vindbaar",
+        "prijsindicatie niet zichtbaar",
+        "geen duidelijke stap om offerte aan te vragen",
+        "doorlooptijd niet duidelijk",
+        "voorbeelden niet direct zichtbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "webshop nodig",
+        "concurrentie beter"
+      ]
+    },
+
+    "onderwijs_opleiding": {
+      "bezoekers_doel": "Wat leer ik hier concreet?",
+      "typische_bezoeker": "Iemand die opleiding of cursus zoekt",
+      "geldige_observaties": [
+        "aanbod niet direct overzichtelijk",
+        "inhoud of programma niet snel vindbaar",
+        "geen duidelijke stap om aan te melden",
+        "prijzen of investering niet zichtbaar",
+        "resultaten of testimonials niet op homepage"
+      ],
+      "verboden_observaties": [
+        "positionering zwak",
+        "aanbod onduidelijk",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "kinderopvang_bso": {
+      "bezoekers_doel": "Is dit veilig en passend voor mijn kind?",
+      "typische_bezoeker": "Ouder die opvang zoekt",
+      "geldige_observaties": [
+        "locatie of faciliteiten niet direct zichtbaar",
+        "aanpak of pedagogiek niet voelbaar",
+        "openingstijden niet meteen duidelijk",
+        "geen duidelijke stap voor rondleiding of inschrijving",
+        "reviews of ervaringen niet op homepage"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "vertrouwen ontbreekt",
+        "marketing nodig"
+      ]
+    },
+
+    "rijschool": {
+      "bezoekers_doel": "Kan ik hier slagen?",
+      "typische_bezoeker": "Iemand die rijbewijs wil halen",
+      "geldige_observaties": [
+        "pakketten of prijzen niet snel vindbaar",
+        "slagingspercentage niet zichtbaar",
+        "geen duidelijke stap voor proefles",
+        "locatie of werkgebied niet meteen duidelijk",
+        "reviews niet op homepage"
+      ],
+      "verboden_observaties": [
+        "concurrentie beter",
+        "conversie laag",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "muziekschool_kunst": {
+      "bezoekers_doel": "Past dit bij mij of mijn kind?",
+      "typische_bezoeker": "Ouder of volwassene die les zoekt",
+      "geldige_observaties": [
+        "aanbod niet direct overzichtelijk",
+        "niveaus of doelgroepen niet onderscheiden",
+        "prijzen niet vindbaar",
+        "geen duidelijke stap voor proefles",
+        "sfeer of aanpak niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "branding zwak",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "webshop_ecommerce": {
+      "bezoekers_doel": "Kan ik vertrouwen en snel kopen?",
+      "typische_bezoeker": "Online shopper",
+      "geldige_observaties": [
+        "reviews of vertrouwenstekens niet direct zichtbaar",
+        "verzendinformatie niet snel vindbaar",
+        "retourbeleid niet meteen duidelijk",
+        "productcategorieën niet overzichtelijk",
+        "geen duidelijke actie bovenaan"
+      ],
+      "verboden_observaties": [
+        "checkout slecht",
+        "ads inefficiënt",
+        "conversie laag"
+      ]
+    },
+
+    "retail_winkel": {
+      "bezoekers_doel": "Kan ik hier vinden wat ik zoek?",
+      "typische_bezoeker": "Potentiële klant die winkel zoekt",
+      "geldige_observaties": [
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "assortiment niet snel vindbaar",
+        "geen duidelijke route naar bezoek",
+        "sfeer of specialiteit niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "webshop nodig",
+        "conversie laag",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "bloemenwinkel_tuincentrum": {
+      "bezoekers_doel": "Kan ik hier snel regelen?",
+      "typische_bezoeker": "Klant die bloemen of planten zoekt",
+      "geldige_observaties": [
+        "openingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "bestelmogelijkheid niet prominent",
+        "assortiment niet snel vindbaar",
+        "bezorgmogelijkheid niet duidelijk"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "webshop nodig",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "juwelier_optiek": {
+      "bezoekers_doel": "Kan ik hier vertrouwen?",
+      "typische_bezoeker": "Klant die sieraad of bril zoekt",
+      "geldige_observaties": [
+        "collectie niet direct zichtbaar",
+        "openingstijden niet meteen duidelijk",
+        "locatie niet prominent",
+        "diensten (reparatie, aanpassing) niet vindbaar",
+        "geen duidelijke stap voor afspraak"
+      ],
+      "verboden_observaties": [
+        "concurrentie beter",
+        "webshop nodig",
+        "branding zwak"
+      ]
+    },
+
+    "klusbedrijf_handyman": {
+      "bezoekers_doel": "Kunnen ze snel komen?",
+      "typische_bezoeker": "Huiseigenaar met klusvraag",
+      "geldige_observaties": [
+        "diensten niet direct overzichtelijk",
+        "werkgebied niet meteen duidelijk",
+        "contactmogelijkheid niet prominent",
+        "reviews niet zichtbaar op homepage",
+        "prijsindicatie niet vindbaar"
+      ],
+      "verboden_observaties": [
+        "website slecht",
+        "meer klanten nodig",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "verhuur_equipment": {
+      "bezoekers_doel": "Kan ik dit snel regelen?",
+      "typische_bezoeker": "Iemand die iets wil huren",
+      "geldige_observaties": [
+        "aanbod niet direct overzichtelijk",
+        "beschikbaarheid niet checkbaar",
+        "prijzen niet vindbaar",
+        "geen duidelijke stap om te reserveren",
+        "locatie niet meteen duidelijk"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "boekingssysteem nodig",
+        "conversie laag"
+      ]
+    },
+
+    "evenementen_catering": {
+      "bezoekers_doel": "Kunnen ze leveren wat ik nodig heb?",
+      "typische_bezoeker": "Organisator van evenement",
+      "geldige_observaties": [
+        "type evenementen niet onderscheiden",
+        "portfolio of voorbeelden niet direct zichtbaar",
+        "prijsindicatie niet vindbaar",
+        "geen duidelijke stap voor offerte",
+        "werkgebied niet meteen duidelijk"
+      ],
+      "verboden_observaties": [
+        "branding zwak",
+        "marketing ontbreekt",
+        "concurrentie beter"
+      ]
+    },
+
+    "it_services": {
+      "bezoekers_doel": "Kunnen ze mijn probleem oplossen?",
+      "typische_bezoeker": "Bedrijf met IT-vraag",
+      "geldige_observaties": [
+        "diensten lopen door elkaar",
+        "geen duidelijke stap voor contact",
+        "doelgroep niet meteen duidelijk",
+        "cases of referenties niet zichtbaar",
+        "werkwijze niet voelbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "positionering zwak",
+        "te technisch"
+      ]
+    },
+
+    "transport_logistiek": {
+      "bezoekers_doel": "Kunnen ze betrouwbaar leveren?",
+      "typische_bezoeker": "Bedrijf met transportbehoefte",
+      "geldige_observaties": [
+        "diensten niet direct onderscheiden",
+        "werkgebied niet meteen duidelijk",
+        "geen duidelijke stap voor offerte",
+        "referenties niet zichtbaar",
+        "specialisaties niet duidelijk"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "conversie laag",
+        "marketing ontbreekt"
+      ]
+    },
+
+    "uitzendbureau_recruitment": {
+      "bezoekers_doel": "Kunnen ze de juiste match vinden?",
+      "typische_bezoeker": "Werkgever of werkzoekende",
+      "geldige_observaties": [
+        "vacatures niet direct zichtbaar",
+        "branches of specialisaties niet onderscheiden",
+        "geen duidelijke stap om contact op te nemen",
+        "werkgevers en werkzoekenden niet onderscheiden",
+        "resultaten niet zichtbaar"
+      ],
+      "verboden_observaties": [
+        "conversie laag",
+        "Indeed beter",
+        "marketing zwak"
+      ]
+    },
+
+    "non_profit_vereniging": {
+      "bezoekers_doel": "Begrijp ik wat jullie doen?",
+      "typische_bezoeker": "Potentieel lid, donor of geïnteresseerde",
+      "geldige_observaties": [
+        "missie niet direct duidelijk bovenaan",
+        "activiteiten niet snel vindbaar",
+        "geen duidelijke stap om lid te worden of te doneren",
+        "impact of resultaten niet zichtbaar",
+        "contact niet prominent"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "branding zwak",
+        "marketing nodig"
+      ]
+    },
+
+    "kerk_religieus": {
+      "bezoekers_doel": "Voel ik me hier welkom?",
+      "typische_bezoeker": "Iemand die gemeenschap zoekt",
+      "geldige_observaties": [
+        "diensten of tijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "activiteiten niet snel vindbaar",
+        "geen duidelijke stap voor eerste bezoek",
+        "sfeer niet voelbaar uit homepage"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "marketing nodig",
+        "branding zwak"
+      ]
+    },
+
+    "sportclub_vereniging": {
+      "bezoekers_doel": "Past dit bij mij?",
+      "typische_bezoeker": "Potentieel lid dat club zoekt",
+      "geldige_observaties": [
+        "trainingstijden niet meteen zichtbaar",
+        "locatie niet direct duidelijk",
+        "teams of niveaus niet onderscheiden",
+        "geen duidelijke stap voor proeftraining",
+        "contributie niet vindbaar"
+      ],
+      "verboden_observaties": [
+        "website verouderd",
+        "marketing ontbreekt",
+        "social media beter"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2311 @@
+{
+  "meta": {
+    "versie": "1.0",
+    "laatstBijgewerkt": "2025-01-15",
+    "doel": "AI-Mailer personalisatie database",
+    "bedrijf": "SKYE Unlimited",
+    "aantalNiches": 20
+  },
+  "niches": [
+    {
+      "id": "accountants",
+      "naam": "Accountants & Boekhouders",
+      "zoekwoorden": ["accountant", "boekhouder", "fiscalist", "belastingadviseur", "administratiekantoor"],
+      "idealeKlant": {
+        "omschrijving": "Zelfstandig kantoor, 50-500 klanten, 1-5 medewerkers",
+        "omzet": "€100.000 - €500.000/jaar",
+        "signalen": ["verouderde website", "geen online booking", "veel telefonische vragen"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Piekmomenten rond aangifteperiodes (maart-juni) - te veel klanten, te weinig tijd",
+          "impact": "Stress, overwerk, fouten door haast",
+          "kostenIndicatie": "€5.000-15.000/jaar aan inefficiëntie"
+        },
+        {
+          "probleem": "Klanten die op het laatste moment documenten aanleveren",
+          "impact": "Onmogelijk om werk te plannen, deadlines missen",
+          "kostenIndicatie": "10+ uur/week aan achtervolgen"
+        },
+        {
+          "probleem": "Eindeloze telefoontjes met dezelfde vragen over BTW, deadlines, tarieven",
+          "impact": "Onderbrekingen tijdens gefocust werk",
+          "kostenIndicatie": "8-12 uur/week aan repetitieve vragen"
+        },
+        {
+          "probleem": "No-shows bij afspraken",
+          "impact": "Lege agenda-slots, gemiste omzet",
+          "kostenIndicatie": "€75-150 per gemiste afspraak, €3.000+/jaar"
+        },
+        {
+          "probleem": "Potentiële klanten die afhaken omdat ze geen snel antwoord krijgen",
+          "impact": "Gemiste leads gaan naar concurrent",
+          "kostenIndicatie": "€2.000-5.000/jaar aan gemiste klanten"
+        },
+        {
+          "probleem": "Administratie van afspraken kost teveel tijd",
+          "impact": "Niet-factureerbare uren",
+          "kostenIndicatie": "5-8 uur/week"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Professionele website die vertrouwen uitstraalt",
+            "beschrijving": "Modern design met certificeringen, klantenreviews en duidelijke diensten",
+            "resultaat": "40% meer contactaanvragen"
+          },
+          {
+            "oplossing": "Mobiel-geoptimaliseerde ervaring",
+            "beschrijving": "60% van bezoekers komt via telefoon - je site moet daar perfect werken",
+            "resultaat": "Lagere bounce rate, meer leads"
+          },
+          {
+            "oplossing": "Duidelijke diensten- en tariefpagina",
+            "beschrijving": "Transparante prijzen en pakketten zodat klanten zichzelf kwalificeren",
+            "resultaat": "Betere leads, minder prijsdiscussies"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online afsprakenplanner met automatische herinneringen",
+            "beschrijving": "Klanten boeken zelf, krijgen SMS/email 24u + 2u voor afspraak",
+            "resultaat": "67% minder no-shows, 5 uur/week bespaard"
+          },
+          {
+            "oplossing": "Intake-formulieren met document upload",
+            "beschrijving": "Klanten moeten documenten uploaden VOOR de afspraak",
+            "resultaat": "90% complete dossiers bij eerste gesprek"
+          },
+          {
+            "oplossing": "Automatische bevestigingsmails met voorbereidingschecklist",
+            "beschrijving": "Na boeking krijgt klant precies wat hij moet meenemen",
+            "resultaat": "Minder onvoorbereide klanten"
+          },
+          {
+            "oplossing": "Wachtlijst-systeem tijdens piekmomenten",
+            "beschrijving": "Automatisch opvullen van geannuleerde slots",
+            "resultaat": "Maximale bezetting, geen lege uren"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "FAQ-sectie met veelgestelde vragen",
+            "beschrijving": "BTW-deadlines, tarieven, benodigde documenten - 24/7 beschikbaar",
+            "resultaat": "80% minder repetitieve telefoontjes"
+          },
+          {
+            "oplossing": "Kennisbank met fiscale tips",
+            "beschrijving": "Blogartikelen over aftrekposten, deadlines, wijzigingen in wetgeving",
+            "resultaat": "SEO-verkeer, thought leadership"
+          },
+          {
+            "oplossing": "Nieuwsbrief met seizoensgebonden reminders",
+            "beschrijving": "Automatische mails: 'BTW-aangifte deadline nadert'",
+            "resultaat": "Klanten leveren op tijd aan"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Je verliest €3.000+ per jaar aan no-shows. Ik laat zien hoe je dit stopt.",
+        "Die 47 telefoontjes per week over BTW-deadlines? Automatiseer ze.",
+        "Maart-juni is chaos. Wat als klanten hun documenten op tijd aanleveren?",
+        "Je concurrent heeft online booking. Jij neemt nog de telefoon op."
+      ],
+      "preheaders": [
+        "67% minder no-shows. Hier is hoe.",
+        "Stop met dezelfde vragen beantwoorden.",
+        "Je website werkt niet voor je. Dit wel."
+      ],
+      "statistieken": [
+        "67% minder no-shows met automatische herinneringen",
+        "80% van standaardvragen beantwoord via FAQ",
+        "5-8 uur/week bespaard op administratie"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Een gemiste afspraak kost €100+. Na 3 maanden heb je de investering terug.",
+        "geenTijd": "Precies waarom je dit nodig hebt. Setup kost 1 gesprek, daarna bespaart het tijd.",
+        "werkGoed": "Hoeveel telefoontjes kreeg je deze week? Tel ze op. Dat is de prijs van 'werkt goed'."
+      }
+    },
+    {
+      "id": "advocaten",
+      "naam": "Advocaten & Notarissen",
+      "zoekwoorden": ["advocaat", "advocatenkantoor", "notaris", "jurist", "juridisch adviseur"],
+      "idealeKlant": {
+        "omschrijving": "Klein kantoor, 1-10 advocaten, focus op particulieren of MKB",
+        "omzet": "€150.000 - €1.000.000/jaar",
+        "signalen": ["lange intakegesprekken", "veel niet-converterende leads", "handmatige status-updates"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Potentiële cliënten verwachten gratis advies via telefoon voordat ze betalen",
+          "impact": "Uren aan niet-factureerbaar werk",
+          "kostenIndicatie": "€10.000+/jaar aan gratis advies"
+        },
+        {
+          "probleem": "Intakegesprekken kosten 30-60 minuten terwijl 40% niet converteert",
+          "impact": "Verspilde tijd aan niet-serieuze leads",
+          "kostenIndicatie": "8+ uur/week"
+        },
+        {
+          "probleem": "Cliënten willen constant updates over hun zaak",
+          "impact": "Onderbrekingen, administratieve last",
+          "kostenIndicatie": "5-10 uur/week aan statusvragen"
+        },
+        {
+          "probleem": "Complexe diensten zijn moeilijk uit te leggen op een basic website",
+          "impact": "Bezoekers begrijpen niet wat je doet, verlaten de site",
+          "kostenIndicatie": "Gemiste leads"
+        },
+        {
+          "probleem": "Gemiste deadlines door slechte agenda-coördinatie",
+          "impact": "Reputatieschade, mogelijke claims",
+          "kostenIndicatie": "Onbetaalbaar risico"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Vertrouwenwekkende website met specialisatie-focus",
+            "beschrijving": "Duidelijke expertise-gebieden, successen, en persoonlijke benadering",
+            "resultaat": "Betere, gekwalificeerde leads"
+          },
+          {
+            "oplossing": "Cliënt-portaal integratie",
+            "beschrijving": "Beveiligde omgeving waar cliënten documenten kunnen uploaden en zaakstatus zien",
+            "resultaat": "80% minder statusvragen"
+          },
+          {
+            "oplossing": "Tariefcalculator voor standaardzaken",
+            "beschrijving": "Indicatieve prijzen voor echtscheiding, testament, bedrijfsoprichting",
+            "resultaat": "Gefilterde leads die budget hebben"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Intake-formulier dat zaken vooraf kwalificeert",
+            "beschrijving": "Vragen over type zaak, budget, urgentie voordat je tijd investeert",
+            "resultaat": "40% minder verspilde intaketijd"
+          },
+          {
+            "oplossing": "Geautomatiseerde status-updates naar cliënten",
+            "beschrijving": "Automatische mails bij elke fase-wijziging van de zaak",
+            "resultaat": "70% minder 'hoe staat het ervoor?' telefoontjes"
+          },
+          {
+            "oplossing": "Deadline-tracking met automatische reminders",
+            "beschrijving": "Systeem dat belangrijke termijnen bewaakt en waarschuwt",
+            "resultaat": "Zero gemiste deadlines"
+          },
+          {
+            "oplossing": "Online booking voor betaalde intakegesprekken",
+            "beschrijving": "€50-100 voor eerste gesprek filtert niet-serieuze leads",
+            "resultaat": "90% conversie van intake naar zaak"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Kennisbank per rechtsgebied",
+            "beschrijving": "Artikelen over procedures, kosten, tijdslijnen per type zaak",
+            "resultaat": "SEO-verkeer, vooraf geïnformeerde cliënten"
+          },
+          {
+            "oplossing": "Video-uitleg van complexe procedures",
+            "beschrijving": "Korte video's die uitleggen wat cliënten kunnen verwachten",
+            "resultaat": "Minder uitleg nodig tijdens betaalde uren"
+          }
+        ]
+      },
+      "emailHooks": [
+        "40% van je intakegesprekken leidt nergens toe. Hier is de oplossing.",
+        "Je geeft €10.000/jaar aan gratis advies weg. Stop ermee.",
+        "Die 5 'hoe staat het ervoor?' telefoontjes per dag? Automatiseer ze.",
+        "Een betaald intakegesprek converteert 90%. Gratis? 40%."
+      ],
+      "preheaders": [
+        "Filter tijdverspillers vooraf.",
+        "Cliënten willen updates. Geef ze die. Automatisch.",
+        "Je website overtuigt niet. Dit wel."
+      ],
+      "statistieken": [
+        "40% tijdsbesparing op intake-administratie",
+        "8 uur/week bespaard met geautomatiseerde updates",
+        "90% conversie met betaalde intake vs 40% gratis"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra zaak per maand dekt de kosten. Je krijgt er meer.",
+        "geenTijd": "Intake-formulier bespaart je 8+ uur/week. Tijd genoeg daarna.",
+        "cliëntenWillenPersoonlijk": "Ze willen updates. Of die van jou komen of automatisch, maakt ze niet uit."
+      }
+    },
+    {
+      "id": "tandartsen",
+      "naam": "Tandartsen",
+      "zoekwoorden": ["tandarts", "tandartspraktijk", "mondhygiënist", "orthodontist", "tandheelkunde"],
+      "idealeKlant": {
+        "omschrijving": "Solo-praktijk of groepspraktijk, 1-5 behandelstoelen",
+        "omzet": "€200.000 - €1.000.000/jaar",
+        "signalen": ["hoge no-show rate", "receptioniste overbelast", "verouderde website"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "No-shows kosten gemiddeld €120-200 per lege stoel per uur",
+          "impact": "Directe omzetderving, niet in te halen",
+          "kostenIndicatie": "€10.000-25.000/jaar"
+        },
+        {
+          "probleem": "Angstpatiënten annuleren op het laatste moment",
+          "impact": "Lege stoelen, gefrustreerd team",
+          "kostenIndicatie": "15-20% van afspraken"
+        },
+        {
+          "probleem": "Receptioniste besteedt 60% van tijd aan telefoon voor afspraken",
+          "impact": "Patiënten in praktijk worden niet geholpen",
+          "kostenIndicatie": "€25.000+/jaar aan loonkosten"
+        },
+        {
+          "probleem": "Patiënten vergeten hun halfjaarlijkse controle",
+          "impact": "Gemiste preventieve zorg, kleinere problemen worden groot",
+          "kostenIndicatie": "€15.000+/jaar aan gemiste controles"
+        },
+        {
+          "probleem": "Spoedeisende gevallen verstoren de planning volledig",
+          "impact": "Wachttijden, gefrustreerde patiënten",
+          "kostenIndicatie": "Reputatieschade"
+        },
+        {
+          "probleem": "Nieuwe patiënten kiezen concurrent omdat website verouderd oogt",
+          "impact": "Gemiste nieuwe patiënten",
+          "kostenIndicatie": "€500-2.000 lifetime value per patiënt"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Moderne, vertrouwenwekkende website",
+            "beschrijving": "Professionele foto's, teamvoorstelling, behandeloverzicht",
+            "resultaat": "50% meer nieuwe patiënt-aanvragen"
+          },
+          {
+            "oplossing": "Virtuele rondleiding door de praktijk",
+            "beschrijving": "Video/foto's van de praktijk om angstpatiënten gerust te stellen",
+            "resultaat": "30% minder last-minute annuleringen van angstpatiënten"
+          },
+          {
+            "oplossing": "Behandelpagina's met prijsindicaties",
+            "beschrijving": "Duidelijke uitleg per behandeling met kostenindicatie",
+            "resultaat": "Minder prijsverrassingen, betere patiënttevredenheid"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online booking systeem",
+            "beschrijving": "Patiënten boeken 24/7, ook 's avonds en weekends",
+            "resultaat": "70% minder telefoontjes, receptioniste kan focussen"
+          },
+          {
+            "oplossing": "SMS/WhatsApp herinneringen 24u + 2u voor afspraak",
+            "beschrijving": "Automatische berichten met bevestigingslink",
+            "resultaat": "50% minder no-shows"
+          },
+          {
+            "oplossing": "Automatische recall voor halfjaarlijkse controles",
+            "beschrijving": "Systeem stuurt herinnering wanneer controle nadert",
+            "resultaat": "40% hogere controle-compliance"
+          },
+          {
+            "oplossing": "Noodslot-systeem voor spoedgevallen",
+            "beschrijving": "Dagelijks blok gereserveerd voor spoed, automatisch gevuld indien niet gebruikt",
+            "resultaat": "Spoed verstoort planning niet meer"
+          },
+          {
+            "oplossing": "Online intake-formulieren",
+            "beschrijving": "Medische voorgeschiedenis digitaal voor de afspraak",
+            "resultaat": "10 minuten bespaard per nieuwe patiënt"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Behandelinformatie pagina's",
+            "beschrijving": "Uitleg over wortelkanaalbehandeling, kronen, implantaten etc.",
+            "resultaat": "Beter geïnformeerde patiënten, minder angst"
+          },
+          {
+            "oplossing": "Blog met mondgezondheidstips",
+            "beschrijving": "SEO-geoptimaliseerde artikelen over tandzorg",
+            "resultaat": "Organisch verkeer, lokale vindbaarheid"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Elke lege stoel kost je €150. Hoeveel stoelen staan er vandaag leeg?",
+        "Je receptioniste is 60% van de tijd aan de telefoon. Dat is €25.000/jaar.",
+        "50% van je no-shows is te voorkomen. Met één simpele aanpassing.",
+        "Patiënten boeken bij de concurrent. Die heeft online booking."
+      ],
+      "preheaders": [
+        "€150 per lege stoel. Reken maar uit.",
+        "Je receptioniste kan meer dan telefoon opnemen.",
+        "Angstpatiënten annuleren minder met deze truc."
+      ],
+      "statistieken": [
+        "70% minder telefoontjes met online booking",
+        "50% minder no-shows met dubbele herinnering",
+        "40% hogere controle-compliance met automatische recall"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Één voorkomen no-show per week = €600/maand. Investering terugverdiend in maand 1.",
+        "patiëntenWillenBellen": "40% van boekingen gebeurt buiten openingstijden. Die mis je nu.",
+        "geenTijd": "Setup kost 2 uur. Daarna bespaar je 10+ uur per week. Permanent."
+      }
+    },
+    {
+      "id": "fysiotherapeuten",
+      "naam": "Fysiotherapeuten & Kinesisten",
+      "zoekwoorden": ["fysiotherapeut", "fysiotherapie", "kinesist", "manueel therapeut", "sportfysiotherapie"],
+      "idealeKlant": {
+        "omschrijving": "Zelfstandige praktijk of kleine groep, focus op specifieke doelgroep",
+        "omzet": "€80.000 - €400.000/jaar",
+        "signalen": ["hoge drop-out rate", "geen oefenopvolging", "veel administratie"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Patiënten stoppen behandeling voortijdig (gemiddeld na 4 van 8 sessies)",
+          "impact": "Incomplete behandeling, slechter resultaat, minder omzet",
+          "kostenIndicatie": "€200-400 per afgebroken traject"
+        },
+        {
+          "probleem": "Administratie van doorverwijzingen en verzekeringspapieren",
+          "impact": "Niet-factureerbare tijd",
+          "kostenIndicatie": "5-8 uur/week"
+        },
+        {
+          "probleem": "No-shows verstoren strakke 30-minuten planning",
+          "impact": "Domino-effect op hele dag",
+          "kostenIndicatie": "€40-60 per no-show"
+        },
+        {
+          "probleem": "Patiënten doen thuisoefeningen niet of niet correct",
+          "impact": "Trage vooruitgang, meer sessies nodig",
+          "kostenIndicatie": "Reputatie + patiënttevredenheid"
+        },
+        {
+          "probleem": "Moeilijk om specialisatie duidelijk te communiceren",
+          "impact": "Verkeerde patiënten, niet-passende aanvragen",
+          "kostenIndicatie": "Tijd aan niet-passende intake"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Specialisatie-gerichte website",
+            "beschrijving": "Duidelijke focus op sport/rug/revalidatie/ouderen etc.",
+            "resultaat": "Betere match tussen patiënt en praktijk"
+          },
+          {
+            "oplossing": "Team- en behandelruimte presentatie",
+            "beschrijving": "Foto's en video's die vertrouwen wekken",
+            "resultaat": "Lagere drempel voor eerste afspraak"
+          },
+          {
+            "oplossing": "Online doorverwijzing upload",
+            "beschrijving": "Patiënten uploaden verwijsbrief voor eerste afspraak",
+            "resultaat": "Complete dossiers bij intake"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Geautomatiseerde herinnering voor volgende afspraak + oefeningen",
+            "beschrijving": "Na elke sessie: bevestiging volgende afspraak + link naar oefeningen",
+            "resultaat": "35% hogere behandelafronding"
+          },
+          {
+            "oplossing": "Video-oefenbibliotheek met persoonlijke programma's",
+            "beschrijving": "Patiënt krijgt eigen pagina met voorgeschreven oefeningen",
+            "resultaat": "2x betere therapietrouw"
+          },
+          {
+            "oplossing": "Online wachtlijst met automatische opvulling",
+            "beschrijving": "Bij annulering gaat automatisch bericht naar wachtlijst",
+            "resultaat": "95% bezettingsgraad"
+          },
+          {
+            "oplossing": "Progressie-tracking",
+            "beschrijving": "Patiënt vult wekelijks korte vragenlijst in over pijn/mobiliteit",
+            "resultaat": "Objectieve vooruitgang zichtbaar, motiveert patiënt"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Oefenvideo's per aandoening",
+            "beschrijving": "Professionele video's van thuisoefeningen",
+            "resultaat": "Correcte uitvoering, betere resultaten"
+          },
+          {
+            "oplossing": "Blog over blessurepreventie",
+            "beschrijving": "SEO-content over veelvoorkomende klachten",
+            "resultaat": "Organisch verkeer van mensen met klachten"
+          },
+          {
+            "oplossing": "Nieuwsbrief met seizoenstips",
+            "beschrijving": "Hardlooptips in voorjaar, skiblessures in winter etc.",
+            "resultaat": "Top-of-mind blijven bij voormalige patiënten"
+          }
+        ]
+      },
+      "emailHooks": [
+        "50% van je patiënten stopt voortijdig. Hier is waarom.",
+        "Je patiënten doen hun oefeningen niet. Of toch wel - maar fout.",
+        "Die 4 no-shows per week? Dat is €800/maand. Weg.",
+        "Een video-oefenbibliotheek. Eenmalig maken, eindeloos gebruiken."
+      ],
+      "preheaders": [
+        "Behandelingen afronden = meer omzet.",
+        "Oefenvideo's verhogen therapietrouw 2x.",
+        "Wachtlijst automatisch opvullen? Ja, dat kan."
+      ],
+      "statistieken": [
+        "35% hogere behandelafronding met geautomatiseerde opvolging",
+        "2x betere therapietrouw met video-oefeningen",
+        "95% bezettingsgraad met automatische wachtlijst"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra afgeronde behandeling per week dekt de kosten.",
+        "patiëntenZijnNietDigitaal": "Ze gebruiken WhatsApp. Ze kunnen een video bekijken.",
+        "ikHebGeenTijdVoorVideos": "Eenmalig 4 uur investeren. Jaren gebruiken."
+      }
+    },
+    {
+      "id": "kappers",
+      "naam": "Kappers & Barbershops",
+      "zoekwoorden": ["kapper", "kapsalon", "barbershop", "hairstylist", "herenkapper"],
+      "idealeKlant": {
+        "omschrijving": "Zelfstandige kapper of kleine zaak, 1-4 stoelen",
+        "omzet": "€50.000 - €250.000/jaar",
+        "signalen": ["telefoon gaat constant", "geen online booking", "Instagram actief maar website zwak"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Telefoon gaat constant terwijl je knipt - klanten moeten wachten",
+          "impact": "Slechte service voor klant in stoel, gemiste boekingen",
+          "kostenIndicatie": "3-5 gemiste boekingen per dag"
+        },
+        {
+          "probleem": "No-shows op zaterdag kosten €50-100 per gemiste klant",
+          "impact": "Hoogste omzetdag, hoogste verlies",
+          "kostenIndicatie": "€200-500/maand"
+        },
+        {
+          "probleem": "Vaste klanten vergeten hun 6-wekelijkse afspraak",
+          "impact": "Onregelmatige bezetting",
+          "kostenIndicatie": "€100-200/maand aan gemiste herhalingsklanten"
+        },
+        {
+          "probleem": "Nieuwe klanten weten niet welke stylist bij hen past",
+          "impact": "Verkeerde verwachtingen, ontevredenheid",
+          "kostenIndicatie": "Negatieve reviews"
+        },
+        {
+          "probleem": "Concurrentie van goedkope ketens die wel online boeken aanbieden",
+          "impact": "Klanten kiezen gemak boven kwaliteit",
+          "kostenIndicatie": "Marktaandeel verlies"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Portfolio-website met stylist profielen",
+            "beschrijving": "Elke stylist met eigen pagina, specialisaties en foto's",
+            "resultaat": "Klanten kiezen de juiste stylist"
+          },
+          {
+            "oplossing": "Instagram-integratie",
+            "beschrijving": "Automatisch laatste werk tonen op website",
+            "resultaat": "Altijd up-to-date portfolio zonder extra werk"
+          },
+          {
+            "oplossing": "Prijslijst met behandeloverzicht",
+            "beschrijving": "Duidelijke prijzen per behandeling en stylist-niveau",
+            "resultaat": "Geen prijsverrassingen, betere klantverwachting"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "24/7 online booking",
+            "beschrijving": "Klanten boeken wanneer het hen uitkomt, ook 's avonds",
+            "resultaat": "50% van boekingen buiten openingstijden = extra omzet"
+          },
+          {
+            "oplossing": "Klantprofielen met voorkeuren",
+            "beschrijving": "Foto's van vorige kapsels, productvoorkeuren, notities",
+            "resultaat": "Persoonlijke service zonder te onthouden"
+          },
+          {
+            "oplossing": "Automatische herinnering: 'Tijd voor je volgende knipbeurt?'",
+            "beschrijving": "Na X weken automatisch bericht met boekingslink",
+            "resultaat": "30% meer herhalingsboekingen"
+          },
+          {
+            "oplossing": "Review-requests na elke afspraak",
+            "beschrijving": "Automatische vraag om Google-review",
+            "resultaat": "Meer reviews, hogere lokale ranking"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Trend-blog of Instagram content",
+            "beschrijving": "Seizoensgebonden trends, styling tips",
+            "resultaat": "Social engagement, top-of-mind"
+          },
+          {
+            "oplossing": "Productadvies pagina's",
+            "beschrijving": "Welke producten voor welk haartype",
+            "resultaat": "Extra productverkoop"
+          }
+        ]
+      },
+      "emailHooks": [
+        "50% van je boekingen gebeurt wanneer jij dicht bent. Mis je die?",
+        "Die telefoon tijdens het knippen? Dat kost je klanten. Aan beide kanten.",
+        "€200-400/week extra omzet. Door boekingen om 22:00.",
+        "Je concurrent heeft online booking. Wanneer krijg jij het?"
+      ],
+      "preheaders": [
+        "Klanten boeken om 23:00. Bij wie?",
+        "Stop met de telefoon. Start met verdienen.",
+        "Je vaste klanten vergeten je. Herinner ze."
+      ],
+      "statistieken": [
+        "50% van boekingen buiten openingstijden",
+        "€200-400/week extra omzet door online booking",
+        "30% meer herhalingsboekingen met automatische herinneringen"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "€150/maand vs €300/maand aan gemiste boekingen. Simpele rekensom.",
+        "mijnKlantenBellenLiever": "Ze boeken liever wanneer het hen uitkomt. Dat is 's avonds.",
+        "ikBenNietTechnisch": "Als je Instagram kunt gebruiken, kun je dit. Wij regelen de setup."
+      }
+    },
+    {
+      "id": "restaurants",
+      "naam": "Restaurants & Horeca",
+      "zoekwoorden": ["restaurant", "eetcafe", "bistro", "brasserie", "horeca"],
+      "idealeKlant": {
+        "omschrijving": "Restaurant met 30-100 couverts, mid-range segment",
+        "omzet": "€200.000 - €1.000.000/jaar",
+        "signalen": ["no-shows op weekend", "telefoon verstoort service", "geen reserveringssysteem"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Telefoon gaat tijdens service - verstoring en gemiste reserveringen",
+          "impact": "Slechte service, gemiste boekingen",
+          "kostenIndicatie": "5-10 gemiste reserveringen per week"
+        },
+        {
+          "probleem": "No-shows op vrijdag/zaterdag kosten €100-300 per tafel",
+          "impact": "Hoogste omzetmomenten, hoogste verlies",
+          "kostenIndicatie": "€1.000-3.000/maand"
+        },
+        {
+          "probleem": "Gasten willen allergieën/voorkeuren doorgeven maar vergeten het",
+          "impact": "Problemen tijdens service, mogelijke gezondheidsrisico's",
+          "kostenIndicatie": "Reputatieschade"
+        },
+        {
+          "probleem": "Geen overzicht van bezetting en omzet per tijdslot",
+          "impact": "Inefficiënte planning, te veel of te weinig personeel",
+          "kostenIndicatie": "€500-1.000/maand aan inefficiëntie"
+        },
+        {
+          "probleem": "Menukaart updaten is gedoe - seizoensgebonden items",
+          "impact": "Verouderde informatie, teleurgestelde gasten",
+          "kostenIndicatie": "Negatieve reviews"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Sfeervolle website met reserveringswidget",
+            "beschrijving": "Mooie foto's, menu, en directe boekingsmogelijkheid",
+            "resultaat": "50% meer directe reserveringen (vs telefoon)"
+          },
+          {
+            "oplossing": "Digitale menukaart die je zelf aanpast",
+            "beschrijving": "Eenvoudig items toevoegen, wijzigen, uitverkocht melden",
+            "resultaat": "Altijd up-to-date menu"
+          },
+          {
+            "oplossing": "Google Maps integratie en optimalisatie",
+            "beschrijving": "Correcte gegevens, foto's, openingstijden",
+            "resultaat": "Hogere lokale vindbaarheid"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online reserveringssysteem met automatische bevestiging",
+            "beschrijving": "Gasten boeken direct, krijgen bevestiging + herinnering",
+            "resultaat": "80% minder telefoontjes"
+          },
+          {
+            "oplossing": "Deposito-systeem voor grote groepen",
+            "beschrijving": "€10-25 per persoon bij boeking, verrekend met rekening",
+            "resultaat": "80% minder no-shows bij groepen"
+          },
+          {
+            "oplossing": "Allergie/voorkeur-invoer bij reservering",
+            "beschrijving": "Gasten vullen dieetwensen in bij boeking",
+            "resultaat": "Keuken is voorbereid, geen verrassingen"
+          },
+          {
+            "oplossing": "Wachtlijst bij volledige bezetting",
+            "beschrijving": "Automatisch bericht als plek vrijkomt",
+            "resultaat": "Maximale bezetting, geen lege tafels"
+          },
+          {
+            "oplossing": "Geautomatiseerde review-requests",
+            "beschrijving": "Dag na bezoek: 'Hoe was het? Laat een review achter'",
+            "resultaat": "Meer Google reviews, hogere ranking"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Seizoensmenu updates",
+            "beschrijving": "Nieuwsbrief bij nieuw seizoensmenu",
+            "resultaat": "Terugkerende gasten"
+          },
+          {
+            "oplossing": "Evenementen-pagina",
+            "beschrijving": "Wine dinners, proeverijen, speciale avonden",
+            "resultaat": "Extra omzet, community building"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Die ene no-show tafel van 8 op zaterdag? Dat is €400 weg.",
+        "Je telefoon gaat 50x per dag. Is dat echt nodig?",
+        "Een deposito van €10 per persoon. 80% minder no-shows.",
+        "Gasten boeken liever online dan bellen. Waarom bied je het niet aan?"
+      ],
+      "preheaders": [
+        "€400 per lege tafel. Elke zaterdag.",
+        "Stop de telefoon. Start met online.",
+        "Allergieën? Weet het vooraf."
+      ],
+      "statistieken": [
+        "80% minder no-shows met deposito-systeem",
+        "80% minder telefoontjes met online reserveren",
+        "50% meer directe boekingen via eigen website"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén voorkomen no-show per weekend = kosten terugverdiend.",
+        "gastenWillenBellen": "Ze bellen omdat het moet. Ze boeken liever online.",
+        "depositoSchriktAf": "Serieuze gasten hebben er geen probleem mee. De rest wil je niet."
+      }
+    },
+    {
+      "id": "aannemers",
+      "naam": "Aannemers & Renovatiebedrijven",
+      "zoekwoorden": ["aannemer", "bouwbedrijf", "renovatie", "verbouwing", "klusser"],
+      "idealeKlant": {
+        "omschrijving": "ZZP'er of klein bedrijf, 1-10 medewerkers",
+        "omzet": "€100.000 - €1.000.000/jaar",
+        "signalen": ["veel offertes maken", "lage conversie", "geen portfolio website"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Offertes maken kost 2-4 uur per klant, 60% converteert niet",
+          "impact": "Enorme tijdsinvestering zonder resultaat",
+          "kostenIndicatie": "10-20 uur/week aan niet-converterende offertes"
+        },
+        {
+          "probleem": "Klanten bellen constant voor updates tijdens het project",
+          "impact": "Onderbrekingen op de bouwplaats",
+          "kostenIndicatie": "5-10 uur/week aan telefoontjes"
+        },
+        {
+          "probleem": "Moeilijk om kwaliteit te bewijzen aan nieuwe klanten",
+          "impact": "Klanten kiezen op prijs i.p.v. kwaliteit",
+          "kostenIndicatie": "Race to the bottom op prijs"
+        },
+        {
+          "probleem": "Leads van vergelijkingssites zijn vaak prijsjagers",
+          "impact": "Laagste prijs wint, geen waardering voor kwaliteit",
+          "kostenIndicatie": "Tijd aan slechte leads"
+        },
+        {
+          "probleem": "Geen tijd om Google-reviews te verzamelen",
+          "impact": "Concurrent met meer reviews scoort hoger",
+          "kostenIndicatie": "Gemiste leads door lage ranking"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Portfolio-website met voor/na foto's",
+            "beschrijving": "Projecten tonen met resultaten, niet alleen beloftes",
+            "resultaat": "Klanten zien kwaliteit, accepteren hogere prijs"
+          },
+          {
+            "oplossing": "Testimonials en reviews prominent",
+            "beschrijving": "Echte klantervaringen op de homepage",
+            "resultaat": "Social proof, hogere conversie"
+          },
+          {
+            "oplossing": "Specialisatie-pagina's per type werk",
+            "beschrijving": "Dakkapel, uitbouw, badkamer - elk met eigen pagina",
+            "resultaat": "SEO voor specifieke zoektermen"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Lead-kwalificatie formulier",
+            "beschrijving": "Vragen over budget, planning, type project voordat je tijd investeert",
+            "resultaat": "Van 40% naar 60% conversie"
+          },
+          {
+            "oplossing": "Klantportaal met projectupdates en foto's",
+            "beschrijving": "Wekelijkse update met foto's, klant volgt zelf",
+            "resultaat": "70% minder 'hoe staat het ervoor?' telefoontjes"
+          },
+          {
+            "oplossing": "Automatische review-requests na projectoplevering",
+            "beschrijving": "Email/SMS na oplevering met link naar Google reviews",
+            "resultaat": "3x meer reviews"
+          },
+          {
+            "oplossing": "Geautomatiseerde follow-up bij niet-geconverteerde offertes",
+            "beschrijving": "Na 1 week: 'Heb je nog vragen over de offerte?'",
+            "resultaat": "15% extra conversie uit 'dode' leads"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog over renovatieprocessen",
+            "beschrijving": "Wat kost een uitbouw? Hoe lang duurt een dakkapel?",
+            "resultaat": "SEO-verkeer, vooraf geïnformeerde klanten"
+          },
+          {
+            "oplossing": "Projectupdates via social media",
+            "beschrijving": "Work-in-progress content op Instagram/Facebook",
+            "resultaat": "Organisch bereik, portfolio building"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Je maakt 10 offertes, 4 worden klant. Wat als dat er 6 waren?",
+        "Die 5 telefoontjes per dag 'hoe staat het ervoor?' - automatiseer ze.",
+        "Je concurrent heeft 50 Google reviews. Jij 8. Wie krijgt de lead?",
+        "Een offerte maken kost je 3 uur. Stel dat je alleen serieuze aanvragen kreeg?"
+      ],
+      "preheaders": [
+        "Van 40% naar 60% conversie. Hier is hoe.",
+        "Klanten willen updates. Geef ze die. Automatisch.",
+        "Meer reviews = meer werk. Simpel."
+      ],
+      "statistieken": [
+        "Van 40% naar 60% conversie met lead-kwalificatie",
+        "70% minder telefoontjes met klantportaal",
+        "3x meer reviews met automatische requests"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra project per maand dekt de kosten ruimschoots.",
+        "geenTijdVoorFotos": "5 minuten per dag. Klant uploadt ook.",
+        "mijnWerkSpreektVoorZich": "Alleen als mensen het zien. Dat doen ze niet zonder website."
+      }
+    },
+    {
+      "id": "schoonmaak",
+      "naam": "Schoonmaakbedrijven",
+      "zoekwoorden": ["schoonmaak", "schoonmaakbedrijf", "glazenwasser", "huishoudelijke hulp", "bedrijfsschoonmaak"],
+      "idealeKlant": {
+        "omschrijving": "Schoonmaakbedrijf met 5-20 medewerkers, particulier en zakelijk",
+        "omzet": "€150.000 - €750.000/jaar",
+        "signalen": ["veel planning-issues", "klanten vergeten afspraken", "geen online aanwezigheid"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Klanten vergeten dat de schoonmaker komt - niemand thuis",
+          "impact": "Verloren reistijd, geen omzet",
+          "kostenIndicatie": "€50-100 per gemiste afspraak"
+        },
+        {
+          "probleem": "Veel tijd kwijt aan offertes voor eenmalige klussen",
+          "impact": "Lage conversie op eenmalige schoonmaak",
+          "kostenIndicatie": "3-5 uur/week"
+        },
+        {
+          "probleem": "Geen overzicht welke medewerker waar en wanneer",
+          "impact": "Inefficiënte routes, dubbele boekingen",
+          "kostenIndicatie": "€200-500/maand aan inefficiëntie"
+        },
+        {
+          "probleem": "Moeilijk om betrouwbaarheid te bewijzen",
+          "impact": "Klanten kiezen bekende merken i.p.v. kwaliteit",
+          "kostenIndicatie": "Gemiste klanten"
+        },
+        {
+          "probleem": "Terugkerende klanten annuleren zonder tijdige melding",
+          "impact": "Lege uren niet meer op te vullen",
+          "kostenIndicatie": "€100-200/maand"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Vertrouwenwekkende website met certificeringen",
+            "beschrijving": "Verzekering, referenties, team voorstelling",
+            "resultaat": "Hogere conversie door vertrouwen"
+          },
+          {
+            "oplossing": "Online offertecalculator",
+            "beschrijving": "m² + type ruimte = indicatieve prijs",
+            "resultaat": "80% minder offertetijd"
+          },
+          {
+            "oplossing": "Diensten-pagina's per type klant",
+            "beschrijving": "Particulier vs zakelijk vs verhuisschoonmaak",
+            "resultaat": "Gerichte content, betere SEO"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Automatische herinneringen 24u voor afspraak",
+            "beschrijving": "SMS/WhatsApp: 'Morgen komt [naam] om [tijd]'",
+            "resultaat": "90% minder niemand-thuis situaties"
+          },
+          {
+            "oplossing": "Planning-systeem met routeoptimalisatie",
+            "beschrijving": "Slim plannen zodat medewerkers minimaal reizen",
+            "resultaat": "20% meer klanten per dag"
+          },
+          {
+            "oplossing": "Klantportaal met facturen en planning",
+            "beschrijving": "Klant ziet wanneer schoonmaker komt, kan wijzigen",
+            "resultaat": "Minder telefoontjes, meer zelfservice"
+          },
+          {
+            "oplossing": "Digitale checklist die klant aftekent",
+            "beschrijving": "Na afloop: klant bevestigt dat werk gedaan is",
+            "resultaat": "Geen discussies, bewijs van levering"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog over schoonmaaktips",
+            "beschrijving": "Hoe vaak moet je X schoonmaken? Beste producten voor Y",
+            "resultaat": "SEO-verkeer, expertise tonen"
+          },
+          {
+            "oplossing": "Seizoensgebonden acties",
+            "beschrijving": "Voorjaarsschoonmaak aanbieding, kerst-pakket",
+            "resultaat": "Extra omzet in rustigere periodes"
+          }
+        ]
+      },
+      "emailHooks": [
+        "3x per week staat je team voor een dichte deur. Herkenbaar?",
+        "Die offerte van 45 minuten voor €80 omzet? Automatiseer hem.",
+        "Je medewerkers rijden 30% te veel kilometers. Dat is €300/maand.",
+        "Klanten annuleren te laat. Automatische herinneringen stoppen dat."
+      ],
+      "preheaders": [
+        "Niemand thuis? Nooit meer.",
+        "Offertes in 2 minuten i.p.v. 45.",
+        "Slimmer plannen = meer klanten."
+      ],
+      "statistieken": [
+        "90% minder niemand-thuis situaties",
+        "80% tijdsbesparing op offertes met calculator",
+        "20% meer klanten per dag door routeoptimalisatie"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén voorkomen lege afspraak per week = kosten terugverdiend.",
+        "mijnKlantenZijnOud": "SMS kunnen ze ontvangen. WhatsApp vaak ook.",
+        "geenTijd": "Eenmalige setup van 2 uur. Daarna automatisch."
+      }
+    },
+    {
+      "id": "garages",
+      "naam": "Autobedrijven & Garages",
+      "zoekwoorden": ["garage", "autobedrijf", "automonteur", "APK", "autoservice"],
+      "idealeKlant": {
+        "omschrijving": "Onafhankelijke garage, 2-8 monteurs",
+        "omzet": "€200.000 - €1.000.000/jaar",
+        "signalen": ["veel telefoon over status", "APK herinneringen handmatig", "website verouderd"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Klanten bellen 10x per dag: 'Is mijn auto al klaar?'",
+          "impact": "Onderbrekingen, receptie overbelast",
+          "kostenIndicatie": "€15.000/jaar aan telefoonkosten en tijd"
+        },
+        {
+          "probleem": "APK-herinneringen versturen kost uren per maand",
+          "impact": "Handmatig uitzoeken wie wanneer moet",
+          "kostenIndicatie": "8+ uur/maand"
+        },
+        {
+          "probleem": "No-shows voor onderhoudsbeurten verstoren planning",
+          "impact": "Lege werkplaats, niet in te vullen",
+          "kostenIndicatie": "€100-200 per no-show"
+        },
+        {
+          "probleem": "Moeilijk om meerwerk te verkopen zonder opdringerig te lijken",
+          "impact": "Klant vertrouwt garage niet bij 'extra werk'",
+          "kostenIndicatie": "Gemiste omzet"
+        },
+        {
+          "probleem": "Concurrent heeft betere Google-reviews",
+          "impact": "Nieuwe klanten kiezen op reviews",
+          "kostenIndicatie": "Gemiste klanten"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Professionele website met diensten-overzicht",
+            "beschrijving": "APK, onderhoud, reparatie - met prijsindicaties",
+            "resultaat": "Vertrouwen, duidelijke verwachtingen"
+          },
+          {
+            "oplossing": "Online afspraakplanner",
+            "beschrijving": "Klanten boeken zelf voor APK of onderhoud",
+            "resultaat": "50% minder telefoontjes"
+          },
+          {
+            "oplossing": "Team en werkplaats presentatie",
+            "beschrijving": "Foto's van monteurs en faciliteiten",
+            "resultaat": "Menselijk gezicht, vertrouwen"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Automatische status-updates via SMS/WhatsApp",
+            "beschrijving": "'Je auto is binnen', 'diagnose klaar', 'klaar voor ophalen'",
+            "resultaat": "80% minder telefoontjes"
+          },
+          {
+            "oplossing": "APK en onderhoudsherinneringen op kenteken",
+            "beschrijving": "Automatisch bericht als APK of onderhoudsbeurt nadert",
+            "resultaat": "30% meer terugkerende klanten"
+          },
+          {
+            "oplossing": "Digitale inspectierapporten met foto's",
+            "beschrijving": "Klant ziet foto's van slijtage, begrijpt meerwerk",
+            "resultaat": "40% meer goedkeuring voor meerwerk"
+          },
+          {
+            "oplossing": "Review-requests na ophalen auto",
+            "beschrijving": "Automatische vraag om Google-review",
+            "resultaat": "3x meer reviews"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Onderhoudstips blog",
+            "beschrijving": "Wanneer banden wisselen? Hoe vaak olie verversen?",
+            "resultaat": "SEO-verkeer, expertise tonen"
+          },
+          {
+            "oplossing": "Seizoensgebonden acties",
+            "beschrijving": "Wintercheck, zomerbanden-actie",
+            "resultaat": "Extra omzet in specifieke periodes"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Die 10 telefoontjes per dag 'Is mijn auto klaar?' kosten je €15.000/jaar.",
+        "APK-herinneringen handmatig versturen? Dat is 2025 niet meer.",
+        "Klanten vertrouwen je niet bij meerwerk. Tenzij je foto's stuurt.",
+        "Je concurrent heeft 80 reviews. Jij 12. Wie krijgt de klant?"
+      ],
+      "preheaders": [
+        "€15.000/jaar aan 'Is ie al klaar?' telefoontjes.",
+        "APK-herinneringen op autopilot.",
+        "Meerwerk verkopen met foto-bewijs."
+      ],
+      "statistieken": [
+        "80% minder telefoontjes met automatische statusupdates",
+        "30% meer terugkerende klanten door APK-herinneringen",
+        "40% meer goedkeuring voor meerwerk met foto's"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén APK-klant die terugkomt i.p.v. naar de concurrent gaat = kosten gedekt.",
+        "klantenWillenPersoonlijkContact": "Ze willen weten wanneer hun auto klaar is. Of dat via telefoon of SMS is, maakt ze niet uit.",
+        "geenTijd": "Setup in 1 dag. Daarna automatisch. Elke dag."
+      }
+    },
+    {
+      "id": "makelaars",
+      "naam": "Makelaars",
+      "zoekwoorden": ["makelaar", "makelaarskantoor", "vastgoed", "woningverkoop", "huizenverkoop"],
+      "idealeKlant": {
+        "omschrijving": "Onafhankelijke makelaar of klein kantoor, 1-5 makelaars",
+        "omzet": "€100.000 - €500.000/jaar",
+        "signalen": ["veel niet-serieuze kijkers", "tijdrovende bezichtigingen", "afhankelijk van Funda"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Bezichtigingen plannen kost uren aan telefoon/mail",
+          "impact": "Niet-factureerbare tijd",
+          "kostenIndicatie": "10+ uur/week"
+        },
+        {
+          "probleem": "Kijkers die niet serieus zijn verspillen je tijd",
+          "impact": "Bezichtigingen die nergens toe leiden",
+          "kostenIndicatie": "60% van bezichtigingen"
+        },
+        {
+          "probleem": "Verkopers willen constante updates over interesse",
+          "impact": "Veel telefoon/mail naar verkopers",
+          "kostenIndicatie": "5 uur/week"
+        },
+        {
+          "probleem": "Moeilijk om je te onderscheiden van grote ketens",
+          "impact": "Klanten kiezen bekende naam",
+          "kostenIndicatie": "Gemiste opdrachten"
+        },
+        {
+          "probleem": "Leads van Funda zijn duur en niet altijd kwalitatief",
+          "impact": "Hoge kosten, lage conversie",
+          "kostenIndicatie": "€500-2000/maand aan Funda zonder ROI"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Eigen aanbod-website naast Funda",
+            "beschrijving": "Je woningen, jouw branding, directe leads",
+            "resultaat": "Leads zonder Funda-kosten"
+          },
+          {
+            "oplossing": "Makelaar-profielpagina met reviews",
+            "beschrijving": "Persoonlijke benadering, resultaten, klantervaringen",
+            "resultaat": "Onderscheidend vs grote ketens"
+          },
+          {
+            "oplossing": "'Wat is mijn huis waard?' tool",
+            "beschrijving": "Lead magnet die potentiële verkopers aantrekt",
+            "resultaat": "Warme leads voor verkoopopdrachten"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online bezichtigingsplanner met beschikbaarheid",
+            "beschrijving": "Kijkers kiezen zelf een tijdslot",
+            "resultaat": "70% minder plannings-telefoontjes"
+          },
+          {
+            "oplossing": "Koper-kwalificatie formulier",
+            "beschrijving": "Budget, financiering geregeld?, zoekprofiel voordat ze bezichtigen",
+            "resultaat": "40% minder niet-serieuze kijkers"
+          },
+          {
+            "oplossing": "Automatische updates naar verkopers",
+            "beschrijving": "Wekelijks: aantal views, bezichtigingen, interesse",
+            "resultaat": "80% minder 'hoe staat het ervoor?' telefoontjes"
+          },
+          {
+            "oplossing": "Geautomatiseerde follow-up na bezichtiging",
+            "beschrijving": "'Wat vond je van de woning?' formulier",
+            "resultaat": "Sneller inzicht in koopintentie"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Woningmarkt updates per wijk",
+            "beschrijving": "Blog over prijsontwikkeling, nieuwe projecten",
+            "resultaat": "Lokale expertise tonen, SEO"
+          },
+          {
+            "oplossing": "Verkooptips voor huiseigenaren",
+            "beschrijving": "Hoe maak je je huis klaar voor verkoop?",
+            "resultaat": "Lead nurturing voor verkoopopdrachten"
+          },
+          {
+            "oplossing": "Virtuele tours voor eerste selectie",
+            "beschrijving": "360° tours zodat kijkers vooraf selecteren",
+            "resultaat": "Alleen serieuze bezichtigingen"
+          }
+        ]
+      },
+      "emailHooks": [
+        "60% van je bezichtigingen leidt tot niets. Filter ze vooraf.",
+        "Die 15 'hoe staat het ervoor?' telefoontjes per week? Automatiseer ze.",
+        "'Wat is mijn huis waard?' - de beste lead magnet voor verkopers.",
+        "Funda kost €500/maand. Je eigen website levert gratis leads."
+      ],
+      "preheaders": [
+        "Alleen serieuze kijkers. Zo filter je.",
+        "Verkopers willen updates. Automatisch.",
+        "Leads zonder Funda-kosten."
+      ],
+      "statistieken": [
+        "40% tijdsbesparing met online planning en kwalificatie",
+        "80% minder update-telefoontjes met automatische rapportage",
+        "70% minder plannings-telefoontjes"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra verkoopopdracht per kwartaal dekt de jaarkost.",
+        "kijkersWillenPersoonlijkContact": "Bij de bezichtiging. Niet bij het plannen.",
+        "ikHebFunda": "En je betaalt €500/maand. Je eigen website is eenmalig."
+      }
+    },
+    {
+      "id": "fitness",
+      "naam": "Fitnessstudio's & Personal Trainers",
+      "zoekwoorden": ["fitness", "sportschool", "personal trainer", "gym", "fitnesscoach"],
+      "idealeKlant": {
+        "omschrijving": "Lokale studio of zelfstandige PT, 50-500 leden/klanten",
+        "omzet": "€50.000 - €500.000/jaar",
+        "signalen": ["hoge churn rate", "geen app", "handmatige administratie"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Leden zeggen op na 3 maanden - geen binding",
+          "impact": "Constante werving nodig, hoge acquisitiekosten",
+          "kostenIndicatie": "40% churn in eerste 90 dagen"
+        },
+        {
+          "probleem": "No-shows voor personal training kosten €30-60 per sessie",
+          "impact": "Directe omzetderving",
+          "kostenIndicatie": "€300-600/maand"
+        },
+        {
+          "probleem": "Administratie van abonnementen en betalingen",
+          "impact": "Tijd die niet naar klanten gaat",
+          "kostenIndicatie": "5-10 uur/week"
+        },
+        {
+          "probleem": "Moeilijk om resultaten te tracken en te communiceren",
+          "impact": "Leden zien geen vooruitgang, stoppen",
+          "kostenIndicatie": "Retentieverlies"
+        },
+        {
+          "probleem": "Concurrentie van budget-ketens en online coaching",
+          "impact": "Prijsdruk, leden vertrekken voor €20/maand optie",
+          "kostenIndicatie": "Marktaandeel verlies"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Moderne website met transformatie-stories",
+            "beschrijving": "Voor/na foto's, testimonials van echte leden",
+            "resultaat": "Nieuwe leden zien wat mogelijk is"
+          },
+          {
+            "oplossing": "Online proefles booking",
+            "beschrijving": "Direct eerste les boeken, laagdrempelig",
+            "resultaat": "50% hogere conversie van bezoeker naar proefles"
+          },
+          {
+            "oplossing": "Abonnement-overzicht met prijzen",
+            "beschrijving": "Transparante prijzen, geen verrassingen",
+            "resultaat": "Gekwalificeerde leads die budget hebben"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Leden-app met trainingsschema's",
+            "beschrijving": "Persoonlijke schema's, progressie-tracking",
+            "resultaat": "25% hogere retentie"
+          },
+          {
+            "oplossing": "Automatische check-in herinneringen",
+            "beschrijving": "'Je hebt 5 dagen niet getraind' push notificatie",
+            "resultaat": "Hogere trainingsfrequentie"
+          },
+          {
+            "oplossing": "Ledenbeheer met automatische incasso",
+            "beschrijving": "Geen handmatige betalingsopvolging",
+            "resultaat": "95% betalingspercentage, 0 uur/week admin"
+          },
+          {
+            "oplossing": "Geautomatiseerde 'we missen je' berichten",
+            "beschrijving": "Bij 2 weken inactiviteit: persoonlijke check-in",
+            "resultaat": "30% minder opzeggingen"
+          },
+          {
+            "oplossing": "Online booking voor groepslessen en PT",
+            "beschrijving": "Leden boeken zelf, wachtlijst bij vol",
+            "resultaat": "Maximale bezetting"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Oefenvideo's en trainingstips",
+            "beschrijving": "Content die leden ook thuis kunnen gebruiken",
+            "resultaat": "Extra waarde, binding"
+          },
+          {
+            "oplossing": "Voedingstips en recepten",
+            "beschrijving": "Holistische benadering van fitness",
+            "resultaat": "Betere resultaten, meer tevreden leden"
+          },
+          {
+            "oplossing": "Transformatie-blog",
+            "beschrijving": "Verhalen van leden die resultaat boekten",
+            "resultaat": "Inspiratie, social proof"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Je verliest 40% van nieuwe leden binnen 90 dagen. Zo stop je dat.",
+        "Die 5 no-shows per week? Dat is €1.200/maand. Weg.",
+        "Een app houdt leden 25% langer. Zonder app vertrekken ze naar Basic-Fit.",
+        "Je leden zien geen resultaat. Daarom stoppen ze."
+      ],
+      "preheaders": [
+        "40% churn in 90 dagen. Stop het.",
+        "No-shows kosten je €1.200/maand.",
+        "Progressie-tracking houdt leden vast."
+      ],
+      "statistieken": [
+        "25% hogere retentie met leden-app",
+        "30% minder opzeggingen met 'we missen je' berichten",
+        "95% betalingspercentage met automatische incasso"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén lid dat 6 maanden langer blijft i.p.v. 3 maanden = investering terugverdiend.",
+        "ledenWillenGeenApp": "Ze willen resultaat. Een app helpt daarbij. Ze gebruiken hem.",
+        "ikHebGeenTijd": "Setup eenmalig. Daarna werkt het voor je."
+      }
+    },
+    {
+      "id": "fotografen",
+      "naam": "Fotografen",
+      "zoekwoorden": ["fotograaf", "fotografie", "bruidsfotograaf", "portretfotograaf", "zakelijke fotografie"],
+      "idealeKlant": {
+        "omschrijving": "Zelfstandig fotograaf, bruiloften/portret/zakelijk",
+        "omzet": "€30.000 - €150.000/jaar",
+        "signalen": ["trage website", "geen online booking", "handmatige gallerij-deling"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Klanten zien portfolio niet goed op telefoon",
+          "impact": "70% van bezoekers via mobiel, verlaten trage site",
+          "kostenIndicatie": "Gemiste boekingen"
+        },
+        {
+          "probleem": "Offerte maken per shoot kost te veel tijd",
+          "impact": "Onderhandelen over elke opdracht",
+          "kostenIndicatie": "5-10 uur/week"
+        },
+        {
+          "probleem": "Gallerij delen en foto-selectie is omslachtig",
+          "impact": "WeTransfer links, e-mail heen-en-weer",
+          "kostenIndicatie": "3-5 uur per klant"
+        },
+        {
+          "probleem": "Betalingen achtervolgen na de shoot",
+          "impact": "Awkward gesprekken, late betalingen",
+          "kostenIndicatie": "5% niet-betalers"
+        },
+        {
+          "probleem": "Moeilijk om je stijl en prijsklasse duidelijk te maken",
+          "impact": "Prijsdiscussies, verkeerde verwachtingen",
+          "kostenIndicatie": "Tijd aan niet-passende aanvragen"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Bliksemsnel portfolio geoptimaliseerd voor mobiel",
+            "beschrijving": "Foto's laden in <2 seconden, ook op 4G",
+            "resultaat": "3x meer boekingen"
+          },
+          {
+            "oplossing": "Pakket-pagina's met prijzen en direct boeken",
+            "beschrijving": "Duidelijke pakketten, klant boekt zelf",
+            "resultaat": "70% minder offertetijd"
+          },
+          {
+            "oplossing": "Stijl-showcase per type fotografie",
+            "beschrijving": "Bruiloften, portret, zakelijk - elk eigen sfeer",
+            "resultaat": "Klanten die bij je stijl passen"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online gallerij waar klanten selecteren en bestellen",
+            "beschrijving": "Klant kiest foto's, print direct, betaalt",
+            "resultaat": "80% minder e-mail heen-en-weer"
+          },
+          {
+            "oplossing": "Automatische facturatie en betalingsherinnering",
+            "beschrijving": "Factuur bij boeking, herinnering bij te laat",
+            "resultaat": "99% betalingspercentage"
+          },
+          {
+            "oplossing": "Contract en voorwaarden digitaal ondertekenen",
+            "beschrijving": "Klant tekent online voor boeking",
+            "resultaat": "Juridisch gedekt, geen papierwerk"
+          },
+          {
+            "oplossing": "Review-request na levering",
+            "beschrijving": "Automatische vraag om Google/socials review",
+            "resultaat": "3x meer reviews"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog met shoot-voorbeelden",
+            "beschrijving": "Achter-de-schermen, styling tips, locatie-inspiratie",
+            "resultaat": "SEO-verkeer, portfolio verrijking"
+          },
+          {
+            "oplossing": "FAQ over shoots",
+            "beschrijving": "Wat moet ik aan? Hoe lang duurt het? Wanneer krijg ik de foto's?",
+            "resultaat": "Minder repetitieve vragen"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Je portfolio laadt 8 seconden op mobiel. 70% van bezoekers is dan weg.",
+        "Die offerte-onderhandelingen per shoot? Vaste pakketten. Klaar.",
+        "WeTransfer voor gallerijen? Er zijn betere opties. Die ook nog geld opleveren.",
+        "3x meer boekingen met een snelle mobiele site. Niet 3%. 3x."
+      ],
+      "preheaders": [
+        "8 seconden laden = bezoekers weg.",
+        "Pakketten i.p.v. offertes. Simpel.",
+        "Gallerijen die geld opleveren."
+      ],
+      "statistieken": [
+        "3x meer boekingen met geoptimaliseerde mobiele ervaring",
+        "70% minder offertetijd met vaste pakketten",
+        "80% minder e-mail met online gallerij-systeem"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra bruiloft per jaar dekt 5 jaar kosten.",
+        "mijnWerkSpreektVoorZich": "Alleen als mensen het zien. Op een trage site doen ze dat niet.",
+        "ikHouVanPersoonlijkContact": "Prima. Laat de administratie maar automatisch gaan."
+      }
+    },
+    {
+      "id": "dakdekkers",
+      "naam": "Dakdekkers",
+      "zoekwoorden": ["dakdekker", "dakwerk", "dakreparatie", "dakbedekking", "dakrenovatie"],
+      "idealeKlant": {
+        "omschrijving": "Gevestigd dakdekkersbedrijf, 3-15 medewerkers",
+        "omzet": "€200.000 - €1.500.000/jaar",
+        "signalen": ["veel huisbezoeken", "prijsconcurrentie", "seizoenspieken"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Offertes maken vereist altijd een bezoek ter plaatse",
+          "impact": "45-60 minuten per offerte, inclusief reistijd",
+          "kostenIndicatie": "€75-100 per offerte"
+        },
+        {
+          "probleem": "Klanten vergelijken alleen op prijs, niet op kwaliteit",
+          "impact": "Race to the bottom",
+          "kostenIndicatie": "Lagere marges"
+        },
+        {
+          "probleem": "Seizoenswerk: rustig in winter, chaos in voorjaar/zomer",
+          "impact": "Cash flow problemen, overbelasting",
+          "kostenIndicatie": "€10.000+/jaar aan inefficiëntie"
+        },
+        {
+          "probleem": "Leads van vergelijkingssites zijn prijsjagers",
+          "impact": "Veel offertes, weinig conversie",
+          "kostenIndicatie": "€50-100 per niet-converterende lead"
+        },
+        {
+          "probleem": "Moeilijk om garantie en vakmanschap te bewijzen",
+          "impact": "Klant kiest goedkoopste optie",
+          "kostenIndicatie": "Gemiste projecten"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Portfolio met projectfoto's en certificeringen",
+            "beschrijving": "Kwaliteitswerk tonen, vakmanschap bewijzen",
+            "resultaat": "Klanten kiezen op kwaliteit, niet prijs"
+          },
+          {
+            "oplossing": "Garantie en certificeringen prominent",
+            "beschrijving": "KOMO, BDA, verzekering zichtbaar",
+            "resultaat": "Vertrouwen, hogere prijsacceptatie"
+          },
+          {
+            "oplossing": "Diensten-pagina's per type dak",
+            "beschrijving": "Plat dak, schuin dak, leien, bitumen - elk eigen pagina",
+            "resultaat": "SEO voor specifieke zoektermen"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online schatter met luchtfoto-integratie",
+            "beschrijving": "Klant vult adres in, krijgt indicatieve prijs op basis van dakoppervlak",
+            "resultaat": "50% minder nutteloze huisbezoeken"
+          },
+          {
+            "oplossing": "Lead-kwalificatie formulier",
+            "beschrijving": "Type dak, budget-indicatie, urgentie vooraf",
+            "resultaat": "Alleen serieuze aanvragen"
+          },
+          {
+            "oplossing": "Wachtlijst-systeem met automatische opvolging",
+            "beschrijving": "Klant op wachtlijst krijgt updates + actie bij annulering",
+            "resultaat": "Maximale bezetting in piekseizoen"
+          },
+          {
+            "oplossing": "Klantportaal met projectfoto's en facturen",
+            "beschrijving": "Klant volgt project, ziet facturen",
+            "resultaat": "Minder telefoontjes, betere betaling"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog over dakinspectie en onderhoud",
+            "beschrijving": "Wanneer moet je dak vervangen? Tekenen van slijtage",
+            "resultaat": "SEO-verkeer, expertise tonen"
+          },
+          {
+            "oplossing": "Prijsindicatie-pagina's",
+            "beschrijving": "Wat kost een nieuw plat dak? Richtprijzen per m²",
+            "resultaat": "Vooraf geïnformeerde klanten met realistisch budget"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Je rijdt 45 minuten voor een offerte die nergens leidt. Dat kan anders.",
+        "Vergelijkingssites leveren prijsjagers. Je eigen leads leveren klanten.",
+        "Klanten kiezen de goedkoopste. Tenzij je kwaliteit bewijst.",
+        "Wachtlijst in het voorjaar? Automatiseer hem. Vul die winter-maanden."
+      ],
+      "preheaders": [
+        "Minder nutteloze huisbezoeken. Meer projecten.",
+        "Prijsjagers filteren. Kwaliteitsklanten houden.",
+        "Vakmanschap bewijzen. Online."
+      ],
+      "statistieken": [
+        "50% minder nutteloze huisbezoeken met online pre-kwalificatie",
+        "Van 30% naar 50% conversie met lead-kwalificatie",
+        "3x meer reviews met automatische requests"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra project per maand dekt de jaarkost.",
+        "elkDakIsAnders": "Klopt. Maar een indicatie filtert de niet-serieuze aanvragen.",
+        "mijnKlantenZijnNietOnline": "Ze zoeken 'dakdekker' op Google. Dat is online."
+      }
+    },
+    {
+      "id": "loodgieters",
+      "naam": "Loodgieters",
+      "zoekwoorden": ["loodgieter", "installateur", "sanitair", "CV-monteur", "lekkage"],
+      "idealeKlant": {
+        "omschrijving": "Zelfstandige loodgieter of klein bedrijf, 1-5 medewerkers",
+        "omzet": "€80.000 - €500.000/jaar",
+        "signalen": ["veel spoedklussen", "inefficiënte routes", "handmatige facturatie"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Spoedklussen verstoren geplande werkzaamheden",
+          "impact": "Geplande klanten moeten wachten, frustratie",
+          "kostenIndicatie": "3-5 uur/week aan herschikken"
+        },
+        {
+          "probleem": "Klanten weten niet wat een eerlijke prijs is",
+          "impact": "Wantrouwen, 'loodgieters zijn duur'",
+          "kostenIndicatie": "Reputatie, discussies"
+        },
+        {
+          "probleem": "Veel kleine klussen zijn niet rendabel door reistijd",
+          "impact": "€30 klus + €40 reistijd",
+          "kostenIndicatie": "€200-500/maand aan inefficiënte routes"
+        },
+        {
+          "probleem": "Administratie van urenstaten en facturen",
+          "impact": "Avonden en weekenden aan administratie",
+          "kostenIndicatie": "8-12 uur/week"
+        },
+        {
+          "probleem": "Moeilijk om beschikbaarheid te communiceren",
+          "impact": "Klanten weten niet wanneer je kunt",
+          "kostenIndicatie": "Gemiste boekingen"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Duidelijke diensten-pagina met prijsindicaties",
+            "beschrijving": "Kraan vervangen: €X-Y, WC ontstoppen: €X-Y",
+            "resultaat": "Vertrouwen door transparantie"
+          },
+          {
+            "oplossing": "Online booking met nood- en reguliere slots",
+            "beschrijving": "Spoed = vandaag (hoger tarief), regulier = deze week",
+            "resultaat": "Verwachtingsmanagement"
+          },
+          {
+            "oplossing": "Reviews en certificeringen prominent",
+            "beschrijving": "Bewijs van vakmanschap en betrouwbaarheid",
+            "resultaat": "Hogere prijsacceptatie"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online booking met spoed-slots",
+            "beschrijving": "Dagelijks 2-3 spoed-slots, automatisch duurder geprijsd",
+            "resultaat": "Spoed verstoort planning niet"
+          },
+          {
+            "oplossing": "Routeplanning die klussen clustert per wijk",
+            "beschrijving": "Automatisch slim plannen op basis van locatie",
+            "resultaat": "30% meer rendabele klussen"
+          },
+          {
+            "oplossing": "Digitale werkbonnen met foto's",
+            "beschrijving": "Foto voor/na, klant tekent digitaal",
+            "resultaat": "Geen discussies, bewijs van werk"
+          },
+          {
+            "oplossing": "Automatische facturatie na afronding",
+            "beschrijving": "Werkbon → factuur → versturen in 2 klikken",
+            "resultaat": "80% tijdsbesparing op administratie"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog met onderhoudstips",
+            "beschrijving": "Hoe voorkom je verstopte afvoer? Wanneer CV-ketel vervangen?",
+            "resultaat": "SEO-verkeer, preventieve klanten"
+          },
+          {
+            "oplossing": "FAQ over prijzen en werkwijze",
+            "beschrijving": "Transparantie wekt vertrouwen",
+            "resultaat": "Minder prijsdiscussies"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Die spoedreparatie om 17:00 verstoort 3 geplande klussen. Slim plannen?",
+        "€30 klus + €40 reistijd. Cluster je klussen, dan is het €30 + €10.",
+        "Klanten denken dat je te duur bent. Laat ze de prijzen vooraf zien.",
+        "8 uur per week aan facturen. Automatiseer het in 8 minuten."
+      ],
+      "preheaders": [
+        "Spoed zonder chaos. Het kan.",
+        "Slimmer plannen = meer verdienen.",
+        "Transparante prijzen = minder discussies."
+      ],
+      "statistieken": [
+        "30% meer rendabele klussen door route-optimalisatie",
+        "80% tijdsbesparing op administratie",
+        "50% minder prijsdiscussies door transparante tarieven"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "De tijd die je bespaart is meer waard dan de kosten.",
+        "mijnKlantenBellen": "Spoed-klanten wel. De rest boekt graag online.",
+        "elkeKlusIsAnders": "Prijsindicatie, geen vaste prijs. Dat snappen klanten."
+      }
+    },
+    {
+      "id": "elektriciens",
+      "naam": "Elektriciens",
+      "zoekwoorden": ["elektricien", "elektrisch installateur", "elektrische keuring", "laadpaal installatie"],
+      "idealeKlant": {
+        "omschrijving": "Erkende elektricien, particulier en zakelijk",
+        "omzet": "€100.000 - €750.000/jaar",
+        "signalen": ["veel offerte-aanvragen", "storingsdienst stress", "weinig online aanwezigheid"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Klanten onderschatten complexiteit van werkzaamheden",
+          "impact": "Verkeerde verwachtingen, prijsdiscussies",
+          "kostenIndicatie": "5+ uur/week aan uitleg"
+        },
+        {
+          "probleem": "Veel offerteaanvragen, weinig serieuze klanten",
+          "impact": "Tijd aan niet-converterende leads",
+          "kostenIndicatie": "10+ uur/week"
+        },
+        {
+          "probleem": "Storingsdienst verstoort privéleven",
+          "impact": "Avond- en weekend-telefoontjes",
+          "kostenIndicatie": "Stress, burn-out risico"
+        },
+        {
+          "probleem": "Administratie van keuringen en garanties per klant",
+          "impact": "Papierwerk, opzoekwerk",
+          "kostenIndicatie": "5-8 uur/week"
+        },
+        {
+          "probleem": "Certificeringen zijn moeilijk te communiceren",
+          "impact": "Klanten begrijpen niet waarom je duurder bent dan 'die andere'",
+          "kostenIndicatie": "Gemiste projecten aan cowboys"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Diensten-pagina's met uitleg en prijsindicatie",
+            "beschrijving": "Groepenkast vervangen, laadpaal installeren - elk met uitleg",
+            "resultaat": "Klanten begrijpen wat het inhoudt"
+          },
+          {
+            "oplossing": "Certificeringen-pagina",
+            "beschrijving": "VCA, NEN1010, InstallQ - uitleg waarom het ertoe doet",
+            "resultaat": "Onderscheidend vs cowboys"
+          },
+          {
+            "oplossing": "Portfolio met projecten",
+            "beschrijving": "Van nieuwbouw tot renovatie - laat je werk zien",
+            "resultaat": "Bewijs van vakmanschap"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Lead-kwalificatie formulier",
+            "beschrijving": "Type project, budget-range, planning vooraf",
+            "resultaat": "60% minder niet-serieuze aanvragen"
+          },
+          {
+            "oplossing": "Storingsdienst-booking met automatische prijsindicatie",
+            "beschrijving": "Online aanvragen, direct richtprijs, accepteren of niet",
+            "resultaat": "Minder telefoon, betere verwachting"
+          },
+          {
+            "oplossing": "Klantportaal met keuringsgeschiedenis",
+            "beschrijving": "Klant ziet wanneer volgende keuring is, facturen",
+            "resultaat": "Automatische herhaalopdrachten"
+          },
+          {
+            "oplossing": "Projectcalculator voor standaardwerk",
+            "beschrijving": "Laadpaal, uitbreiding groepenkast - indicatieve prijs",
+            "resultaat": "70% minder offertetijd"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog over elektrische veiligheid",
+            "beschrijving": "Wanneer groepenkast vervangen? Tekenen van problemen",
+            "resultaat": "SEO-verkeer, preventieve klanten"
+          },
+          {
+            "oplossing": "FAQ over keuringen en installaties",
+            "beschrijving": "Beantwoord de vragen die je elke week krijgt",
+            "resultaat": "Minder repetitieve gesprekken"
+          },
+          {
+            "oplossing": "Nieuwsbrief over wetswijzigingen",
+            "beschrijving": "Laadpaal-subsidies, nieuwe normen, etc.",
+            "resultaat": "Top-of-mind bij bestaande klanten"
+          }
+        ]
+      },
+      "emailHooks": [
+        "8 van 10 offerte-aanvragen zijn niet serieus. Filter ze vooraf.",
+        "Die storingsdienst-telefoon om 21:00? Er is een betere manier.",
+        "Klanten kiezen de cowboy. Tot ze jouw certificeringen zien.",
+        "Keuringen automatisch opvolgen? Dat is €5.000+/jaar aan herhaalopdrachten."
+      ],
+      "preheaders": [
+        "Alleen serieuze aanvragen. Zo filter je.",
+        "Storingsdienst zonder stress.",
+        "Certificeringen verkopen. Automatisch."
+      ],
+      "statistieken": [
+        "60% tijdsbesparing op offerte-administratie",
+        "70% minder niet-serieuze aanvragen",
+        "3x meer herhaalopdrachten met automatische keuring-herinneringen"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén herhaalopdracht die je nu mist dekt de kosten.",
+        "mijnKlantenZijnNietTechnisch": "Ze kunnen een formulier invullen. Dat bespaart jou uren.",
+        "ikWilPersoonlijkContact": "Bij het werk zelf. Niet bij de administratie."
+      }
+    },
+    {
+      "id": "hoveniers",
+      "naam": "Tuinarchitecten & Hoveniers",
+      "zoekwoorden": ["hovenier", "tuinarchitect", "tuinaanleg", "tuinonderhoud", "tuinontwerp"],
+      "idealeKlant": {
+        "omschrijving": "Gevestigde hovenier, focus op design en kwaliteit",
+        "omzet": "€100.000 - €750.000/jaar",
+        "signalen": ["veel ontwerpen maken", "seizoensschommelingen", "onderhoudcontracten handmatig"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Klanten hebben geen realistisch beeld van kosten",
+          "impact": "Schrikreactie bij offerte, afhaakmoment",
+          "kostenIndicatie": "40% van ontwerpen wordt niet uitgevoerd"
+        },
+        {
+          "probleem": "Ontwerpen maken kost veel tijd, vaak zonder resultaat",
+          "impact": "Uren werk zonder betaling",
+          "kostenIndicatie": "€100-300 per niet-geconverteerd ontwerp"
+        },
+        {
+          "probleem": "Seizoensafhankelijk: rustig in winter",
+          "impact": "Cash flow problemen",
+          "kostenIndicatie": "3-4 maanden lage omzet"
+        },
+        {
+          "probleem": "Onderhoudcontracten bijhouden is administratief werk",
+          "impact": "Wie moet wanneer, facturatie, planning",
+          "kostenIndicatie": "5-10 uur/week"
+        },
+        {
+          "probleem": "Moeilijk om je stijl visueel te communiceren",
+          "impact": "Klanten weten niet wat ze kunnen verwachten",
+          "kostenIndicatie": "Verkeerde matches"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Inspiratiegalerij met eigen projecten",
+            "beschrijving": "Sfeervolle foto's per tuinstijl",
+            "resultaat": "Klanten die bij je stijl passen"
+          },
+          {
+            "oplossing": "Budget-calculator voor tuin-renovaties",
+            "beschrijving": "m² + type tuin = indicatieve investering",
+            "resultaat": "Realistische verwachtingen vooraf"
+          },
+          {
+            "oplossing": "Stijl-pagina's",
+            "beschrijving": "Moderne tuin, landelijke tuin, kindvriendelijk - elk eigen sfeer",
+            "resultaat": "Betere match klant-stijl"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online booking voor betaald adviesgesprek",
+            "beschrijving": "€75-150 voor eerste gesprek, verrekend bij opdracht",
+            "resultaat": "Van 40% naar 65% conversie"
+          },
+          {
+            "oplossing": "Onderhoudcontract-beheer met automatische planning",
+            "beschrijving": "Systeem plant bezoeken, stuurt herinneringen",
+            "resultaat": "0 uur admin, maximale bezetting"
+          },
+          {
+            "oplossing": "Seizoensgebonden nieuwsbrieven",
+            "beschrijving": "Voorjaar: snoeien, najaar: winterklaar maken",
+            "resultaat": "Extra werk in rustige periodes"
+          },
+          {
+            "oplossing": "Klantportaal met ontwerp-varianten",
+            "beschrijving": "Klant bekijkt opties, geeft feedback online",
+            "resultaat": "Minder revisierondes"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog over tuinonderhoud per seizoen",
+            "beschrijving": "Wat moet wanneer? Tips per periode",
+            "resultaat": "SEO-verkeer, onderhoudcontract-leads"
+          },
+          {
+            "oplossing": "Projectverhalen met proces-foto's",
+            "beschrijving": "Van ontwerp tot eindresultaat - het hele verhaal",
+            "resultaat": "Klanten begrijpen de investering"
+          },
+          {
+            "oplossing": "Video-content van projecten",
+            "beschrijving": "Drone-opnames, transformatie-video's",
+            "resultaat": "Social media bereik, portfolio verrijking"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Je maakt 5 ontwerpen per maand, 2 worden gerealiseerd. Dat kan beter.",
+        "Betaald adviesgesprek = 65% conversie. Gratis = 40%. Kies maar.",
+        "Onderhoudcontracten automatisch plannen? Dat is €10.000+/jaar. Zonder admin.",
+        "De winter is rustig. Tenzij je onderhoud-herinneringen verstuurt."
+      ],
+      "preheaders": [
+        "Van 40% naar 65% conversie. Eén aanpassing.",
+        "Onderhoud automatisch plannen.",
+        "Seizoenswerk in de winter? Ja, echt."
+      ],
+      "statistieken": [
+        "Van 40% naar 65% conversie met betaald adviesgesprek",
+        "0 uur admin voor onderhoudcontracten",
+        "30% meer winterwerk met automatische seizoensmail"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra onderhoudcontract per maand dekt de kosten.",
+        "klantenBetalenNietVoorAdvies": "Serieuze klanten wel. De rest wil je niet.",
+        "geenTijd": "Daarom automatiseren. Setup eenmalig, daarna automatisch."
+      }
+    },
+    {
+      "id": "rijscholen",
+      "naam": "Rijscholen",
+      "zoekwoorden": ["rijschool", "rijles", "rijinstructeur", "rijbewijs", "autorijschool"],
+      "idealeKlant": {
+        "omschrijving": "Zelfstandige instructeur of kleine rijschool, 1-5 auto's",
+        "omzet": "€40.000 - €250.000/jaar",
+        "signalen": ["veel annuleringen", "piektijden vol/rest leeg", "handmatige planning"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Leerlingen annuleren op het laatste moment",
+          "impact": "Lege uren niet meer op te vullen",
+          "kostenIndicatie": "€40-60 per geannuleerde les"
+        },
+        {
+          "probleem": "Piektijden (16:00-19:00) zijn altijd vol, rest van dag leeg",
+          "impact": "Auto staat 4+ uur per dag stil",
+          "kostenIndicatie": "€200/dag gemiste omzet"
+        },
+        {
+          "probleem": "Administratie van lesuren, examens en voortgang",
+          "impact": "Avonden aan papierwerk",
+          "kostenIndicatie": "5-10 uur/week"
+        },
+        {
+          "probleem": "Betalingen achtervolgen bij pakket-leerlingen",
+          "impact": "Awkward gesprekken, late betalingen",
+          "kostenIndicatie": "5-10% wanbetalers"
+        },
+        {
+          "probleem": "Moeilijk om je te onderscheiden van concurrentie",
+          "impact": "Prijs is enige differentiator",
+          "kostenIndicatie": "Race to the bottom"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Moderne website met slagingspercentage",
+            "beschrijving": "Resultaten tonen zonder op te scheppen",
+            "resultaat": "Bewijs van kwaliteit"
+          },
+          {
+            "oplossing": "Pakket-pagina's met prijzen",
+            "beschrijving": "Duidelijke pakketten, geen verrassingen",
+            "resultaat": "Gekwalificeerde leads"
+          },
+          {
+            "oplossing": "Reviews van geslaagde leerlingen",
+            "beschrijving": "Echte verhalen van mensen die slaagden",
+            "resultaat": "Social proof"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online lesplanning met annuleringsbeleid",
+            "beschrijving": "Annuleren <24u = betalen, systeem handhaaft dit",
+            "resultaat": "50% minder last-minute annuleringen"
+          },
+          {
+            "oplossing": "Dynamische prijzen voor dal-uren",
+            "beschrijving": "Ochtend/middag goedkoper, avond duurder",
+            "resultaat": "40% betere bezetting daluren"
+          },
+          {
+            "oplossing": "Leerling-portaal met voortgang",
+            "beschrijving": "Leerling ziet welke onderdelen beheerst, wat nog moet",
+            "resultaat": "Minder 'hoe ver ben ik?' gesprekken"
+          },
+          {
+            "oplossing": "Pakketbeheer met automatische incasso",
+            "beschrijving": "Leerling kiest pakket, betaling automatisch",
+            "resultaat": "0% wanbetalers"
+          },
+          {
+            "oplossing": "Automatische herinnering voor examenaanvraag",
+            "beschrijving": "Systeem stuurt reminder wanneer leerling klaar is",
+            "resultaat": "Geen vergeten examenaanvragen"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog met rijtips en theorie",
+            "beschrijving": "Helpen bij theorie-examen, praktische tips",
+            "resultaat": "SEO-verkeer, helpende content"
+          },
+          {
+            "oplossing": "FAQ over rijles en examen",
+            "beschrijving": "Beantwoord de vragen die elke leerling stelt",
+            "resultaat": "Minder repetitieve gesprekken"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Je auto staat 4 uur per dag stil. Dat is €200/dag gemiste omzet.",
+        "Last-minute annuleringen kosten je €500/maand. Stop ze.",
+        "Dal-uren vol? Dynamische prijzen. Simpel.",
+        "Die 5 uur per week aan administratie? Automatiseer het in 5 minuten."
+      ],
+      "preheaders": [
+        "€200/dag gemiste omzet. Elke dag.",
+        "Annuleringen stoppen. Automatisch.",
+        "Dal-uren vullen met korting."
+      ],
+      "statistieken": [
+        "40% betere bezetting door dynamische prijzen",
+        "50% minder last-minute annuleringen",
+        "0% wanbetalers met automatische incasso"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén gevulde dal-uur per dag = €800/maand extra omzet.",
+        "leerlingenWillenFlexibiliteit": "Ze kunnen nog steeds kiezen. Maar ochtend is gewoon goedkoper.",
+        "ikHebGeenTijd": "Precies. Daarom automatiseren."
+      }
+    },
+    {
+      "id": "schoonheidssalons",
+      "naam": "Schoonheidssalons & Huidverzorging",
+      "zoekwoorden": ["schoonheidssalon", "beautysalon", "huidtherapeut", "schoonheidsspecialist", "wellness"],
+      "idealeKlant": {
+        "omschrijving": "Zelfstandige salon of kleine groep, 1-4 behandelkamers",
+        "omzet": "€50.000 - €300.000/jaar",
+        "signalen": ["veel no-shows", "geen klantprofielen", "handmatige booking"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "No-shows kosten €40-80 per gemiste behandeling",
+          "impact": "Directe omzetderving",
+          "kostenIndicatie": "€600-1.200/maand"
+        },
+        {
+          "probleem": "Klanten vergeten hun afspraak of komen te laat",
+          "impact": "Planning loopt uit, volgende klant wacht",
+          "kostenIndicatie": "Frustratie, reputatieschade"
+        },
+        {
+          "probleem": "Productverkoop loopt achter bij behandelingen",
+          "impact": "Gemiste omzet, klanten kopen elders",
+          "kostenIndicatie": "€200-500/maand potentiële extra omzet"
+        },
+        {
+          "probleem": "Geen structuur in klantloyaliteit en terugkeergedrag",
+          "impact": "Klanten komen onregelmatig of helemaal niet terug",
+          "kostenIndicatie": "€2.000+/jaar aan gemiste herhalingsbezoeken"
+        },
+        {
+          "probleem": "Moeilijk om behandelresultaten te documenteren",
+          "impact": "Geen voor/na bewijs, minder overtuigingskracht",
+          "kostenIndicatie": "Gemiste upsells"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Sfeervolle website met behandeloverzicht",
+            "beschrijving": "Alle behandelingen met prijzen en duur",
+            "resultaat": "Duidelijke verwachtingen"
+          },
+          {
+            "oplossing": "Before/after galerij",
+            "beschrijving": "Resultaten van behandelingen visueel",
+            "resultaat": "Overtuigingskracht voor premium behandelingen"
+          },
+          {
+            "oplossing": "Online cadeaubon-verkoop",
+            "beschrijving": "Cadeaubonnen direct kopen en mailen",
+            "resultaat": "Extra omzet, nieuwe klanten"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Online booking met depositoverplichting",
+            "beschrijving": "€10-25 deposito bij boeking, verrekend met behandeling",
+            "resultaat": "75% minder no-shows"
+          },
+          {
+            "oplossing": "Automatische herinneringen via SMS/WhatsApp",
+            "beschrijving": "24u + 2u voor afspraak",
+            "resultaat": "90% minder te-laat-komers"
+          },
+          {
+            "oplossing": "Klantprofiel met behandelgeschiedenis",
+            "beschrijving": "Elke behandeling gelogd, notities, foto's",
+            "resultaat": "Persoonlijke service, minder vergeten"
+          },
+          {
+            "oplossing": "Productaanbevelingen gebaseerd op behandelingen",
+            "beschrijving": "Na gezichtsbehandeling: 'Dit serum past bij jouw huid'",
+            "resultaat": "30% meer productverkoop"
+          },
+          {
+            "oplossing": "Loyaliteitsprogramma met automatische punten",
+            "beschrijving": "Elke €10 = 1 punt, 50 punten = €5 korting",
+            "resultaat": "25% meer herhalingsbezoeken"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog over huidverzorging",
+            "beschrijving": "Seizoenstips, ingrediënten-uitleg, routines",
+            "resultaat": "SEO-verkeer, expertise tonen"
+          },
+          {
+            "oplossing": "Email-series na behandeling",
+            "beschrijving": "Nazorg-tips, productadvies, herinnering volgende afspraak",
+            "resultaat": "Betere resultaten, meer loyaliteit"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Die 3 no-shows per week? Dat is €600/maand die je mist.",
+        "Een deposito van €15 schrikt niemand af. Behalve no-shows.",
+        "Je klanten kopen hun producten bij Etos. Omdat jij het niet aanbiedt.",
+        "Een loyaliteitsprogramma. Klinkt complex? 5 minuten setup."
+      ],
+      "preheaders": [
+        "€600/maand aan no-shows. Stop het.",
+        "Deposito = commitment.",
+        "Productverkoop verdubbelen. Automatisch."
+      ],
+      "statistieken": [
+        "75% minder no-shows met deposito en herinneringen",
+        "30% meer productverkoop met automatische aanbevelingen",
+        "25% meer herhalingsbezoeken met loyaliteitsprogramma"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Drie voorkomen no-shows per maand = investering terugverdiend.",
+        "depositoSchriktAf": "Serieuze klanten niet. No-shows wel. Dat is het punt.",
+        "geenTijdVoorContent": "Eenmalig schrijven, automatisch versturen. Altijd."
+      }
+    },
+    {
+      "id": "kinderopvang",
+      "naam": "Kinderopvang & Crèches",
+      "zoekwoorden": ["kinderopvang", "creche", "kinderdagverblijf", "buitenschoolse opvang", "BSO"],
+      "idealeKlant": {
+        "omschrijving": "Particuliere opvang of kleine groep, 10-50 kinderen",
+        "omzet": "€150.000 - €750.000/jaar",
+        "signalen": ["lange wachtlijsten", "veel ouder-communicatie", "handmatige facturatie"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Wachtlijstbeheer is administratief zwaar",
+          "impact": "Excel-lijsten, handmatig opvolgen",
+          "kostenIndicatie": "5-10 uur/maand"
+        },
+        {
+          "probleem": "Ouders willen updates over hun kind tijdens de dag",
+          "impact": "Constante telefoontjes en WhatsApp-berichten",
+          "kostenIndicatie": "3-5 uur/dag aan communicatie"
+        },
+        {
+          "probleem": "Facturatie van flexibele opvang is complex",
+          "impact": "Handmatig berekenen per kind, per dag",
+          "kostenIndicatie": "10+ uur/maand"
+        },
+        {
+          "probleem": "Planning van personeel vs. aantal kinderen",
+          "impact": "Te veel of te weinig begeleiders",
+          "kostenIndicatie": "€500-1000/maand aan inefficiëntie"
+        },
+        {
+          "probleem": "Website geeft geen vertrouwen",
+          "impact": "Ouders twijfelen, kiezen andere opvang",
+          "kostenIndicatie": "Gemiste inschrijvingen"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Vertrouwenwekkende website met virtuele rondleiding",
+            "beschrijving": "Video/foto's van ruimtes, team, activiteiten",
+            "resultaat": "Ouders voelen zich gerust voor eerste bezoek"
+          },
+          {
+            "oplossing": "Team-pagina met foto's en achtergrond",
+            "beschrijving": "Wie zorgt voor mijn kind? Gezichten bij namen",
+            "resultaat": "Vertrouwen en binding"
+          },
+          {
+            "oplossing": "Online wachtlijst-registratie",
+            "beschrijving": "Ouders schrijven zich direct in, geen telefoon nodig",
+            "resultaat": "50% minder administratie"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Ouder-app met dagelijkse foto's en updates",
+            "beschrijving": "'Tim heeft goed gegeten, heerlijk geslapen, foto van knutselwerk'",
+            "resultaat": "80% minder telefoon, gelukkigere ouders"
+          },
+          {
+            "oplossing": "Geautomatiseerde facturatie per uur/dag",
+            "beschrijving": "Systeem berekent automatisch op basis van aanwezigheid",
+            "resultaat": "0 uur/maand aan handmatige facturatie"
+          },
+          {
+            "oplossing": "Digitale ziekmelding en vakantie-aanvraag",
+            "beschrijving": "Ouders melden af via app, planning update automatisch",
+            "resultaat": "Realtime overzicht van bezetting"
+          },
+          {
+            "oplossing": "Roosterplanning op basis van aanmeldingen",
+            "beschrijving": "Systeem berekent benodigde begeleiders per dag",
+            "resultaat": "Optimale personeelsbezetting"
+          },
+          {
+            "oplossing": "Wachtlijst met automatische updates",
+            "beschrijving": "Ouders krijgen positie-updates en aanbod bij plek",
+            "resultaat": "Geen handmatige opvolging"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog over kindontwikkeling",
+            "beschrijving": "Tips voor ouders, pedagogische visie",
+            "resultaat": "Expertise tonen, SEO-verkeer"
+          },
+          {
+            "oplossing": "Nieuwsbrief met activiteiten en foto's",
+            "beschrijving": "Maandelijkse update van wat er speelde",
+            "resultaat": "Ouder-betrokkenheid, mond-tot-mond"
+          }
+        ]
+      },
+      "emailHooks": [
+        "Ouders bellen 5x per dag: 'Hoe gaat het met mijn kind?' Automatiseer het.",
+        "Die wachtlijst in Excel? Daar gaat 10 uur/maand in zitten.",
+        "Flexibele facturatie handmatig? Er is een betere manier.",
+        "Je website overtuigt niet. Ouders kiezen de concurrent."
+      ],
+      "preheaders": [
+        "Ouder-updates automatisch. Zij blij, jij rust.",
+        "Wachtlijst beheren zonder Excel.",
+        "Facturatie in 5 minuten i.p.v. 5 uur."
+      ],
+      "statistieken": [
+        "80% minder telefoon met ouder-app",
+        "0 uur/maand aan handmatige facturatie",
+        "50% minder wachtlijst-administratie"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén extra inschrijving per jaar dekt de kosten.",
+        "oudersWillenPersoonlijkContact": "Absoluut. Maar niet voor 'heeft Tim goed geslapen?'. Dat kan via app.",
+        "geenTijd": "Precies. Daarom moet je automatiseren."
+      }
+    },
+    {
+      "id": "webshops",
+      "naam": "Webshops & E-commerce",
+      "zoekwoorden": ["webshop", "webwinkel", "e-commerce", "online shop", "verkopen online"],
+      "idealeKlant": {
+        "omschrijving": "Gevestigde webshop, €5.000-50.000/maand omzet",
+        "omzet": "€60.000 - €600.000/jaar",
+        "signalen": ["hoge bounce rate", "veel verlaten winkelwagens", "weinig herhaalaankopen"]
+      },
+      "pijnpunten": [
+        {
+          "probleem": "Hoge bounce rate - bezoekers verlaten de site snel",
+          "impact": "Advertentiegeld verspild, geen conversie",
+          "kostenIndicatie": "€500-2000/maand aan verspilde advertenties"
+        },
+        {
+          "probleem": "Winkelwagentjes worden verlaten zonder af te rekenen",
+          "impact": "70% van gevulde wagentjes converteert niet",
+          "kostenIndicatie": "€10.000+/maand aan gemiste omzet"
+        },
+        {
+          "probleem": "Klantenservice vragen zijn repetitief",
+          "impact": "Uren aan dezelfde vragen beantwoorden",
+          "kostenIndicatie": "10+ uur/week"
+        },
+        {
+          "probleem": "Retourproces is handmatig en tijdrovend",
+          "impact": "Frustratie voor klant en jou",
+          "kostenIndicatie": "30 min per retour"
+        },
+        {
+          "probleem": "Geen herhalingsaankopen van bestaande klanten",
+          "impact": "Constant nieuwe klanten werven",
+          "kostenIndicatie": "5-25x hogere acquisitiekost vs retentie"
+        }
+      ],
+      "oplossingen": {
+        "webdesign": [
+          {
+            "oplossing": "Snelle, conversiegerichte webshop",
+            "beschrijving": "Laadtijd <2 sec, duidelijke CTA's, vertrouwenssignalen",
+            "resultaat": "50% lagere bounce rate"
+          },
+          {
+            "oplossing": "Geoptimaliseerde productpagina's",
+            "beschrijving": "Goede foto's, reviews, urgentie-elementen",
+            "resultaat": "30% hogere conversie"
+          },
+          {
+            "oplossing": "Simpel checkout-proces",
+            "beschrijving": "Zo min mogelijk stappen, meerdere betaalopties",
+            "resultaat": "20% minder checkout-verlating"
+          }
+        ],
+        "automatisering": [
+          {
+            "oplossing": "Verlaten winkelwagen e-mails",
+            "beschrijving": "Automatische mail na 1u, 24u, 72u met herinnering",
+            "resultaat": "5-15% van verlaten wagentjes converteert alsnog"
+          },
+          {
+            "oplossing": "Chatbot voor veelgestelde vragen",
+            "beschrijving": "24/7 antwoord op verzending, retouren, beschikbaarheid",
+            "resultaat": "60% minder klantenservice tickets"
+          },
+          {
+            "oplossing": "Geautomatiseerd retourproces",
+            "beschrijving": "Klant vraagt retour aan, krijgt direct label",
+            "resultaat": "80% tijdsbesparing op retouren"
+          },
+          {
+            "oplossing": "Post-aankoop flow met review-requests",
+            "beschrijving": "Automatische mail na levering: review + gerelateerde producten",
+            "resultaat": "3x meer reviews, 20% meer herhaalaankopen"
+          },
+          {
+            "oplossing": "Loyaliteitsprogramma met automatische kortingen",
+            "beschrijving": "Punten sparen, automatisch korting bij volgende aankoop",
+            "resultaat": "40% meer herhaalaankopen"
+          }
+        ],
+        "content": [
+          {
+            "oplossing": "Blog met productgerelateerde content",
+            "beschrijving": "How-to's, vergelijkingen, tips",
+            "resultaat": "SEO-verkeer, expertise"
+          },
+          {
+            "oplossing": "Email-nieuwsbrief met aanbiedingen",
+            "beschrijving": "Segmented: nieuwe producten, sale, seizoensgebonden",
+            "resultaat": "Directe omzet uit bestaande klanten"
+          },
+          {
+            "oplossing": "User-generated content integratie",
+            "beschrijving": "Klantfoto's en reviews op productpagina's",
+            "resultaat": "Social proof, hogere conversie"
+          }
+        ]
+      },
+      "emailHooks": [
+        "70% van je winkelwagentjes wordt verlaten. €10.000/maand blijft liggen.",
+        "Eén verlaten-winkelwagen-mail. 15% converteert alsnog. Reken maar uit.",
+        "Je klantenservice beantwoordt 100x dezelfde vraag. Een chatbot doet het voor je.",
+        "Nieuwe klant werven kost €25. Bestaande klant laten terugkomen: €2."
+      ],
+      "preheaders": [
+        "€10.000/maand aan verlaten wagentjes.",
+        "15% extra conversie. Eén email.",
+        "Klantenservice op autopilot."
+      ],
+      "statistieken": [
+        "15% omzetverhoging met verlaten winkelwagen automatisering",
+        "60% minder klantenservice tickets met chatbot",
+        "40% meer herhaalaankopen met loyaliteitsprogramma"
+      ],
+      "bezwaarWeerlegging": {
+        "teDuur": "Eén herstelde verlaten winkelwagen per dag = €500+/maand extra omzet.",
+        "mijnKlantenKomenWelTerug": "Data zegt iets anders. Gemiddeld 20% komt terug. Met systeem: 35%.",
+        "ikHebShopify": "Prima. Deze automatiseringen werken er perfect mee samen."
+      }
+    }
+  ]
+}

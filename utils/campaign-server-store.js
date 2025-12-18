@@ -113,7 +113,12 @@ export async function createCampaign(data) {
         })),
 
         // QStash message ID (to potentially cancel)
-        qstashMessageId: null
+        qstashMessageId: null,
+
+        // Persistent logs
+        logs: [
+            { timestamp: new Date().toISOString(), message: 'Campagne aangemaakt', type: 'info' }
+        ]
     };
 
     const kv = await getKV();
@@ -309,6 +314,26 @@ export async function deleteCampaign(id) {
     }
 
     return { success: true };
+}
+
+/**
+ * Add log entry to campaign
+ */
+export async function addCampaignLog(id, message, type = 'info') {
+    const campaign = await getCampaign(id);
+    if (!campaign) return null;
+
+    const logs = campaign.logs || [];
+    logs.push({
+        timestamp: new Date().toISOString(),
+        message,
+        type
+    });
+
+    // Keep only last 100 logs
+    const trimmedLogs = logs.slice(-100);
+
+    return updateCampaign(id, { logs: trimmedLogs });
 }
 
 /**

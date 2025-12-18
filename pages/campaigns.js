@@ -106,26 +106,20 @@ export default function Campaigns() {
           const data = await res.json();
 
           if (data.success && data.campaign) {
-            // Check voor nieuwe logs (email status veranderingen)
-            const currentEmails = selectedCampaign.emails || [];
-            const newEmails = data.campaign.emails || [];
+            // Update logs from server if available
+            if (data.campaign.logs && data.campaign.logs.length > 0) {
+              const serverLogs = data.campaign.logs.map(l => ({
+                id: `server-${l.timestamp}-${l.message.substring(0, 10)}`,
+                timestamp: new Date(l.timestamp).toLocaleTimeString('nl-NL'),
+                message: l.message,
+                type: l.type
+              }));
 
-            // Vergelijk en update logs (simpele implementatie)
-            // In een echte app zouden we diffs kunnen tonen
-
-            // Detecteer veranderingen voor logs
-            newEmails.forEach(newEmail => {
-              const oldEmail = currentEmails.find(e => e.email === newEmail.email);
-              if (oldEmail && oldEmail.status !== newEmail.status) {
-                if (newEmail.status === 'sent') {
-                  addLog(`✅ Verzonden: ${newEmail.email}`, 'success');
-                } else if (newEmail.status === 'failed') {
-                  addLog(`❌ Mislukt: ${newEmail.email} - ${newEmail.error || 'Onbekende fout'}`, 'error');
-                } else if (newEmail.status === 'processing') {
-                  addLog(`🔄 Aan het verwerken: ${newEmail.email}`, 'info');
-                }
-              }
-            });
+              // We kunnen de logs simpelweg vervangen of mergen. 
+              // Mergen is lastiger door duplicaten, dus we vervangen ze door de server logs 
+              // plus eventuele zeer recente lokale logs als die er zijn.
+              setLogs(serverLogs);
+            }
 
             // Update campaign state
             setSelectedCampaign(prev => ({ ...prev, ...data.campaign }));
@@ -194,6 +188,18 @@ export default function Campaigns() {
       const data = await res.json();
       if (data.success && data.campaign) {
         setSelectedCampaign(data.campaign);
+
+        // Laad logs van server
+        if (data.campaign.logs) {
+          setLogs(data.campaign.logs.map(l => ({
+            id: `server-${l.timestamp}-${l.message.substring(0, 10)}`,
+            timestamp: new Date(l.timestamp).toLocaleTimeString('nl-NL'),
+            message: l.message,
+            type: l.type
+          })));
+        } else {
+          setLogs([]);
+        }
 
         // Zet de huidige email index op de eerste pending email
         if (data.campaign.emails && data.campaign.emails.length > 0) {

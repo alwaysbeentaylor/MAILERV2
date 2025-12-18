@@ -1,5 +1,7 @@
 // QStash Client - Background Job Queue
 import { Client } from "@upstash/qstash";
+import { getBaseUrl } from "./base-url";
+
 
 // Singleton client instance
 let qstashClient = null;
@@ -35,7 +37,8 @@ export async function scheduleEmail(emailData, delaySeconds = 0) {
         return { success: false, error: 'QStash niet geconfigureerd' };
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const baseUrl = getBaseUrl();
+
 
     try {
         const response = await client.publishJSON({
@@ -109,7 +112,8 @@ export async function scheduleWarmup(smtpConfig, emailsToSend, spreadHours = 8) 
         return { success: false, error: 'QStash niet geconfigureerd' };
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const baseUrl = getBaseUrl();
+
     const intervalSeconds = (spreadHours * 3600) / emailsToSend;
 
     const results = [];
