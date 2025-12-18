@@ -17,8 +17,9 @@ export function getQStashClient() {
     }
 
     if (!qstashClient) {
+        const token = process.env.QSTASH_TOKEN.replace(/['"]/g, '').trim();
         qstashClient = new Client({
-            token: process.env.QSTASH_TOKEN
+            token: token
         });
     }
 
@@ -38,11 +39,14 @@ export async function scheduleEmail(emailData, delaySeconds = 0) {
     }
 
     const baseUrl = getBaseUrl();
-
+    const targetUrl = `${baseUrl}/api/process-scheduled-email`;
 
     try {
+        // Validate URL
+        new URL(targetUrl);
+
         const response = await client.publishJSON({
-            url: `${baseUrl}/api/process-scheduled-email`,
+            url: targetUrl,
             body: emailData,
             delay: delaySeconds
         });
@@ -175,8 +179,8 @@ export async function verifySignature(req) {
     }
 
     const receiver = new Receiver({
-        currentSigningKey: process.env.QSTASH_CURRENT_SIGNING_KEY,
-        nextSigningKey: process.env.QSTASH_NEXT_SIGNING_KEY
+        currentSigningKey: process.env.QSTASH_CURRENT_SIGNING_KEY.replace(/['"]/g, '').trim(),
+        nextSigningKey: process.env.QSTASH_NEXT_SIGNING_KEY.replace(/['"]/g, '').trim()
     });
 
     const signature = req.headers['upstash-signature'];

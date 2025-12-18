@@ -34,6 +34,10 @@ export default async function handler(req, res) {
 
     const { campaignId } = req.body;
 
+    if (campaignId) {
+        await addCampaignLog(campaignId, '🔄 Worker aangeroepen door QStash - verwerking start...', 'info');
+    }
+
     if (!campaignId) {
         return res.status(400).json({ error: 'Campaign ID is vereist' });
     }

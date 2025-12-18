@@ -13,12 +13,8 @@ export function getBaseUrl() {
     else if (process.env.VERCEL_URL) {
         url = `https://${process.env.VERCEL_URL.trim()}`;
     }
-    // 3. Fallback for local development
-    else {
-        url = 'http://localhost:3000';
-    }
-
-    url = url.trim();
+    // Verwijder aanhalingstekens en trim
+    url = url.replace(/['"]/g, '').trim();
 
     // Garandeer protocol
     if (url && !url.startsWith('http')) {
