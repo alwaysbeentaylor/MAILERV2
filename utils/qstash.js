@@ -172,9 +172,9 @@ export async function scheduleWarmup(smtpConfig, emailsToSend, spreadHours = 8) 
  * @returns {Promise<{isValid: boolean, error?: string, debug?: string}>} Verification result
  */
 export async function verifySignature(req, buffer) {
-    // Check voor nood-bypass (gebruik dit alleen voor tijdelijke debugging!)
+    // Check voor nood-bypass
     if (process.env.QSTASH_DEBUG_BYPASS === 'true') {
-        console.warn('⚠️ QSTASH_DEBUG_BYPASS staat aan - BEVEILIGING IS UITGESCHAKELD');
+        console.warn('⚠️ QSTASH_DEBUG_BYPASS IS ACTIEF - Beveiliging tijdelijk uitgeschakeld voor debugging');
         return { isValid: true };
     }
 
@@ -183,14 +183,20 @@ export async function verifySignature(req, buffer) {
     const currentKey = (process.env.QSTASH_CURRENT_SIGNING_KEY || "").replace(/['"]/g, '').trim();
     const nextKey = (process.env.QSTASH_NEXT_SIGNING_KEY || "").replace(/['"]/g, '').trim();
 
-    // Helper om key te maskeren voor veilige debugging (bijv. "abc...xyz")
     const mask = (s) => s ? `${s.substring(0, 4)}...${s.substring(s.length - 4)}` : 'MISSING';
-    const debugInfo = `Keys: CUR=${mask(currentKey)}, NXT=${mask(nextKey)} (lens: ${currentKey.length}/${nextKey.length})`;
+
+    // Waarschuwing als keys incompleet lijken (Upstash keys zijn meestal 64 karakters)
+    let lengthWarning = "";
+    if (currentKey && currentKey.length < 60) {
+        lengthWarning = ` ⚠️ WAARSCHUWING: CUR key lijkt te kort (${currentKey.length} karakters). Heb je de volledige sleutel gekopieerd?`;
+    }
+
+    const debugInfo = `Keys: CUR=${mask(currentKey)}, NXT=${mask(nextKey)} (lens: ${currentKey.length}/${nextKey.length})${lengthWarning}`;
 
     if (!currentKey && !nextKey) {
         return {
             isValid: process.env.NODE_ENV === 'development',
-            error: 'Geen signing keys geconfigureerd',
+            error: 'Geen signing keys gevonden op Vercel',
             debug: debugInfo
         };
     }
@@ -202,10 +208,9 @@ export async function verifySignature(req, buffer) {
 
     const signature = req.headers['upstash-signature'];
     if (!signature) {
-        return { isValid: false, error: 'Ontbrekende upstash-signature header', debug: debugInfo };
+        return { isValid: false, error: 'Upstash-Signature header ontbreekt', debug: debugInfo };
     }
 
-    // Reconstruct URL nauwkeuriger voor Vercel
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const host = req.headers['x-forwarded-host'] || req.headers['host'];
     const reconstructedUrl = `${protocol}://${host}${req.url}`;
@@ -218,23 +223,9 @@ export async function verifySignature(req, buffer) {
         });
         return { isValid: true };
     } catch (error) {
-        console.error('❌ QStash verificatie mislukt op URL:', reconstructedUrl, '-', error.message);
+        console.error('❌ QStash verificatie mislukt:', error.message);
 
-        // Fallback 1: Probeer met baseUrl (oude methode)
-        const baseUrl = getBaseUrl().replace(/\/$/, '');
-        const fallbackUrl = `${baseUrl}${req.url}`;
-
-        if (fallbackUrl !== reconstructedUrl) {
-            try {
-                await receiver.verify({ signature, body: buffer, url: fallbackUrl });
-                console.log('✅ Signature OK via fallback URL');
-                return { isValid: true };
-            } catch (e) {
-                console.error('❌ Ook fallback URL mislukt');
-            }
-        }
-
-        // Fallback 2: Zonder URL
+        // Fallback: Probeer zonder URL (sommige proxy configuraties veranderen de URL)
         try {
             await receiver.verify({ signature, body: buffer });
             console.log('✅ Signature OK (zonder URL check)');
@@ -242,7 +233,7 @@ export async function verifySignature(req, buffer) {
         } catch (retryError) {
             return {
                 isValid: false,
-                error: `Signature mismatch: ${retryError.message}`,
+                error: `Mislukt: ${retryError.message}`,
                 debug: `${debugInfo}, Sig=${signature.substring(0, 8)}...`
             };
         }
