@@ -168,22 +168,29 @@ export async function scheduleWarmup(smtpConfig, emailsToSend, spreadHours = 8) 
 /**
  * Verify QStash signature for incoming webhooks
  * @param {Object} req - Next.js request object
- * @param {Buffer|string} body - The raw, unparsed body (Buffer is preferred)
+ * @param {Buffer} buffer - The raw body buffer
  * @returns {Promise<{isValid: boolean, error?: string, debug?: string}>} Verification result
  */
-export async function verifySignature(req, body) {
+export async function verifySignature(req, buffer) {
+    // Check voor nood-bypass (gebruik dit alleen voor tijdelijke debugging!)
+    if (process.env.QSTASH_DEBUG_BYPASS === 'true') {
+        console.warn('⚠️ QSTASH_DEBUG_BYPASS staat aan - BEVEILIGING IS UITGESCHAKELD');
+        return { isValid: true };
+    }
+
     const { Receiver } = await import("@upstash/qstash");
 
     const currentKey = (process.env.QSTASH_CURRENT_SIGNING_KEY || "").replace(/['"]/g, '').trim();
     const nextKey = (process.env.QSTASH_NEXT_SIGNING_KEY || "").replace(/['"]/g, '').trim();
 
-    const debugInfo = `Keys found: ${currentKey ? 'CURRENT' : 'NONE'} (len: ${currentKey.length}), ${nextKey ? 'NEXT' : 'NONE'} (len: ${nextKey.length})`;
+    // Helper om key te maskeren voor veilige debugging (bijv. "abc...xyz")
+    const mask = (s) => s ? `${s.substring(0, 4)}...${s.substring(s.length - 4)}` : 'MISSING';
+    const debugInfo = `Keys: CUR=${mask(currentKey)}, NXT=${mask(nextKey)} (lens: ${currentKey.length}/${nextKey.length})`;
 
     if (!currentKey && !nextKey) {
-        console.warn('⚠️ Geen QStash signing keys gevonden');
         return {
             isValid: process.env.NODE_ENV === 'development',
-            error: 'Geen signing keys geconfigureerd in ambiente variabelen',
+            error: 'Geen signing keys geconfigureerd',
             debug: debugInfo
         };
     }
@@ -198,33 +205,45 @@ export async function verifySignature(req, body) {
         return { isValid: false, error: 'Ontbrekende upstash-signature header', debug: debugInfo };
     }
 
-    const baseUrl = getBaseUrl().replace(/\/$/, '');
-    const url = `${baseUrl}${req.url}`;
+    // Reconstruct URL nauwkeuriger voor Vercel
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const host = req.headers['x-forwarded-host'] || req.headers['host'];
+    const reconstructedUrl = `${protocol}://${host}${req.url}`;
 
     try {
         await receiver.verify({
             signature,
-            body: body,
-            url: url
+            body: buffer,
+            url: reconstructedUrl
         });
         return { isValid: true };
     } catch (error) {
-        console.error('❌ QStash signature verificatie mislukt (met URL):', error.message);
+        console.error('❌ QStash verificatie mislukt op URL:', reconstructedUrl, '-', error.message);
 
-        // Try again WITHOUT URL if URL mismatch is the issue
+        // Fallback 1: Probeer met baseUrl (oude methode)
+        const baseUrl = getBaseUrl().replace(/\/$/, '');
+        const fallbackUrl = `${baseUrl}${req.url}`;
+
+        if (fallbackUrl !== reconstructedUrl) {
+            try {
+                await receiver.verify({ signature, body: buffer, url: fallbackUrl });
+                console.log('✅ Signature OK via fallback URL');
+                return { isValid: true };
+            } catch (e) {
+                console.error('❌ Ook fallback URL mislukt');
+            }
+        }
+
+        // Fallback 2: Zonder URL
         try {
-            await receiver.verify({
-                signature,
-                body: body
-            });
+            await receiver.verify({ signature, body: buffer });
             console.log('✅ Signature OK (zonder URL check)');
             return { isValid: true };
         } catch (retryError) {
-            console.error('❌ QStash signature verificatie ook mislukt zonder URL check:', retryError.message);
             return {
                 isValid: false,
-                error: `Verificatie mislukt: ${retryError.message}`,
-                debug: debugInfo
+                error: `Signature mismatch: ${retryError.message}`,
+                debug: `${debugInfo}, Sig=${signature.substring(0, 8)}...`
             };
         }
     }
