@@ -48,13 +48,13 @@ export default async function handler(req, res) {
 
     // Verify QStash signature in production
     if (process.env.NODE_ENV === 'production') {
-        const isValid = await verifySignature(req, rawBody);
-        if (!isValid) {
-            console.error('❌ Invalid QStash signature');
+        const verification = await verifySignature(req, rawBody);
+        if (!verification.isValid) {
+            console.error('❌ Invalid QStash signature:', verification.error);
             if (campaignId) {
-                await addCampaignLog(campaignId, '❌ Beveiligingscheck mislukt: QStash signature ongeldig. Controleer je signing keys.', 'error');
+                await addCampaignLog(campaignId, `❌ Beveiligingscheck mislukt: ${verification.error} (${verification.debug})`, 'error');
             }
-            return res.status(401).json({ error: 'Invalid signature' });
+            return res.status(401).json({ error: 'Invalid signature', message: verification.error });
         }
     }
 
