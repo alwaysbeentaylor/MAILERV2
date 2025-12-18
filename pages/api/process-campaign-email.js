@@ -14,11 +14,7 @@ import {
 import { verifySignature, getQStashClient } from '../../utils/qstash';
 import { getBaseUrl } from '../../utils/base-url';
 
-export const config = {
-    api: {
-        bodyParser: false
-    }
-};
+
 
 async function getRawBody(readable) {
     const chunks = [];
