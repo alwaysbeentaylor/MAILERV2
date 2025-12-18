@@ -7,25 +7,40 @@ import { getBaseUrl } from '../../utils/base-url';
 
 export const config = {
     api: {
-        bodyParser: true
+        bodyParser: false
     }
 };
+
+async function getRawBody(readable) {
+    const chunks = [];
+    for await (const chunk of readable) {
+        chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
+    }
+    return Buffer.concat(chunks).toString('utf-8');
+}
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
+    // Read raw body for signature verification
+    const rawBody = await getRawBody(req);
+    let emailData = {};
+    try {
+        emailData = JSON.parse(rawBody);
+    } catch (e) {
+        console.error('Failed to parse body:', e);
+    }
+
     // Verify QStash signature in production
     if (process.env.NODE_ENV === 'production') {
-        const isValid = await verifySignature(req);
+        const isValid = await verifySignature(req, rawBody);
         if (!isValid) {
             console.error('❌ Invalid QStash signature');
             return res.status(401).json({ error: 'Unauthorized - Invalid signature' });
         }
     }
-
-    const emailData = req.body;
 
     console.log(`\n📬 Processing scheduled email...`);
     console.log(`   To: ${emailData.toEmail}`);

@@ -168,9 +168,10 @@ export async function scheduleWarmup(smtpConfig, emailsToSend, spreadHours = 8) 
 /**
  * Verify QStash signature for incoming webhooks
  * @param {Object} req - Next.js request object
+ * @param {string} rawBody - The raw, unparsed body string
  * @returns {boolean} Whether signature is valid
  */
-export async function verifySignature(req) {
+export async function verifySignature(req, rawBody) {
     const { Receiver } = await import("@upstash/qstash");
 
     if (!process.env.QSTASH_CURRENT_SIGNING_KEY || !process.env.QSTASH_NEXT_SIGNING_KEY) {
@@ -184,12 +185,11 @@ export async function verifySignature(req) {
     });
 
     const signature = req.headers['upstash-signature'];
-    const body = JSON.stringify(req.body);
 
     try {
         await receiver.verify({
             signature,
-            body
+            body: rawBody
         });
         return true;
     } catch (error) {

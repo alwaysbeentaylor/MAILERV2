@@ -14,13 +14,36 @@ import {
 import { verifySignature, getQStashClient } from '../../utils/qstash';
 import { getBaseUrl } from '../../utils/base-url';
 
+export const config = {
+    api: {
+        bodyParser: false
+    }
+};
+
+async function getRawBody(readable) {
+    const chunks = [];
+    for await (const chunk of readable) {
+        chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
+    }
+    return Buffer.concat(chunks).toString('utf-8');
+}
+
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { campaignId } = req.body;
+    // Read raw body for signature verification
+    const rawBody = await getRawBody(req);
+    let body = {};
+    try {
+        body = JSON.parse(rawBody);
+    } catch (e) {
+        console.error('Failed to parse body:', e);
+    }
+
+    const campaignId = body.campaignId;
 
     // Log entry ASAP
     if (campaignId) {
@@ -29,7 +52,7 @@ export default async function handler(req, res) {
 
     // Verify QStash signature in production
     if (process.env.NODE_ENV === 'production') {
-        const isValid = await verifySignature(req);
+        const isValid = await verifySignature(req, rawBody);
         if (!isValid) {
             console.error('❌ Invalid QStash signature');
             if (campaignId) {
@@ -238,9 +261,7 @@ export default async function handler(req, res) {
 // Increase timeout for this endpoint
 export const config = {
     api: {
-        bodyParser: {
-            sizeLimit: '1mb',
-        },
+        bodyParser: false,
     },
     maxDuration: 60 // 60 seconds max
 };
