@@ -174,26 +174,46 @@ export async function scheduleWarmup(smtpConfig, emailsToSend, spreadHours = 8) 
 export async function verifySignature(req, rawBody) {
     const { Receiver } = await import("@upstash/qstash");
 
-    if (!process.env.QSTASH_CURRENT_SIGNING_KEY || !process.env.QSTASH_NEXT_SIGNING_KEY) {
-        console.warn('⚠️ QStash signing keys niet gevonden - skip verificatie in development');
+    const currentKey = (process.env.QSTASH_CURRENT_SIGNING_KEY || "").replace(/['"]/g, '').trim();
+    const nextKey = (process.env.QSTASH_NEXT_SIGNING_KEY || "").replace(/['"]/g, '').trim();
+
+    if (!currentKey && !nextKey) {
+        console.warn('⚠️ Geen QStash signing keys gevonden');
         return process.env.NODE_ENV === 'development';
     }
 
     const receiver = new Receiver({
-        currentSigningKey: process.env.QSTASH_CURRENT_SIGNING_KEY.replace(/['"]/g, '').trim(),
-        nextSigningKey: process.env.QSTASH_NEXT_SIGNING_KEY.replace(/['"]/g, '').trim()
+        currentSigningKey: currentKey || nextKey, // Gebruik wat we hebben
+        nextSigningKey: nextKey || currentKey
     });
 
     const signature = req.headers['upstash-signature'];
+    const baseUrl = getBaseUrl();
+
+    // De URL die QStash waarschijnlijk heeft gebruikt
+    const url = `${baseUrl}${req.url}`;
 
     try {
         await receiver.verify({
             signature,
-            body: rawBody
+            body: rawBody,
+            url: url
         });
         return true;
     } catch (error) {
-        console.error('❌ QStash signature verification failed:', error);
-        return false;
+        console.error('❌ QStash signature verificatie mislukt:', error.message);
+
+        // Try again WITHOUT URL if URL mismatch is the issue
+        try {
+            await receiver.verify({
+                signature,
+                body: rawBody
+            });
+            console.log('✅ Signature OK (zonder URL check)');
+            return true;
+        } catch (retryError) {
+            console.error('❌ QStash signature verificatie ook mislukt zonder URL check:', retryError.message);
+            return false;
+        }
     }
 }
