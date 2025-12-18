@@ -25,6 +25,9 @@ export default async function handler(req, res) {
         const isValid = await verifySignature(req);
         if (!isValid) {
             console.error('❌ Invalid QStash signature');
+            if (campaignId) {
+                await addCampaignLog(campaignId, '❌ QStash signature verificatie mislukt. Controleer signing keys.', 'error');
+            }
             return res.status(401).json({ error: 'Invalid signature' });
         }
     }

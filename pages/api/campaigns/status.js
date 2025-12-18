@@ -89,7 +89,9 @@ export default async function handler(req, res) {
                     status: e.status,
                     processedAt: e.processedAt,
                     error: e.error
-                }))
+                })),
+                // Persistent logs
+                logs: campaign.logs || []
             }
         });
 

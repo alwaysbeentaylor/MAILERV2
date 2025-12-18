@@ -54,9 +54,14 @@ export default async function handler(req, res) {
                     delay: 2 // Start after 2 seconds
                 });
                 console.log(`▶️ Campaign ${campaignId} resumed, QStash message: ${response.messageId}`);
+                await addCampaignLog(campaignId, '✅ Achtergrond-taak gepland via QStash', 'info');
             } catch (qstashError) {
                 console.error('QStash scheduling error:', qstashError);
+                await addCampaignLog(campaignId, `⚠️ Kon achtergrond-taak niet plannen: ${qstashError.message}`, 'error');
             }
+        } else {
+            console.warn('⚠️ QStash niet beschikbaar - volgende email niet automatisch gepland');
+            await addCampaignLog(campaignId, '⚠️ QStash niet beschikbaar - campagne loopt niet automatisch door', 'warning');
         }
 
         return res.status(200).json({
