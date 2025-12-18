@@ -11,12 +11,12 @@ export const config = {
     }
 };
 
-async function getRawBody(readable) {
+async function getRawBodyBuffer(readable) {
     const chunks = [];
     for await (const chunk of readable) {
         chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
     }
-    return Buffer.concat(chunks).toString('utf-8');
+    return Buffer.concat(chunks);
 }
 
 export default async function handler(req, res) {
@@ -24,8 +24,10 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    // Read raw body for signature verification
-    const rawBody = await getRawBody(req);
+    // Read raw body as buffer for signature verification
+    const rawBuffer = await getRawBodyBuffer(req);
+    const rawBody = rawBuffer.toString('utf-8');
+
     let emailData = {};
     try {
         emailData = JSON.parse(rawBody);
@@ -35,10 +37,10 @@ export default async function handler(req, res) {
 
     // Verify QStash signature in production
     if (process.env.NODE_ENV === 'production') {
-        const isValid = await verifySignature(req, rawBody);
-        if (!isValid) {
-            console.error('❌ Invalid QStash signature');
-            return res.status(401).json({ error: 'Unauthorized - Invalid signature' });
+        const verification = await verifySignature(req, rawBuffer);
+        if (!verification.isValid) {
+            console.error('❌ Invalid QStash signature:', verification.error);
+            return res.status(401).json({ error: 'Unauthorized - Invalid signature', details: verification.error });
         }
     }
 

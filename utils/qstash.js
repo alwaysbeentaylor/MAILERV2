@@ -168,10 +168,10 @@ export async function scheduleWarmup(smtpConfig, emailsToSend, spreadHours = 8) 
 /**
  * Verify QStash signature for incoming webhooks
  * @param {Object} req - Next.js request object
- * @param {string} rawBody - The raw, unparsed body string
+ * @param {Buffer|string} body - The raw, unparsed body (Buffer is preferred)
  * @returns {Promise<{isValid: boolean, error?: string, debug?: string}>} Verification result
  */
-export async function verifySignature(req, rawBody) {
+export async function verifySignature(req, body) {
     const { Receiver } = await import("@upstash/qstash");
 
     const currentKey = (process.env.QSTASH_CURRENT_SIGNING_KEY || "").replace(/['"]/g, '').trim();
@@ -198,13 +198,13 @@ export async function verifySignature(req, rawBody) {
         return { isValid: false, error: 'Ontbrekende upstash-signature header', debug: debugInfo };
     }
 
-    const baseUrl = getBaseUrl();
+    const baseUrl = getBaseUrl().replace(/\/$/, '');
     const url = `${baseUrl}${req.url}`;
 
     try {
         await receiver.verify({
             signature,
-            body: rawBody,
+            body: body,
             url: url
         });
         return { isValid: true };
@@ -215,7 +215,7 @@ export async function verifySignature(req, rawBody) {
         try {
             await receiver.verify({
                 signature,
-                body: rawBody
+                body: body
             });
             console.log('✅ Signature OK (zonder URL check)');
             return { isValid: true };
