@@ -1283,16 +1283,7 @@ export default async function handler(req, res) {
     }
 
     // STAP 3: Verstuur email met complete SKYE HTML template
-
-    // Genereer uniek email ID voor tracking
     const emailId = uuidv4();
-
-    // Helper functie om tracked URLs te maken
-    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const createTrackedUrl = (originalUrl, linkType) => {
-      const encodedUrl = encodeURIComponent(originalUrl);
-      return `${BASE_URL}/api/track?id=${emailId}&type=${linkType}&url=${encodedUrl}`;
-    };
 
     // Dynamische SMTP: gebruik smtpConfig als aanwezig, anders env vars
     let transporter;
@@ -1436,9 +1427,7 @@ export default async function handler(req, res) {
       let formatted = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
       return formatted;
     }).join('<br>\n')}
-    
-    <!-- Tracking pixel for email opens -->
-    <img src="${createTrackedUrl('open', 'open')}" width="1" height="1" style="display:none;" alt="" />
+    <!-- No tracking pixel for better deliverability -->
   </div>
 </body>
 </html>`;

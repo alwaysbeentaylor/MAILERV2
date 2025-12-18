@@ -38,6 +38,17 @@ export function getDomainFromEmail(email) {
 export async function validateMX(email, options = {}) {
     const { timeout = 5000 } = options;
 
+    // Syntax check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+        return {
+            valid: false,
+            domain: null,
+            mxRecords: null,
+            error: 'Ongeldig email formaat (syntax)'
+        };
+    }
+
     const domain = getDomainFromEmail(email);
 
     if (!domain) {
@@ -89,49 +100,24 @@ export async function validateMX(email, options = {}) {
         const errorMsg = error.message || String(error);
 
         // Handle specific DNS errors
-        if (error.code === 'ENOTFOUND' || error.code === 'ENODATA') {
-            console.log(`   ❌ Domein ${domain} bestaat niet of heeft geen MX`);
+        if (error.code === 'ENOTFOUND' || error.code === 'ENODATA' || error.code === 'ESERVFAIL') {
+            console.log(`   ❌ Domein ${domain} bestaat niet of heeft geen MX records`);
             return {
                 valid: false,
                 domain,
                 mxRecords: null,
-                error: 'Domein bestaat niet of heeft geen mail server'
+                error: 'Domein is ongeldig of heeft geen mail server'
             };
         }
 
-        // For timeout or server errors - BE LENIENT and allow the email through
-        // Better to try sending than to block valid emails due to DNS issues
-        if (error.code === 'ETIMEOUT' || errorMsg.includes('timeout')) {
-            console.log(`   ⚠️ MX lookup timeout voor ${domain} - email wordt toch toegestaan`);
-            return {
-                valid: true, // Allow through on timeout
-                domain,
-                mxRecords: null,
-                error: null,
-                warning: 'MX lookup timeout - email toch toegestaan'
-            };
-        }
-
-        // ESERVFAIL = DNS server failed to respond - common with some providers
-        if (error.code === 'ESERVFAIL' || error.code === 'ECONNREFUSED') {
-            console.log(`   ⚠️ DNS server fout voor ${domain} - email wordt toch toegestaan`);
-            return {
-                valid: true, // Allow through on DNS server errors
-                domain,
-                mxRecords: null,
-                error: null,
-                warning: 'DNS server error - email toch toegestaan'
-            };
-        }
-
-        // For any other error - be lenient and allow through
-        console.log(`   ⚠️ MX check fout (${error.code || 'unknown'}): ${errorMsg} - email wordt toch toegestaan`);
+        // If bounce rate is the priority, we SHOULD be strict.
+        // Even for timeouts, it's safer to block than to risk a bounce from a defunct server.
+        console.log(`   ❌ MX check fout voor ${domain}: ${errorMsg}`);
         return {
-            valid: true, // Default to allowing emails through
+            valid: false,
             domain,
             mxRecords: null,
-            error: null,
-            warning: `MX check overgeslagen wegens fout: ${errorMsg}`
+            error: `MX check gefaald: ${errorMsg}`
         };
     }
 }
