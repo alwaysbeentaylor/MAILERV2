@@ -30,7 +30,7 @@ export default function Campaigns() {
 
   // Process emails for display (filter, sort, paginate)
   const processedEmails = useMemo(() => {
-    if (!selectedCampaign) return null;
+    if (!selectedCampaign || !selectedCampaign.emails) return null;
 
     // Group
     const sent = selectedCampaign.emails.filter(e => e.status === 'sent');
@@ -80,11 +80,11 @@ export default function Campaigns() {
   useEffect(() => {
     if (router.query.id && campaigns.length > 0) {
       const campaign = campaigns.find(c => c.id === router.query.id);
-      if (campaign && !selectedCampaign) {
+      if (campaign && (!selectedCampaign || selectedCampaign.id !== campaign.id)) {
         selectCampaign(campaign);
       }
     }
-  }, [router.query.id, campaigns]);
+  }, [router.query.id, campaigns, selectedCampaign?.id]);
 
   useEffect(() => {
     // Scroll logs to bottom
@@ -182,11 +182,29 @@ export default function Campaigns() {
     setLogs(prev => [...prev, { id: logId, timestamp, message, type, errorData }]);
   };
 
-  const selectCampaign = (campaign) => {
+  const selectCampaign = async (campaign) => {
+    // 1. Optimistisch de basis info zetten (van de lijst)
     setSelectedCampaign(campaign);
-    setLogs([]); // Start with empty logs, enrichment logs will appear when campaign starts
-    setCurrentEmailIndex(campaign.emails.findIndex(e => e.status === 'pending'));
-    setCurrentEmailPage(1); // Reset naar eerste pagina bij nieuwe campagne
+    setLogs([]);
+    setCurrentEmailPage(1);
+
+    // 2. Volledige data ophalen (met emails array)
+    try {
+      const res = await fetch(`/api/campaigns/status?campaignId=${campaign.id}`);
+      const data = await res.json();
+      if (data.success && data.campaign) {
+        setSelectedCampaign(data.campaign);
+
+        // Zet de huidige email index op de eerste pending email
+        if (data.campaign.emails && data.campaign.emails.length > 0) {
+          const firstPendingIdx = data.campaign.emails.findIndex(e => e.status === 'pending');
+          setCurrentEmailIndex(firstPendingIdx >= 0 ? firstPendingIdx : 0);
+        }
+      }
+    } catch (error) {
+      console.error('Error loading full campaign data:', error);
+      addLog('Fout bij laden campagne details', 'error');
+    }
   };
 
   // Sync running state from campaign status
@@ -545,7 +563,7 @@ export default function Campaigns() {
                   {/* Controls */}
                   <div className="controls">
                     {!isRunning ? (
-                      <button className="btn-start" onClick={startCampaign}>
+                      <button className="btn-start" onClick={handleStartCampaign}>
                         ▶️ {selectedCampaign.status === 'paused' ? 'Hervatten' : 'Starten'}
                       </button>
                     ) : (
@@ -703,13 +721,13 @@ export default function Campaigns() {
                           </thead>
                           <tbody>
                             {processedEmails.displayed.map((email, displayIdx) => {
-                              const originalIdx = selectedCampaign.emails.findIndex(e => e.email === email.email);
+                              const originalIdx = selectedCampaign.emails ? selectedCampaign.emails.findIndex(e => e.email === email.email) : -1;
                               return (
                                 <tr
                                   key={email.email}
                                   className={`${email.status} ${originalIdx === currentEmailIndex && isRunning ? 'current' : ''}`}
                                 >
-                                  <td>{originalIdx + 1}</td>
+                                  <td>{originalIdx >= 0 ? originalIdx + 1 : '?'}</td>
                                   <td>{email.email}</td>
                                   <td>{email.businessName || '-'}</td>
                                   <td>
