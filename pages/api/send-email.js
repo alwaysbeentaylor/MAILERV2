@@ -25,6 +25,8 @@ import { validateMX } from '../../utils/mx-validator';
 import { isApiEnabled, loadApiSettings } from '../../utils/api-settings';
 // 📚 Niche Database (pain points, solutions, hooks)
 import { getNicheContext, getMasterPromptContext } from '../../utils/niche-database';
+// ☁️ AWS SES Client (FALLBACK 2)
+import { isSESEnabled, sendEmailViaSES } from '../../utils/ses-client';
 
 // Initialize OpenAI only if API key is present
 let openai = null;

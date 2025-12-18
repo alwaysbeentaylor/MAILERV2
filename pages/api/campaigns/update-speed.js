@@ -1,5 +1,5 @@
-import { getCampaign, updateCampaign, addCampaignLog } from '../../utils/campaign-server-store';
-import { getSpeedProfile } from '../../utils/godmode';
+import { getCampaign, updateCampaign, addCampaignLog } from '../../../utils/campaign-server-store';
+import { getSpeedProfile } from '../../../utils/godmode';
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
