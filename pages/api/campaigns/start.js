@@ -68,8 +68,10 @@ export default async function handler(req, res) {
                 });
 
                 console.log(`🚀 Campaign ${campaign.id} started, QStash message: ${response.messageId}`);
+                await addCampaignLog(campaign.id, '✅ Achtergrond-taak gepland via QStash', 'info');
             } catch (qstashError) {
                 console.error('QStash scheduling error:', qstashError);
+                await addCampaignLog(campaign.id, `⚠️ Kon achtergrond-taak niet plannen: ${qstashError.message} (URL: ${baseUrl}/api/process-campaign-email)`, 'error');
                 // Continue anyway - campaign exists, can be processed manually
             }
         } else {

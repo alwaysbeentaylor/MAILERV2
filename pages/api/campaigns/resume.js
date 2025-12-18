@@ -57,7 +57,7 @@ export default async function handler(req, res) {
                 await addCampaignLog(campaignId, '✅ Achtergrond-taak gepland via QStash', 'info');
             } catch (qstashError) {
                 console.error('QStash scheduling error:', qstashError);
-                await addCampaignLog(campaignId, `⚠️ Kon achtergrond-taak niet plannen: ${qstashError.message}`, 'error');
+                await addCampaignLog(campaignId, `⚠️ Kon achtergrond-taak niet plannen: ${qstashError.message} (URL: ${baseUrl}/api/process-campaign-email)`, 'error');
             }
         } else {
             console.warn('⚠️ QStash niet beschikbaar - volgende email niet automatisch gepland');
