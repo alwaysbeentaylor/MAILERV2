@@ -41,7 +41,8 @@ export default function Settings() {
     mailgunEnabled: true,
     openaiEnabled: true,
     websiteAnalysisEnabled: true,
-    dryRunMode: false
+    dryRunMode: false,
+    resendDefaultFrom: 'info@skye-unlimited.be'
   });
   const [apiSettingsLoading, setApiSettingsLoading] = useState(true);
 
@@ -440,247 +441,274 @@ export default function Settings() {
                 <span className="toggle-slider"></span>
               </label>
             </div>
-          </div>
-        </div>
 
-        {/* Filter & Sort Bar */}
-        <div className="filter-bar">
-          <div className="filters">
-            {/* Status Filter */}
-            <select
-              value={filter.status}
-              onChange={e => { setFilter(f => ({ ...f, status: e.target.value })); setPage(1); }}
-            >
-              <option value="all">Alle Status</option>
-              <option value="cold">❄️ Koud</option>
-              <option value="warming">🌡️ Warming</option>
-              <option value="warm">🔥 Warm</option>
-              <option value="hot">💥 Hot</option>
-            </select>
-
-            {/* Provider Filter */}
-            <select
-              value={filter.provider}
-              onChange={e => { setFilter(f => ({ ...f, provider: e.target.value })); setPage(1); }}
-            >
-              <option value="all">Alle Providers</option>
-              <option value="gmail">Gmail</option>
-              <option value="outlook/365">Outlook</option>
-              <option value="sendgrid">SendGrid</option>
-              <option value="custom">Custom</option>
-            </select>
-
-            {/* Search */}
-            <input
-              type="text"
-              placeholder="🔍 Zoeken..."
-              value={filter.search}
-              onChange={e => { setFilter(f => ({ ...f, search: e.target.value })); setPage(1); }}
-              className="search-input"
-            />
+            <div className="resend-config-box">
+              <div className="config-header">
+                <span className="config-label">📬 Standaard Resend Afzender (From/Reply-To)</span>
+                <span className="config-hint">Instellen op een geverifieerd (sub)domein in Resend</span>
+              </div>
+              <div className="config-input-row">
+                <input
+                  type="email"
+                  value={apiSettings.resendDefaultFrom || 'info@skye-unlimited.be'}
+                  onChange={(e) => setApiSettings({ ...apiSettings, resendDefaultFrom: e.target.value })}
+                  placeholder="bijv: info@mail.skye-unlimited.be"
+                  className="config-input"
+                />
+                <button
+                  className="btn btn-primary btn-sm"
+                  onClick={() => {
+                    fetch('/api/api-settings', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ settings: { resendDefaultFrom: apiSettings.resendDefaultFrom } })
+                    }).then(() => alert('Instelling opgeslagen!'));
+                  }}
+                >
+                  Opslaan
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div className="sort-pagination">
-            {/* Sort */}
-            <select value={sortBy} onChange={e => setSortBy(e.target.value)}>
-              <option value="recent">Recent</option>
-              <option value="name">Naam A-Z</option>
-              <option value="status">Status</option>
-              <option value="capacity">Capaciteit</option>
-            </select>
+          {/* Filter & Sort Bar */}
+          <div className="filter-bar">
+            <div className="filters">
+              {/* Status Filter */}
+              <select
+                value={filter.status}
+                onChange={e => { setFilter(f => ({ ...f, status: e.target.value })); setPage(1); }}
+              >
+                <option value="all">Alle Status</option>
+                <option value="cold">❄️ Koud</option>
+                <option value="warming">🌡️ Warming</option>
+                <option value="warm">🔥 Warm</option>
+                <option value="hot">💥 Hot</option>
+              </select>
 
-            {/* Per Page */}
-            <select value={perPage} onChange={e => { setPerPage(Number(e.target.value)); setPage(1); }}>
-              <option value={10}>10</option>
-              <option value={25}>25</option>
-              <option value={50}>50</option>
-              <option value={100}>100</option>
-              <option value={250}>250</option>
-              <option value={500}>500</option>
-            </select>
-          </div>
-        </div>
+              {/* Provider Filter */}
+              <select
+                value={filter.provider}
+                onChange={e => { setFilter(f => ({ ...f, provider: e.target.value })); setPage(1); }}
+              >
+                <option value="all">Alle Providers</option>
+                <option value="gmail">Gmail</option>
+                <option value="outlook/365">Outlook</option>
+                <option value="sendgrid">SendGrid</option>
+                <option value="custom">Custom</option>
+              </select>
 
-        {/* Accounts Table */}
-        <div className="accounts-table">
-          {/* Header */}
-          <div className="table-header">
-            <div className="col-check">
+              {/* Search */}
               <input
-                type="checkbox"
-                checked={selectAll}
-                onChange={handleSelectAll}
+                type="text"
+                placeholder="🔍 Zoeken..."
+                value={filter.search}
+                onChange={e => { setFilter(f => ({ ...f, search: e.target.value })); setPage(1); }}
+                className="search-input"
               />
             </div>
-            <div className="col-account">Account</div>
-            <div className="col-status">Status</div>
-            <div className="col-usage">Gebruik</div>
-            <div className="col-actions">Acties</div>
+
+            <div className="sort-pagination">
+              {/* Sort */}
+              <select value={sortBy} onChange={e => setSortBy(e.target.value)}>
+                <option value="recent">Recent</option>
+                <option value="name">Naam A-Z</option>
+                <option value="status">Status</option>
+                <option value="capacity">Capaciteit</option>
+              </select>
+
+              {/* Per Page */}
+              <select value={perPage} onChange={e => { setPerPage(Number(e.target.value)); setPage(1); }}>
+                <option value={10}>10</option>
+                <option value={25}>25</option>
+                <option value={50}>50</option>
+                <option value={100}>100</option>
+                <option value={250}>250</option>
+                <option value={500}>500</option>
+              </select>
+            </div>
           </div>
 
-          {/* Loading State */}
-          {loading && (
-            <div className="loading-state">
-              ⏳ Accounts laden...
+          {/* Accounts Table */}
+          <div className="accounts-table">
+            {/* Header */}
+            <div className="table-header">
+              <div className="col-check">
+                <input
+                  type="checkbox"
+                  checked={selectAll}
+                  onChange={handleSelectAll}
+                />
+              </div>
+              <div className="col-account">Account</div>
+              <div className="col-status">Status</div>
+              <div className="col-usage">Gebruik</div>
+              <div className="col-actions">Acties</div>
             </div>
-          )}
 
-          {/* Empty State */}
-          {!loading && accounts.length === 0 && (
-            <div className="empty-state">
-              <p>🔌 Nog geen SMTP accounts geconfigureerd</p>
-              <p>Klik op "Nieuw Account" of "Bulk Import" om te beginnen</p>
-            </div>
-          )}
+            {/* Loading State */}
+            {loading && (
+              <div className="loading-state">
+                ⏳ Accounts laden...
+              </div>
+            )}
 
-          {/* No Results */}
-          {!loading && accounts.length > 0 && paginatedAccounts.length === 0 && (
-            <div className="empty-state">
-              <p>🔍 Geen accounts gevonden met deze filters</p>
-            </div>
-          )}
+            {/* Empty State */}
+            {!loading && accounts.length === 0 && (
+              <div className="empty-state">
+                <p>🔌 Nog geen SMTP accounts geconfigureerd</p>
+                <p>Klik op "Nieuw Account" of "Bulk Import" om te beginnen</p>
+              </div>
+            )}
 
-          {/* Account Rows */}
-          {paginatedAccounts.map(account => {
-            const advice = advices[account.id] || {};
-            return (
-              <div
-                key={account.id}
-                className={`table-row ${account.active ? '' : 'inactive'} ${selectedIds.includes(account.id) ? 'selected' : ''}`}
-              >
-                {/* Checkbox */}
-                <div className="col-check">
-                  <input
-                    type="checkbox"
-                    checked={selectedIds.includes(account.id)}
-                    onChange={() => handleSelect(account.id)}
-                  />
-                </div>
+            {/* No Results */}
+            {!loading && accounts.length > 0 && paginatedAccounts.length === 0 && (
+              <div className="empty-state">
+                <p>🔍 Geen accounts gevonden met deze filters</p>
+              </div>
+            )}
 
-                {/* Account Info */}
-                <div className="col-account">
-                  <div className="account-email">📧 {account.user}</div>
-                  <div className="account-meta">
-                    {account.name && <span className="account-name">{account.name}</span>}
-                    <span className="account-provider">{advice.provider || 'Custom'}</span>
-                  </div>
-                </div>
-
-                {/* Status */}
-                <div className="col-status">
-                  <span
-                    className="status-badge"
-                    style={{
-                      background: `${advice.statusColor}20`,
-                      borderColor: advice.statusColor,
-                      color: advice.statusColor
-                    }}
-                  >
-                    {advice.statusEmoji} {advice.statusLabel || 'Unknown'}
-                  </span>
-                </div>
-
-                {/* Usage */}
-                <div className="col-usage">
-                  <span className="usage-text">
-                    {advice.usage?.today || 0}/{advice.usage?.dailyLimit || 50}
-                  </span>
-                  <div className="usage-bar">
-                    <div
-                      className="usage-fill"
-                      style={{
-                        width: `${Math.min(100, ((advice.usage?.today || 0) / (advice.usage?.dailyLimit || 50)) * 100)}%`,
-                        background: advice.statusColor
-                      }}
+            {/* Account Rows */}
+            {paginatedAccounts.map(account => {
+              const advice = advices[account.id] || {};
+              return (
+                <div
+                  key={account.id}
+                  className={`table-row ${account.active ? '' : 'inactive'} ${selectedIds.includes(account.id) ? 'selected' : ''}`}
+                >
+                  {/* Checkbox */}
+                  <div className="col-check">
+                    <input
+                      type="checkbox"
+                      checked={selectedIds.includes(account.id)}
+                      onChange={() => handleSelect(account.id)}
                     />
                   </div>
-                </div>
 
-                {/* Actions */}
-                <div className="col-actions">
-                  <button
-                    className="btn-icon"
-                    title="Instellingen"
-                    onClick={() => openAccountSettings(account)}
-                  >
-                    ⚙️
-                  </button>
-                  <button
-                    className="btn-icon"
-                    title="Verwijderen"
-                    onClick={() => handleDelete(account.id)}
-                  >
-                    🗑️
-                  </button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+                  {/* Account Info */}
+                  <div className="col-account">
+                    <div className="account-email">📧 {account.user}</div>
+                    <div className="account-meta">
+                      {account.name && <span className="account-name">{account.name}</span>}
+                      <span className="account-provider">{advice.provider || 'Custom'}</span>
+                    </div>
+                  </div>
 
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="pagination">
-            <button
-              className="btn btn-sm"
-              disabled={page === 1}
-              onClick={() => setPage(1)}
-            >
-              ⏮️
-            </button>
-            <button
-              className="btn btn-sm"
-              disabled={page === 1}
-              onClick={() => setPage(p => p - 1)}
-            >
-              ◀️
-            </button>
-            <span className="page-info">
-              {page} / {totalPages}
-            </span>
-            <button
-              className="btn btn-sm"
-              disabled={page === totalPages}
-              onClick={() => setPage(p => p + 1)}
-            >
-              ▶️
-            </button>
-            <button
-              className="btn btn-sm"
-              disabled={page === totalPages}
-              onClick={() => setPage(totalPages)}
-            >
-              ⏭️
-            </button>
+                  {/* Status */}
+                  <div className="col-status">
+                    <span
+                      className="status-badge"
+                      style={{
+                        background: `${advice.statusColor}20`,
+                        borderColor: advice.statusColor,
+                        color: advice.statusColor
+                      }}
+                    >
+                      {advice.statusEmoji} {advice.statusLabel || 'Unknown'}
+                    </span>
+                  </div>
+
+                  {/* Usage */}
+                  <div className="col-usage">
+                    <span className="usage-text">
+                      {advice.usage?.today || 0}/{advice.usage?.dailyLimit || 50}
+                    </span>
+                    <div className="usage-bar">
+                      <div
+                        className="usage-fill"
+                        style={{
+                          width: `${Math.min(100, ((advice.usage?.today || 0) / (advice.usage?.dailyLimit || 50)) * 100)}%`,
+                          background: advice.statusColor
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Actions */}
+                  <div className="col-actions">
+                    <button
+                      className="btn-icon"
+                      title="Instellingen"
+                      onClick={() => openAccountSettings(account)}
+                    >
+                      ⚙️
+                    </button>
+                    <button
+                      className="btn-icon"
+                      title="Verwijderen"
+                      onClick={() => handleDelete(account.id)}
+                    >
+                      🗑️
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        )}
-      </div >
 
-      {/* Modals */}
-      < BulkImportModal
-        isOpen={showBulkImport}
-        onClose={() => setShowBulkImport(false)
-        }
-        onImport={handleBulkImport}
-      />
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="pagination">
+              <button
+                className="btn btn-sm"
+                disabled={page === 1}
+                onClick={() => setPage(1)}
+              >
+                ⏮️
+              </button>
+              <button
+                className="btn btn-sm"
+                disabled={page === 1}
+                onClick={() => setPage(p => p - 1)}
+              >
+                ◀️
+              </button>
+              <span className="page-info">
+                {page} / {totalPages}
+              </span>
+              <button
+                className="btn btn-sm"
+                disabled={page === totalPages}
+                onClick={() => setPage(p => p + 1)}
+              >
+                ▶️
+              </button>
+              <button
+                className="btn btn-sm"
+                disabled={page === totalPages}
+                onClick={() => setPage(totalPages)}
+              >
+                ⏭️
+              </button>
+            </div>
+          )}
+        </div >
 
-      <BulkSettingsModal
-        isOpen={showBulkSettings}
-        onClose={() => setShowBulkSettings(false)}
-        selectedCount={selectedIds.length}
-        onApply={handleBulkSettings}
-      />
+        {/* Modals */}
+        < BulkImportModal
+          isOpen={showBulkImport}
+          onClose={() => setShowBulkImport(false)
+          }
+          onImport={handleBulkImport}
+        />
 
-      <SmtpSettingsModal
-        isOpen={showSettings}
-        onClose={() => { setShowSettings(false); setEditingAccount(null); }}
-        account={editingAccount}
-        advice={editingAccount ? advices[editingAccount.id] : null}
-        onSave={handleSave}
-        onTest={handleTest}
-      />
+        <BulkSettingsModal
+          isOpen={showBulkSettings}
+          onClose={() => setShowBulkSettings(false)}
+          selectedCount={selectedIds.length}
+          onApply={handleBulkSettings}
+        />
 
-      <style jsx>{`
+        <SmtpSettingsModal
+          isOpen={showSettings}
+          onClose={() => { setShowSettings(false); setEditingAccount(null); }}
+          account={editingAccount}
+          advice={editingAccount ? advices[editingAccount.id] : null}
+          onSave={handleSave}
+          onTest={handleTest}
+        />
+
+        <style jsx>{`
         .container {
           max-width: 1200px;
           margin: 0 auto;
@@ -969,6 +997,50 @@ export default function Settings() {
           color: #888;
         }
 
+        .resend-config-box {
+          margin-top: 20px;
+          padding-top: 20px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .config-header {
+          margin-bottom: 12px;
+        }
+
+        .config-label {
+          display: block;
+          font-size: 14px;
+          font-weight: 600;
+          color: #fff;
+          margin-bottom: 4px;
+        }
+
+        .config-hint {
+          display: block;
+          font-size: 12px;
+          color: #888;
+        }
+
+        .config-input-row {
+          display: flex;
+          gap: 12px;
+        }
+
+        .config-input {
+          flex: 1;
+          padding: 8px 12px;
+          background: rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 6px;
+          color: #fff;
+          font-size: 14px;
+        }
+
+        .config-input:focus {
+          border-color: #6366f1;
+          outline: none;
+        }
+
         .api-toggles {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1110,6 +1182,7 @@ export default function Settings() {
           letter-spacing: 0.5px;
         }
       `}</style>
+      </div>
     </>
   );
 }

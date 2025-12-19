@@ -14,6 +14,7 @@ const DEFAULT_SETTINGS = {
     websiteAnalysisEnabled: true, // Toggle website scraping/analysis
     mxValidationEnabled: true,  // Toggle MX record validation before sending
     dryRunMode: false,          // Global dry-run mode (no actual sends)
+    resendDefaultFrom: 'info@skye-unlimited.be', // Default sender for Resend
 };
 
 /**

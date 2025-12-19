@@ -1460,15 +1460,16 @@ export default async function handler(req, res) {
           console.log(`🚀 Verzenden via Resend API...`);
 
           // Check from address - MUST be from a verified domain in Resend
-          const requestedFrom = smtpConfig?.fromEmail || smtpConfig?.user || 'info@skye-unlimited.be';
+          const requestedFrom = smtpConfig?.fromEmail || smtpConfig?.user || apiSettings.resendDefaultFrom || 'info@skye-unlimited.be';
           let finalFrom = requestedFrom;
           let replyTo = null;
 
           // If from address doesn't end with our verified domain, fallback to default
           // and set replyTo to the requested address so the user gets replies
-          if (!requestedFrom.toLowerCase().endsWith('@skye-unlimited.be') && !requestedFrom.toLowerCase().endsWith('@skye-unlimited.com')) {
-            console.log(`⚠️ From address "${requestedFrom}" matches no verified domain. Falling back to default for Resend.`);
-            finalFrom = 'info@skye-unlimited.be';
+          const verifiedDomain = (apiSettings.resendDefaultFrom || 'info@skye-unlimited.be').split('@')[1];
+          if (!requestedFrom.toLowerCase().endsWith(`@${verifiedDomain}`)) {
+            console.log(`⚠️ From address "${requestedFrom}" matches no verified domain (${verifiedDomain}). Falling back to default for Resend.`);
+            finalFrom = apiSettings.resendDefaultFrom || 'info@skye-unlimited.be';
             replyTo = requestedFrom;
           }
 
