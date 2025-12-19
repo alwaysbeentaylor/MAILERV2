@@ -112,6 +112,19 @@ export default function Navigation({ dark = false }) {
                         {router.pathname === item.href && <span className="item-dot"></span>}
                       </Link>
                     ))}
+                    <div className="dropdown-divider"></div>
+                    <button
+                      className="dropdown-item logout-item"
+                      onClick={async () => {
+                        await fetch('/api/auth/logout');
+                        router.push('/login');
+                      }}
+                    >
+                      <div className="item-content">
+                        <span className="item-icon">🚪</span>
+                        <span className="item-label">Uitloggen</span>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -121,6 +134,24 @@ export default function Navigation({ dark = false }) {
       </nav>
 
       <style jsx>{`
+        .dropdown-divider {
+          height: 1px;
+          background: var(--nav-border);
+          margin: 8px 0;
+        }
+
+        .logout-item {
+          width: 100%;
+          border: none;
+          background: none;
+          cursor: pointer;
+          text-align: left;
+          color: #ef4444 !important;
+        }
+
+        .logout-item:hover {
+          background: rgba(239, 68, 68, 0.1) !important;
+        }
         /* Theme Variables */
         .theme-dark {
           --nav-bg: rgba(15, 23, 42, 0.6);
