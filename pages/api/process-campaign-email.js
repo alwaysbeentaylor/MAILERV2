@@ -166,9 +166,10 @@ export default async function handler(req, res) {
                     status: 'sent',
                     processedAt: new Date().toISOString(),
                     trackingId: sendData.emailId || null,
-                    smtpUsed: sendData.smtpUsed || null
+                    smtpUsed: sendData.smtpUsed || sendData.sendMethod || null
                 });
-                await addCampaignLog(campaignId, `✅ E-mail verzonden naar ${emailData.email}`, 'success');
+                const providerInfo = sendData.sendMethod ? ` (via ${sendData.sendMethod})` : '';
+                await addCampaignLog(campaignId, `✅ E-mail verzonden naar ${emailData.email}${providerInfo}`, 'success');
 
                 // Rotate SMTP if in rotate mode
                 if (campaign.smtpMode === 'rotate' && campaign.smtpAccountIds?.length > 1) {

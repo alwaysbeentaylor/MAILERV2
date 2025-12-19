@@ -31,7 +31,7 @@ export function isResendEnabled() {
  * @param {string} [options.fromName] - Sender name
  */
 export async function sendEmailViaResend(options) {
-    const { to, subject, html, text, from, fromName } = options;
+    const { to, subject, html, text, from, fromName, replyTo } = options;
 
     if (!isResendEnabled()) {
         throw new Error("Resend is not enabled or configured");
@@ -48,6 +48,7 @@ export async function sendEmailViaResend(options) {
         to: Array.isArray(to) ? to : [to],
         subject: subject,
         html: html,
+        reply_to: replyTo || fromEmail
     };
 
     // Add text version if provided

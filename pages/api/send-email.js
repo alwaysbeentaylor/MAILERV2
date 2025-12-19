@@ -1457,29 +1457,40 @@ export default async function handler(req, res) {
       // 🚀 Try Resend API FIRST (PRIMARY - best deliverability)
       if (isResendEnabled()) {
         try {
-          console.log(`🚀 Verzenden via Resend API (PRIMARY)...`);
-          console.log(`   To: ${toEmail}`);
-          console.log(`   Subject: ${subject}`);
-          console.log(`   PlainBody length: ${plainBody?.length || 0}`);
-          console.log(`   HTML length: ${fullHtml?.length || 0}`);
+          console.log(`🚀 Verzenden via Resend API...`);
+
+          // Check from address - MUST be from a verified domain in Resend
+          const requestedFrom = smtpConfig?.fromEmail || smtpConfig?.user || 'info@skye-unlimited.be';
+          let finalFrom = requestedFrom;
+          let replyTo = null;
+
+          // If from address doesn't end with our verified domain, fallback to default
+          // and set replyTo to the requested address so the user gets replies
+          if (!requestedFrom.toLowerCase().endsWith('@skye-unlimited.be') && !requestedFrom.toLowerCase().endsWith('@skye-unlimited.com')) {
+            console.log(`⚠️ From address "${requestedFrom}" matches no verified domain. Falling back to default for Resend.`);
+            finalFrom = 'info@skye-unlimited.be';
+            replyTo = requestedFrom;
+          }
 
           const resendResult = await sendEmailViaResend({
             to: toEmail,
             subject: subject,
             html: fullHtml,
             text: plainBody,
-            from: smtpConfig?.fromEmail || smtpConfig?.user || 'info@skye-unlimited.be',
-            fromName: smtpConfig?.fromName || 'SKYE'
+            from: finalFrom,
+            fromName: smtpConfig?.fromName || 'SKYE',
+            replyTo: replyTo
           });
+
           info = { messageId: resendResult.messageId };
           sendMethod = 'resend';
-          console.log(`✅ Email verstuurd via Resend naar ${toEmail}: ${info.messageId} `);
+          console.log(`✅ Email verstuurd via Resend naar ${toEmail}: ${info.messageId}`);
         } catch (resendError) {
-          console.error(`⚠️ Resend fout: ${resendError.message} `);
+          console.error(`⚠️ Resend fout: ${resendError.message}`);
           console.log(`   Probeer fallback provider...`);
         }
       } else {
-        console.log(`⏸️ Resend API uitgeschakeld in settings`);
+        console.log(`⏸️ Resend API uitgeschakeld of niet geconfigureerd`);
       }
 
       // 📧 Try Mailgun API if Resend failed (FALLBACK 1)
