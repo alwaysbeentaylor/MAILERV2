@@ -11,7 +11,11 @@ export function middleware(request) {
     // QStash / Webhook routes moeten toegankelijk blijven zonder cookie
     const isWebhookApi = pathname === '/api/process-campaign-email' ||
         pathname === '/api/process-scheduled-email' ||
-        pathname === '/api/qstash-status';
+        pathname === '/api/process-warmup-email' ||
+        pathname === '/api/send-email' ||
+        pathname === '/api/qstash-status' ||
+        pathname === '/api/track' ||
+        pathname === '/api/scan-replies';
 
     if (isAuthPage || isAuthApi || isStatic || isWebhookApi) {
         return NextResponse.next();
