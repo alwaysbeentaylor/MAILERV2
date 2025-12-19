@@ -8,7 +8,8 @@ export default async function handler(req, res) {
     // GET - Load settings
     if (req.method === 'GET') {
         try {
-            const settings = loadApiSettings();
+            const { loadApiSettingsAsync } = await import('../../utils/api-settings');
+            const settings = await loadApiSettingsAsync();
             return res.status(200).json({
                 success: true,
                 settings
@@ -25,6 +26,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
             const { settings } = req.body;
+            const { loadApiSettingsAsync, saveApiSettings } = await import('../../utils/api-settings');
 
             if (!settings || typeof settings !== 'object') {
                 return res.status(400).json({
@@ -34,10 +36,10 @@ export default async function handler(req, res) {
             }
 
             // Load current and merge with new
-            const current = loadApiSettings();
+            const current = await loadApiSettingsAsync();
             const updated = { ...current, ...settings };
 
-            const saved = saveApiSettings(updated);
+            const saved = await saveApiSettings(updated);
 
             if (saved) {
                 console.log('✅ API Settings updated:', updated);

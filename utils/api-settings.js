@@ -1,10 +1,8 @@
-// API Settings - User-configurable toggles
-// This file stores runtime API settings that can be toggled via the UI
-
 import fs from 'fs';
 import path from 'path';
 
 const SETTINGS_FILE = path.join(process.cwd(), 'data', 'api-settings.json');
+const KV_KEY_SETTINGS = 'api_settings';
 
 // Default settings
 const DEFAULT_SETTINGS = {
@@ -18,21 +16,32 @@ const DEFAULT_SETTINGS = {
 };
 
 /**
- * Ensure data directory exists
+ * Get Vercel KV client
  */
-function ensureDataDir() {
-    const dataDir = path.dirname(SETTINGS_FILE);
-    if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
+async function getKV() {
+    if (!process.env.KV_REST_API_URL || !process.env.KV_REST_API_TOKEN) {
+        return null;
+    }
+    try {
+        const { kv } = await import('@vercel/kv');
+        return kv;
+    } catch (e) {
+        return null;
     }
 }
 
 /**
- * Load current settings from file
+ * Load current settings (Async version for server-side)
  */
-export function loadApiSettings() {
+export async function loadApiSettingsAsync() {
     try {
-        ensureDataDir();
+        const kv = await getKV();
+        if (kv) {
+            const settings = await kv.get(KV_KEY_SETTINGS);
+            if (settings) return { ...DEFAULT_SETTINGS, ...settings };
+        }
+
+        // Fallback to local file for dev
         if (fs.existsSync(SETTINGS_FILE)) {
             const content = fs.readFileSync(SETTINGS_FILE, 'utf-8');
             return { ...DEFAULT_SETTINGS, ...JSON.parse(content) };
@@ -44,11 +53,36 @@ export function loadApiSettings() {
 }
 
 /**
- * Save settings to file
+ * Sync version for legacy support (reads from file only)
  */
-export function saveApiSettings(settings) {
+export function loadApiSettings() {
     try {
-        ensureDataDir();
+        if (fs.existsSync(SETTINGS_FILE)) {
+            const content = fs.readFileSync(SETTINGS_FILE, 'utf-8');
+            return { ...DEFAULT_SETTINGS, ...JSON.parse(content) };
+        }
+    } catch (error) {
+        // Silent fail
+    }
+    return { ...DEFAULT_SETTINGS };
+}
+
+/**
+ * Save settings to KV and file
+ */
+export async function saveApiSettings(settings) {
+    try {
+        // Save to KV
+        const kv = await getKV();
+        if (kv) {
+            await kv.set(KV_KEY_SETTINGS, settings);
+        }
+
+        // Also save to file for local persistence/fallback
+        const dataDir = path.dirname(SETTINGS_FILE);
+        if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir, { recursive: true });
+        }
         fs.writeFileSync(SETTINGS_FILE, JSON.stringify(settings, null, 2));
         return true;
     } catch (error) {
@@ -58,41 +92,37 @@ export function saveApiSettings(settings) {
 }
 
 /**
- * Update a single setting
+ * Check if a specific API is enabled (Async version)
  */
-export function updateApiSetting(key, value) {
-    const settings = loadApiSettings();
-    settings[key] = value;
-    return saveApiSettings(settings);
+export async function isApiEnabledAsync(apiName) {
+    const settings = await loadApiSettingsAsync();
+    const key = `${apiName}Enabled`;
+    if (settings[key] !== undefined) return settings[key];
+    if (apiName === 'dryRun') return settings.dryRunMode;
+    return true; // Default
 }
 
 /**
- * Check if a specific API is enabled
+ * Legacy sync check
  */
 export function isApiEnabled(apiName) {
     const settings = loadApiSettings();
     switch (apiName) {
-        case 'resend':
-            return settings.resendEnabled;
-        case 'mailgun':
-            return settings.mailgunEnabled;
-        case 'openai':
-            return settings.openaiEnabled;
-        case 'websiteAnalysis':
-            return settings.websiteAnalysisEnabled;
-        case 'mxValidation':
-            return settings.mxValidationEnabled;
-        case 'dryRun':
-            return settings.dryRunMode;
-        default:
-            return true;
+        case 'resend': return settings.resendEnabled;
+        case 'mailgun': return settings.mailgunEnabled;
+        case 'openai': return settings.openaiEnabled;
+        case 'websiteAnalysis': return settings.websiteAnalysisEnabled;
+        case 'mxValidation': return settings.mxValidationEnabled;
+        case 'dryRun': return settings.dryRunMode;
+        default: return true;
     }
 }
 
 export default {
     loadApiSettings,
+    loadApiSettingsAsync,
     saveApiSettings,
-    updateApiSetting,
     isApiEnabled,
+    isApiEnabledAsync,
     DEFAULT_SETTINGS
 };

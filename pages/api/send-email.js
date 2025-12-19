@@ -22,7 +22,7 @@ import { isResendEnabled, sendEmailViaResend } from '../../utils/resend-client';
 // 📬 MX Record Validator
 import { validateMX } from '../../utils/mx-validator';
 // 🔧 API Settings (user toggles)
-import { isApiEnabled, loadApiSettings } from '../../utils/api-settings';
+import { isApiEnabled, loadApiSettingsAsync } from '../../utils/api-settings';
 // 📚 Niche Database (pain points, solutions, hooks)
 import { getNicheContext, getMasterPromptContext } from '../../utils/niche-database';
 // ☁️ AWS SES Client (FALLBACK 2)
@@ -1439,7 +1439,7 @@ export default async function handler(req, res) {
     let sendMethod = 'smtp'; // Track which method was used
 
     // 🔧 Load global API settings
-    const apiSettings = loadApiSettings();
+    const apiSettings = await loadApiSettingsAsync();
     const globalDryRun = apiSettings.dryRunMode;
     const effectiveDryRun = dryRun || globalDryRun;
 
@@ -1455,7 +1455,7 @@ export default async function handler(req, res) {
       sendMethod = 'dry-run';
     } else {
       // 🚀 Try Resend API FIRST (PRIMARY - best deliverability)
-      if (isResendEnabled()) {
+      if (apiSettings.resendEnabled && process.env.RESEND_API_KEY) {
         try {
           console.log(`🚀 Verzenden via Resend API...`);
 

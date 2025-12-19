@@ -38,10 +38,7 @@ export async function sendEmailViaResend(options) {
     }
 
     // Format the from address
-    const settings = isApiEnabled('apiInstance') ? {} : require('./api-settings').loadApiSettings();
-    const defaultFrom = settings.resendDefaultFrom || 'info@skye-unlimited.be';
-
-    const fromEmail = from || defaultFrom;
+    const fromEmail = from || 'info@skye-unlimited.be';
     const senderName = fromName || 'SKYE';
     const formattedFrom = `${senderName} <${fromEmail}>`;
 
