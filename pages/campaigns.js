@@ -27,6 +27,7 @@ export default function Campaigns() {
   // Bulk selection state
   const [isSelectionMode, setIsSelectionMode] = useState(false);
   const [selectedForDeletion, setSelectedForDeletion] = useState([]);
+  const [selectedEmails, setSelectedEmails] = useState([]); // Voor acties op individuele emails
 
   // Process emails for display (filter, sort, paginate)
   const processedEmails = useMemo(() => {
@@ -180,6 +181,7 @@ export default function Campaigns() {
     // 1. Optimistisch de basis info zetten (van de lijst)
     setSelectedCampaign(campaign);
     setLogs([]);
+    setSelectedEmails([]);
     setCurrentEmailPage(1);
 
     // 2. Volledige data ophalen (met emails array)
@@ -310,6 +312,42 @@ export default function Campaigns() {
         if (statusData.success) setSelectedCampaign(statusData.campaign);
       } else {
         addLog(`⚠️ ${data.message || 'Geen emails gereset'}`, 'warning');
+      }
+    } catch (error) {
+      addLog(`❌ Fout bij resetten: ${error.message}`, 'error');
+    }
+  };
+
+  const resetEmails = async (mode = 'all') => {
+    if (!selectedCampaign) return;
+
+    let confirmMsg = 'Weet je zeker dat je ALLE emails wilt resetten naar de beginstatus?';
+    if (mode === 'selected') confirmMsg = `Weet je zeker dat je de ${selectedEmails.length} geselecteerde emails wilt herstarten?`;
+
+    if (!confirm(confirmMsg)) return;
+
+    addLog(`🔄 Emails resetten (${mode})...`, 'info');
+    try {
+      const res = await fetch('/api/campaigns/reset', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          campaignId: selectedCampaign.id,
+          mode: mode,
+          emailIndices: mode === 'selected' ? selectedEmails : []
+        })
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        addLog(`✅ ${data.message}`, 'success');
+        setSelectedEmails([]);
+        // Refresh campaign data
+        const statusRes = await fetch(`/api/campaigns/status?campaignId=${selectedCampaign.id}`);
+        const statusData = await statusRes.json();
+        if (statusData.success) setSelectedCampaign(statusData.campaign);
+      } else {
+        addLog(`❌ Reset mislukt: ${data.error}`, 'error');
       }
     } catch (error) {
       addLog(`❌ Fout bij resetten: ${error.message}`, 'error');
@@ -584,8 +622,13 @@ export default function Campaigns() {
                   {/* Controls */}
                   <div className="controls">
                     {!isRunning ? (
-                      <button className="btn-start" onClick={handleStartCampaign}>
-                        ▶️ {selectedCampaign.status === 'paused' ? 'Hervatten' : 'Starten'}
+                      <button
+                        className="btn-start"
+                        onClick={handleStartCampaign}
+                        disabled={selectedCampaign.pending === 0}
+                      >
+                        ▶️ {selectedCampaign.status === 'paused' ? 'Hervatten' :
+                          (selectedCampaign.status === 'completed' || selectedCampaign.status === 'stopped' ? 'Herstarten' : 'Starten')}
                       </button>
                     ) : (
                       <button className="btn-pause" onClick={pauseCampaign}>
@@ -606,6 +649,25 @@ export default function Campaigns() {
                     >
                       🔄 Retry Mislukte ({selectedCampaign.failed})
                     </button>
+
+                    {!isRunning && (
+                      <button
+                        className="btn-reset-all"
+                        onClick={() => resetEmails('all')}
+                        title="Zet alle emails terug op 'pending' om de campagne volledig opnieuw te doen"
+                      >
+                        ♻️ Reset Alles
+                      </button>
+                    )}
+
+                    {!isRunning && selectedEmails.length > 0 && (
+                      <button
+                        className="btn-reset-selected"
+                        onClick={() => resetEmails('selected')}
+                      >
+                        🎯 Reset Geselecteerd ({selectedEmails.length})
+                      </button>
+                    )}
                   </div>
                 </div>
 
@@ -731,6 +793,26 @@ export default function Campaigns() {
                         <table className="emails-table">
                           <thead>
                             <tr>
+                              <th style={{ width: '40px' }}>
+                                <input
+                                  type="checkbox"
+                                  checked={processedEmails.displayed.length > 0 && processedEmails.displayed.every(e => {
+                                    const idx = selectedCampaign.emails.findIndex(oe => oe.email === e.email);
+                                    return selectedEmails.includes(idx);
+                                  })}
+                                  onChange={(e) => {
+                                    const pageIndices = processedEmails.displayed.map(pe =>
+                                      selectedCampaign.emails.findIndex(oe => oe.email === pe.email)
+                                    ).filter(idx => idx !== -1);
+
+                                    if (e.target.checked) {
+                                      setSelectedEmails(prev => [...new Set([...prev, ...pageIndices])]);
+                                    } else {
+                                      setSelectedEmails(prev => prev.filter(idx => !pageIndices.includes(idx)));
+                                    }
+                                  }}
+                                />
+                              </th>
                               <th>#</th>
                               <th>Email</th>
                               <th>Bedrijf</th>
@@ -748,6 +830,19 @@ export default function Campaigns() {
                                   key={email.email}
                                   className={`${email.status} ${originalIdx === currentEmailIndex && isRunning ? 'current' : ''}`}
                                 >
+                                  <td>
+                                    <input
+                                      type="checkbox"
+                                      checked={selectedEmails.includes(originalIdx)}
+                                      onChange={(e) => {
+                                        if (e.target.checked) {
+                                          setSelectedEmails(prev => [...prev, originalIdx]);
+                                        } else {
+                                          setSelectedEmails(prev => prev.filter(idx => idx !== originalIdx));
+                                        }
+                                      }}
+                                    />
+                                  </td>
                                   <td>{originalIdx >= 0 ? originalIdx + 1 : '?'}</td>
                                   <td>{email.email}</td>
                                   <td>{email.businessName || '-'}</td>
@@ -1301,6 +1396,12 @@ export default function Campaigns() {
         
         .btn-retry { background: #3b82f6; color: #fff; }
         .btn-retry:hover:not(:disabled) { background: #2563eb; }
+
+        .btn-reset-all { background: #8b5cf6; color: #fff; }
+        .btn-reset-all:hover:not(:disabled) { background: #7c3aed; }
+
+        .btn-reset-selected { background: #6d28d9; color: #fff; }
+        .btn-reset-selected:hover:not(:disabled) { background: #5b21b6; }
 
         .logs-panel {
           background: #1a1a2e;
